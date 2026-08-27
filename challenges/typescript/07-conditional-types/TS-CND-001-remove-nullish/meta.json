@@ -1,0 +1,16 @@
+{
+  "id": "TS-CND-001",
+  "title": "Remove nullish members",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "hard",
+  "topics": ["conditional-types", "distributive-conditionals", "union-filtering", "never"],
+  "estimatedMinutes": 7,
+  "prerequisites": ["union-types", "never"],
+  "hints": [
+    "Filtering a union can map rejected members to never.",
+    "A naked generic parameter in a conditional distributes over unions.",
+    "Check each member against the two nullish values and preserve the member otherwise."
+  ],
+  "validation": { "type": "typescript" }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "TS-GEN-003",
+  "title": "Type a readonly head helper",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": ["generic-functions", "readonly-arrays", "indexed-access"],
+  "estimatedMinutes": 6,
+  "prerequisites": ["arrays", "generic-functions"],
+  "hints": [
+    "The array's element type needs a name that can flow to the result.",
+    "Use a generic element parameter and a readonly array parameter.",
+    "Unchecked indexed access can be absent, so include undefined in the return relationship."
+  ],
+  "validation": { "type": "typescript" }
+}

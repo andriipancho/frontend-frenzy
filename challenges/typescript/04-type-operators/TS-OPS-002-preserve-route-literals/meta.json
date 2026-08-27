@@ -1,0 +1,16 @@
+{
+  "id": "TS-OPS-002",
+  "title": "Preserve route literals",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": ["satisfies", "const-assertions", "literal-types", "template-literals"],
+  "estimatedMinutes": 6,
+  "prerequisites": ["literal-types", "record-types"],
+  "hints": [
+    "A direct annotation validates the value but replaces its inferred literal details.",
+    "Combine a const assertion with the satisfies operator.",
+    "Preserve the expression first, then check it against a record of the route contract."
+  ],
+  "validation": { "type": "typescript" }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "TS-TOPIC-000",
+  "title": "Challenge title",
+  "domain": "typescript",
+  "topic": "topic-slug",
+  "difficulty": "medium",
+  "topics": ["primary-concept"],
+  "estimatedMinutes": 5,
+  "prerequisites": [],
+  "hints": [
+    "Give conceptual direction without naming the implementation.",
+    "Name the relevant language mechanism without writing the answer.",
+    "Describe the shape of the approach without complete code."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

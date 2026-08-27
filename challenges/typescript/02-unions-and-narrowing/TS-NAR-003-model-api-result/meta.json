@@ -1,0 +1,16 @@
+{
+  "id": "TS-NAR-003",
+  "title": "Model an API result",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": ["discriminated-unions", "impossible-states", "api-modeling"],
+  "estimatedMinutes": 10,
+  "prerequisites": ["union-types", "optional-properties", "never"],
+  "hints": [
+    "The current object permits combinations that cannot occur in the system.",
+    "Represent success and failure as separate members of a discriminated union.",
+    "Give each status its required payload and prohibit the other payload with an optional never property."
+  ],
+  "validation": { "type": "typescript" }
+}

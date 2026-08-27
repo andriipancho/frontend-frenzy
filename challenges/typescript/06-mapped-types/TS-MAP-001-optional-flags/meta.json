@@ -1,0 +1,16 @@
+{
+  "id": "TS-MAP-001",
+  "title": "Map optional flags",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": ["mapped-types", "keyof", "optional-modifiers"],
+  "estimatedMinutes": 5,
+  "prerequisites": ["keyof", "optional-properties"],
+  "hints": [
+    "The output repeats the same transformation for every key in the source.",
+    "Use a mapped type over keyof the input.",
+    "Mark the mapped property optional and replace its value expression with boolean."
+  ],
+  "validation": { "type": "typescript" }
+}

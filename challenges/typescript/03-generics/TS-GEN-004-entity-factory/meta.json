@@ -1,0 +1,16 @@
+{
+  "id": "TS-GEN-004",
+  "title": "Preserve an entity in a factory",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": ["generic-constraints", "factories", "intersections", "type-preservation"],
+  "estimatedMinutes": 9,
+  "prerequisites": ["generic-functions", "object-types", "intersections"],
+  "hints": [
+    "The input needs a minimum shape without losing its additional fields.",
+    "Constrain a generic parameter to an object containing a string id.",
+    "Express the result as the preserved input type combined with the generated timestamp field."
+  ],
+  "validation": { "type": "typescript" }
+}

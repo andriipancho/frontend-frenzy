@@ -1,0 +1,16 @@
+{
+  "id": "TS-OPS-001",
+  "title": "Preserve object keys",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": ["keyof", "generic-constraints", "boundary-assertions"],
+  "estimatedMinutes": 8,
+  "prerequisites": ["keyof", "generic-functions"],
+  "hints": [
+    "The standard library returns strings because runtime objects may contain more keys than their static type exposes.",
+    "Capture the input object type and derive the result element type with keyof.",
+    "Keep the assertion around Object.keys inside the adapter and return an array of the derived keys."
+  ],
+  "validation": { "type": "typescript" }
+}

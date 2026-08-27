@@ -1,0 +1,16 @@
+{
+  "id": "TS-CORE-003",
+  "title": "Preserve literal values",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": ["literal-types", "inference", "readonly", "tuples"],
+  "estimatedMinutes": 3,
+  "prerequisites": ["arrays", "literal-types"],
+  "hints": [
+    "Default array inference widens values because the array can be mutated.",
+    "A const assertion preserves literal information deeply.",
+    "Apply the assertion to the complete array expression rather than each element."
+  ],
+  "validation": { "type": "typescript" }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "frontend-frenzy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A deterministic deliberate-practice engine for frontend engineering.",
+  "type": "module",
+  "bin": {
+    "frenzy": "./packages/cli/bin/frenzy.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build --silent && node --test dist/internal/tests/all.test.js",
+    "lint": "npm run build --silent && node dist/internal/validation/src/validate-bank.js",
+    "check": "npm run typecheck && npm test && npm run lint",
+    "frenzy": "node dist/packages/cli/src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
+  }
+}

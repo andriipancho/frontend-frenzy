@@ -1,0 +1,16 @@
+{
+  "id": "TS-CORE-001",
+  "title": "Narrow an unknown value",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": ["unknown", "narrowing"],
+  "estimatedMinutes": 4,
+  "prerequisites": ["primitive-types"],
+  "hints": [
+    "An unknown value must be checked before any property can be read.",
+    "Use a runtime relationship check for Error instances.",
+    "Handle the Error case first, then convert every remaining value safely."
+  ],
+  "validation": { "type": "typescript" }
+}

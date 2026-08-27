@@ -1,0 +1,16 @@
+{
+  "id": "TS-NAR-001",
+  "title": "Make area exhaustive",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": ["discriminated-unions", "exhaustive-checking", "never"],
+  "estimatedMinutes": 5,
+  "prerequisites": ["union-types", "literal-types"],
+  "hints": [
+    "One discriminant value can still reach the exhaustive fallback.",
+    "Add a switch branch for the missing union member.",
+    "Once every kind is handled, the fallback value narrows to never."
+  ],
+  "validation": { "type": "typescript" }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "TS-OPS-003",
+  "title": "Relate events to payloads",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": ["keyof", "indexed-access", "generic-relationships", "api-design"],
+  "estimatedMinutes": 8,
+  "prerequisites": ["keyof", "indexed-access", "generic-functions"],
+  "hints": [
+    "Two independent unions allow valid members to be combined incorrectly.",
+    "Represent the selected event key with a generic parameter.",
+    "Constrain the key to the event map and index the map with that exact key for the payload."
+  ],
+  "validation": { "type": "typescript" }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "TS-GEN-002",
+  "title": "Build a property accessor",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": ["generics", "keyof", "indexed-access"],
+  "estimatedMinutes": 5,
+  "prerequisites": ["generic-functions", "object-types"],
+  "hints": [
+    "The result depends on both the object type and the selected key.",
+    "Constrain a key parameter with keyof the object parameter.",
+    "Use indexed access with the object and key parameters for the return type and implementation."
+  ],
+  "validation": { "type": "typescript" }
+}
