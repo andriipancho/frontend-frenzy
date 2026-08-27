@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-011",
+  "title": "Annotate an event payload",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "annotations",
+    "object-types",
+    "function-parameters"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "object-types",
+    "function-types"
+  ],
+  "hints": [
+    "Strict mode does not permit an untyped parameter at a public boundary.",
+    "Reuse the nearby object type as the parameter annotation.",
+    "Place the payload type on the function parameter rather than asserting inside the body."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

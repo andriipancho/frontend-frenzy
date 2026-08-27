@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-042",
+  "title": "Define deployment environments",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "literal-types",
+    "string",
+    "configuration"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "literal-types",
+    "type-aliases"
+  ],
+  "hints": [
+    "Configuration consumes a closed vocabulary.",
+    "Represent each supported name as an exact string literal.",
+    "Combine the three full environment names in the alias."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-017",
+  "title": "Accept readonly measurements",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "arrays",
+    "readonly",
+    "function-parameters"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "arrays",
+    "readonly"
+  ],
+  "hints": [
+    "A function that only reads its input should not require mutation rights.",
+    "Use the readonly array form at the parameter boundary.",
+    "The reducer is available on readonly arrays, so the implementation does not need mutation."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

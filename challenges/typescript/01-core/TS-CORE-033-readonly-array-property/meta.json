@@ -1,0 +1,26 @@
+{
+  "id": "TS-CORE-033",
+  "title": "Protect an array property",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "object-types",
+    "readonly",
+    "arrays"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "object-types",
+    "readonly",
+    "arrays"
+  ],
+  "hints": [
+    "Protecting the property and protecting the array are separate decisions.",
+    "Use readonly at both the property and collection levels.",
+    "The property modifier blocks replacement; a readonly array type removes mutating methods."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

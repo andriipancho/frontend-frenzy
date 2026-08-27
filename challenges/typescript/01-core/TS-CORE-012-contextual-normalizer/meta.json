@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-012",
+  "title": "Type a string normalizer",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "annotations",
+    "inference",
+    "callbacks"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "function-types",
+    "string"
+  ],
+  "hints": [
+    "The callback body expects string methods, but the parameter has no type.",
+    "Add a primitive annotation at the parameter boundary.",
+    "The return type can remain inferred from the string method chain."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

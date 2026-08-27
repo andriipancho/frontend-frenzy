@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-038",
+  "title": "Define request status literals",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "literal-types",
+    "string",
+    "type-aliases"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "literal-types",
+    "type-aliases"
+  ],
+  "hints": [
+    "The set of valid text values is closed and known.",
+    "Combine exact string literal types.",
+    "List each supported state as one member of the alias."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

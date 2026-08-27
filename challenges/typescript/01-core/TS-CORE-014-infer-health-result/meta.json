@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-014",
+  "title": "Infer a health-check result",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "inference",
+    "object-types",
+    "return-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "object-types",
+    "function-types"
+  ],
+  "hints": [
+    "The declared return type is broader than the actual returned object.",
+    "Function return inference can retain known property names and primitive types.",
+    "Remove the broad record annotation and let the return expression define the shape."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

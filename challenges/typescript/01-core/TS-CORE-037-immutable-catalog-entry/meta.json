@@ -1,0 +1,30 @@
+{
+  "id": "TS-CORE-037",
+  "title": "Model an immutable catalog entry",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "hard",
+  "topics": [
+    "object-types",
+    "readonly",
+    "optional-properties",
+    "tuples",
+    "arrays"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "object-types",
+    "readonly",
+    "optional-properties",
+    "tuples",
+    "arrays"
+  ],
+  "hints": [
+    "Several fields need different combinations of presence, fixed length, and mutation rights.",
+    "Use readonly properties plus readonly collection types; optionality is independent.",
+    "Protect sku, position, and tags at the property level, then choose a readonly tuple for position and readonly array for tags."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

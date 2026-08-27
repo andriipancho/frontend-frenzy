@@ -1,0 +1,26 @@
+{
+  "id": "TS-CORE-046",
+  "title": "Protect a boxed unknown value",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "any",
+    "unknown",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "object-types",
+    "any",
+    "unknown"
+  ],
+  "hints": [
+    "The box is intentionally untyped, but unsafe operations should not be permitted.",
+    "Use unknown for data that requires narrowing before use.",
+    "Replace the permissive value property type with the safe top type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

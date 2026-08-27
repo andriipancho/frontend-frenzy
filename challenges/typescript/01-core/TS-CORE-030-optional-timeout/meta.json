@@ -1,0 +1,26 @@
+{
+  "id": "TS-CORE-030",
+  "title": "Distinguish optional from undefined",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "object-types",
+    "optional-properties",
+    "undefined"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "object-types",
+    "optional-properties",
+    "undefined"
+  ],
+  "hints": [
+    "A required property that admits undefined still has to be present.",
+    "Optional property syntax controls presence separately from its value type.",
+    "Make the property optional and keep its declared value type numeric."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

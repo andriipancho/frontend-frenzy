@@ -1,0 +1,24 @@
+{
+  "id": "TS-CORE-009",
+  "title": "Use a symbol registry key",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "primitive-types",
+    "symbol",
+    "annotations"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "primitive-types"
+  ],
+  "hints": [
+    "The required primitive represents unique identity rather than textual content.",
+    "Use the lowercase primitive annotation for symbols.",
+    "A value created by the Symbol function should be assignable to the alias."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

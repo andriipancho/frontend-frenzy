@@ -1,0 +1,27 @@
+{
+  "id": "TS-CORE-047",
+  "title": "Contain a legacy any boundary",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "hard",
+  "topics": [
+    "any",
+    "unknown",
+    "boundaries",
+    "return-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "any",
+    "unknown",
+    "function-types"
+  ],
+  "hints": [
+    "Sometimes any cannot be removed at an external boundary, but it does not need to propagate.",
+    "Change the public return type to the safe top type.",
+    "Keep the legacy input and explicitly contain its output behind unknown."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

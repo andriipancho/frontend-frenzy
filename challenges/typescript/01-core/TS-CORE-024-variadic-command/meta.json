@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-024",
+  "title": "Model variadic command arguments",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "hard",
+  "topics": [
+    "tuples",
+    "rest-elements",
+    "arrays"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "tuples",
+    "arrays"
+  ],
+  "hints": [
+    "A plain string array cannot guarantee that the first element exists.",
+    "Tuple rest elements combine a required prefix with a variable tail.",
+    "Place one required string before a rest collection of strings."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

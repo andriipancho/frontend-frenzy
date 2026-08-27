@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-034",
+  "title": "Type a formatter property",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "object-types",
+    "function-types",
+    "annotations"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "object-types",
+    "function-types"
+  ],
+  "hints": [
+    "The property stores behavior rather than a precomputed string.",
+    "Describe a function type in the property position.",
+    "The function takes a number and points to a string result."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

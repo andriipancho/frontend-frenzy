@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-013",
+  "title": "Preserve a const number literal",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "inference",
+    "annotations",
+    "literal-types"
+  ],
+  "estimatedMinutes": 3,
+  "prerequisites": [
+    "const-declarations",
+    "literal-types"
+  ],
+  "hints": [
+    "An explicit primitive annotation can widen a constant's inferred type.",
+    "A const declaration already communicates that the binding cannot change.",
+    "Remove the annotation that replaces the literal inference."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

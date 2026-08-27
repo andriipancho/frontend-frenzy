@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-008",
+  "title": "Represent a cache miss",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "primitive-types",
+    "null",
+    "type-aliases"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "primitive-types",
+    "type-aliases"
+  ],
+  "hints": [
+    "A cache miss is a real value in this contract rather than an omitted property.",
+    "The alias needs to admit two primitive possibilities.",
+    "Add null alongside the existing string type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

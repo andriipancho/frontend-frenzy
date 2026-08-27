@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-043",
+  "title": "Constrain event severity",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "literal-types",
+    "object-types",
+    "annotations"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "literal-types",
+    "object-types"
+  ],
+  "hints": [
+    "One property has a small set of operationally meaningful values.",
+    "Introduce exact string literals at that property.",
+    "Replace the broad severity string with the three supported levels."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

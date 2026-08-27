@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-025",
+  "title": "Return a precise tuple",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "tuples",
+    "return-types",
+    "annotations"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "tuples",
+    "function-types"
+  ],
+  "hints": [
+    "An array return type loses both fixed length and positional meaning.",
+    "Annotate the function result as a tuple.",
+    "Describe the string position first and the numeric position second."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

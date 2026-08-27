@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-020",
+  "title": "Model a numeric matrix",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "arrays",
+    "nested-arrays",
+    "type-aliases"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "arrays",
+    "type-aliases"
+  ],
+  "hints": [
+    "The data contains an array whose elements are themselves arrays.",
+    "Add one array level to the alias.",
+    "The inner collection contains numbers and the outer collection contains rows."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

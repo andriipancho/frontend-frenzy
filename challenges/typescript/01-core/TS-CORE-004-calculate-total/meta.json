@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-004",
+  "title": "Annotate a numeric total",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "annotations",
+    "arrays",
+    "number"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "primitive-types",
+    "arrays"
+  ],
+  "hints": [
+    "The compiler needs to know the element type before it can type the reducer.",
+    "Add an array type annotation at the function boundary.",
+    "Describe the parameter as a collection whose elements are numbers."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-032",
+  "title": "Model shallow readonly settings",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "object-types",
+    "readonly",
+    "nested-objects"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "object-types",
+    "readonly"
+  ],
+  "hints": [
+    "Readonly on a property is shallow; it does not recursively freeze nested values.",
+    "Apply the modifier to the outer property only.",
+    "Protect the preferences reference while leaving its theme field unmodified."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

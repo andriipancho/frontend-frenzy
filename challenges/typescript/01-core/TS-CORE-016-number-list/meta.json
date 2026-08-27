@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-016",
+  "title": "Type a numeric score list",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "arrays",
+    "number",
+    "annotations"
+  ],
+  "estimatedMinutes": 3,
+  "prerequisites": [
+    "arrays",
+    "primitive-types"
+  ],
+  "hints": [
+    "An array annotation describes the type of every element.",
+    "The current element annotation does not match the values.",
+    "Replace the array's element primitive with number."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

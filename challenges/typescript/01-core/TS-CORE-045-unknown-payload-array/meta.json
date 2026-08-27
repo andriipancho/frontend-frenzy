@@ -1,0 +1,26 @@
+{
+  "id": "TS-CORE-045",
+  "title": "Contain untrusted payloads in an array",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "any",
+    "unknown",
+    "arrays"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "arrays",
+    "any",
+    "unknown"
+  ],
+  "hints": [
+    "The queue knows nothing about each payload yet, but consumers must still narrow values.",
+    "Use the safe top type as the array element.",
+    "Replace the array's permissive element type with unknown."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

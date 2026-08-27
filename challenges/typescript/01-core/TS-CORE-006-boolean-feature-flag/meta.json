@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-006",
+  "title": "Return a boolean feature flag",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "primitive-types",
+    "boolean",
+    "return-types"
+  ],
+  "estimatedMinutes": 3,
+  "prerequisites": [
+    "primitive-types",
+    "function-types"
+  ],
+  "hints": [
+    "The current conversion changes both the runtime value and its type.",
+    "The function can return its input without conversion.",
+    "Align the return annotation and returned expression with the flag primitive."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-022",
+  "title": "Define a coordinate tuple",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "tuples",
+    "number",
+    "fixed-length"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "arrays",
+    "tuples"
+  ],
+  "hints": [
+    "The position and length of this collection are part of its contract.",
+    "Use a tuple instead of a regular array.",
+    "Declare two number positions in the tuple."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-039",
+  "title": "Constrain movement directions",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "literal-types",
+    "function-parameters",
+    "api-design"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "literal-types",
+    "function-types"
+  ],
+  "hints": [
+    "The function accepts a finite command vocabulary rather than arbitrary text.",
+    "Define a string literal type for the supported directions.",
+    "Use the literal alias at the function parameter boundary."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

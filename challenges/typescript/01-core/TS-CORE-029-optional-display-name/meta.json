@@ -1,0 +1,24 @@
+{
+  "id": "TS-CORE-029",
+  "title": "Make a display name optional",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "object-types",
+    "optional-properties"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "object-types",
+    "optional-properties"
+  ],
+  "hints": [
+    "Some accounts have no display name at all.",
+    "Use optional property syntax on only the field that may be absent.",
+    "Place the optional marker on displayName while leaving id required."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

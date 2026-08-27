@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-023",
+  "title": "Add an optional tuple flag",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "tuples",
+    "optional-elements",
+    "boolean"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "tuples",
+    "optional-properties"
+  ],
+  "hints": [
+    "The second position may be absent while the first may not.",
+    "Tuple elements can use optional syntax.",
+    "Mark only the boolean position optional."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-031",
+  "title": "Protect an entity ID",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "object-types",
+    "readonly",
+    "immutability"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "object-types",
+    "readonly"
+  ],
+  "hints": [
+    "Identity should not change, but presentation data may.",
+    "Use a property modifier on the identifier.",
+    "Apply readonly to id and leave name mutable."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

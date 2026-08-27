@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-028",
+  "title": "Correct a user profile shape",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "object-types",
+    "primitive-types",
+    "type-aliases"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "object-types",
+    "primitive-types"
+  ],
+  "hints": [
+    "One property currently describes text even though the application uses a logical flag.",
+    "Compare each field name with the sample values in the tests.",
+    "Change the active property to the boolean primitive."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-CORE-007",
+  "title": "Use a bigint counter",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "primitive-types",
+    "bigint",
+    "literal-types"
+  ],
+  "estimatedMinutes": 3,
+  "prerequisites": [
+    "primitive-types"
+  ],
+  "hints": [
+    "Regular numbers and arbitrary-size integers are different primitives.",
+    "Use the bigint primitive type and its literal syntax.",
+    "A bigint literal uses a suffix that distinguishes it from a number literal."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

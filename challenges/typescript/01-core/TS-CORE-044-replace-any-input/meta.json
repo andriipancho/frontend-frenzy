@@ -1,0 +1,26 @@
+{
+  "id": "TS-CORE-044",
+  "title": "Replace an unsafe any input",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "any",
+    "unknown",
+    "function-parameters"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "any",
+    "unknown",
+    "function-types"
+  ],
+  "hints": [
+    "The input is unrestricted, but the implementation should still require proof before use.",
+    "Use the safe top type for untrusted values.",
+    "Replace the permissive parameter annotation while keeping the unknown return boundary."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

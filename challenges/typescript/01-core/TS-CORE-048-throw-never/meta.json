@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-048",
+  "title": "Type a throwing function",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "never",
+    "return-types",
+    "functions"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "function-types",
+    "never"
+  ],
+  "hints": [
+    "A function that always throws never produces a value or reaches its caller normally.",
+    "Use the bottom type for a function that cannot return.",
+    "Replace the current return annotation with never."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

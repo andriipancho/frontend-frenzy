@@ -1,0 +1,26 @@
+{
+  "id": "TS-CORE-027",
+  "title": "Type a destructured RGB tuple",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "hard",
+  "topics": [
+    "tuples",
+    "destructuring",
+    "annotations",
+    "number"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "tuples",
+    "function-parameters"
+  ],
+  "hints": [
+    "A regular array does not guarantee values at all three destructured positions.",
+    "Annotate the destructured parameter with a fixed-length tuple.",
+    "Use one number position for each red, green, and blue channel."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

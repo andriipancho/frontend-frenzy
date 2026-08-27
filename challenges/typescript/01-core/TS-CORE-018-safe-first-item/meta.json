@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-018",
+  "title": "Model a possibly missing first item",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "arrays",
+    "undefined",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "arrays",
+    "undefined"
+  ],
+  "hints": [
+    "An empty array has no value at index zero.",
+    "Strict unchecked-index handling includes undefined for array access.",
+    "Expand the return annotation to include the missing case."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

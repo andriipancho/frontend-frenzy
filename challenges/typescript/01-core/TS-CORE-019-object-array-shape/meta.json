@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-019",
+  "title": "Correct an object array shape",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "arrays",
+    "object-types",
+    "annotations"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "arrays",
+    "object-types"
+  ],
+  "hints": [
+    "The array contract is correct, but one property value has the wrong primitive.",
+    "Compare each object property against the declared element shape.",
+    "Represent the measurement as a number rather than text."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

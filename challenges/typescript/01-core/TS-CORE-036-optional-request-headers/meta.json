@@ -1,0 +1,26 @@
+{
+  "id": "TS-CORE-036",
+  "title": "Make request headers optional",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "object-types",
+    "optional-properties",
+    "index-signatures"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "object-types",
+    "optional-properties",
+    "index-signatures"
+  ],
+  "hints": [
+    "The headers object may be absent, and its property names are open-ended.",
+    "Combine an optional property with a nested string index signature.",
+    "Mark headers optional and describe every nested key as mapping to string."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

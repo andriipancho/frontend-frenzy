@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-040",
+  "title": "Bound retry count literals",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "literal-types",
+    "number",
+    "type-aliases"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "literal-types",
+    "number"
+  ],
+  "hints": [
+    "The valid quantities form a small closed set.",
+    "Use exact number literals instead of the broad number primitive.",
+    "Combine zero, one, two, and three in the alias."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-026",
+  "title": "Accept a readonly tuple",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "tuples",
+    "readonly",
+    "function-parameters"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "tuples",
+    "readonly"
+  ],
+  "hints": [
+    "A readonly tuple cannot be passed where mutation could be possible.",
+    "The function only reads both positions.",
+    "Apply readonly to the tuple parameter type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-CORE-005",
+  "title": "Model a string user ID",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "primitive-types",
+    "annotations",
+    "string"
+  ],
+  "estimatedMinutes": 3,
+  "prerequisites": [
+    "primitive-types"
+  ],
+  "hints": [
+    "The API represents identifiers as text, not quantities.",
+    "Change the primitive annotation on the parameter.",
+    "The template expression already supports the required primitive directly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

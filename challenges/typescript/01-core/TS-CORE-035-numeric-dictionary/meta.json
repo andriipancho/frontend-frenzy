@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-035",
+  "title": "Type a numeric dictionary",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "object-types",
+    "index-signatures",
+    "number"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "object-types",
+    "annotations"
+  ],
+  "hints": [
+    "The complete set of property names is not known in advance.",
+    "Use an index signature for string keys.",
+    "Associate every string key with a numeric value type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

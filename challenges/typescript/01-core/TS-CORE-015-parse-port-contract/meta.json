@@ -1,0 +1,26 @@
+{
+  "id": "TS-CORE-015",
+  "title": "Honor a numeric return contract",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "annotations",
+    "return-types",
+    "number",
+    "string"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "primitive-types",
+    "function-types"
+  ],
+  "hints": [
+    "The public return contract should describe the converted value, not the source text.",
+    "Use a numeric conversion at runtime and a matching return annotation.",
+    "Convert the input before returning it rather than changing the parameter type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

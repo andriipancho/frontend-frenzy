@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-041",
+  "title": "Require an enabled feature",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "easy",
+  "topics": [
+    "literal-types",
+    "boolean",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "literal-types",
+    "object-types"
+  ],
+  "hints": [
+    "The flag carries a guaranteed state, not two possible states.",
+    "Use a boolean literal type for the property.",
+    "Replace the broad boolean annotation with the exact enabled value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

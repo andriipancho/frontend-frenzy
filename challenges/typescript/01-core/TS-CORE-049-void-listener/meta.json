@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-049",
+  "title": "Model a void event listener",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "void",
+    "function-types",
+    "callbacks"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "function-types",
+    "void"
+  ],
+  "hints": [
+    "A callback with no meaningful consumed result is modeled differently from one required to return the value undefined.",
+    "Use the return type intended for ignored callback results.",
+    "Change the function alias return position from undefined to void."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

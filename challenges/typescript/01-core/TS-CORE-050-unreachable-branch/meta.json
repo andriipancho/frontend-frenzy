@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-050",
+  "title": "Type an unreachable branch",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "hard",
+  "topics": [
+    "never",
+    "function-parameters",
+    "unreachable-code"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "never",
+    "function-types"
+  ],
+  "hints": [
+    "The helper should be callable only when no possible value remains.",
+    "Use the bottom type at the parameter boundary.",
+    "Change the input from the safe top type to the type with no values."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

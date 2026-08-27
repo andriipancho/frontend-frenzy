@@ -1,0 +1,25 @@
+{
+  "id": "TS-CORE-021",
+  "title": "Expose immutable tags",
+  "domain": "typescript",
+  "topic": "core",
+  "difficulty": "medium",
+  "topics": [
+    "arrays",
+    "readonly",
+    "api-design"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "arrays",
+    "readonly"
+  ],
+  "hints": [
+    "The collection has variable length but should not grant mutation methods.",
+    "Use a readonly array annotation rather than a fixed tuple.",
+    "Change the exported collection type so push is unavailable."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
