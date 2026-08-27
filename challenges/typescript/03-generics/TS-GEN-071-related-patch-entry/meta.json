@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-071",
+  "title": "Create a related patch entry",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-types",
+    "keyof",
+    "indexed-access",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "indexed-access"
+  ],
+  "hints": [
+    "The key is specific while the value is still a broad union.",
+    "Use indexed access with the selected key.",
+    "The value should be T[K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

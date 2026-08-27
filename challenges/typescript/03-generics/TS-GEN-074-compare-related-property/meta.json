@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-074",
+  "title": "Compare a related property",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-functions",
+    "keyof",
+    "indexed-access",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "indexed-access"
+  ],
+  "hints": [
+    "The comparison value is currently a union of unrelated fields.",
+    "Capture the chosen key as K.",
+    "Use K extends keyof T and accept value as T[K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

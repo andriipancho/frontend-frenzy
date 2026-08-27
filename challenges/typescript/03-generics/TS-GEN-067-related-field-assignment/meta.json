@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-067",
+  "title": "Relate assigned fields",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "keyof",
+    "indexed-access",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "keyof"
+  ],
+  "hints": [
+    "A union of all values is too broad for one selected key.",
+    "Capture the key as a second type parameter.",
+    "The value type should index T with that key parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

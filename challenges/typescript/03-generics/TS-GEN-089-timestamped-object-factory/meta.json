@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-089",
+  "title": "Create a timestamped object",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "factories",
+    "constraints",
+    "intersections"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "The broad object type erases the input shape.",
+    "Capture the input with a constrained parameter.",
+    "Return T intersected with the timestamp property."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

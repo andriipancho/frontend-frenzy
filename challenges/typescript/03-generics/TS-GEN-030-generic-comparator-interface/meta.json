@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-030",
+  "title": "Parameterize a comparator interface",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-interfaces",
+    "callbacks",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-interfaces"
+  ],
+  "hints": [
+    "A comparator evaluates two values from one domain.",
+    "Use T for both input positions.",
+    "Leave the return type number."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-091",
+  "title": "Preserve fallback factory results",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "factories",
+    "callbacks",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-callbacks"
+  ],
+  "hints": [
+    "The callback and fallback represent one result type.",
+    "Use a shared parameter for both positions.",
+    "Accept () => T and fallback T, then return T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

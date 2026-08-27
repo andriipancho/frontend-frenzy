@@ -1,0 +1,27 @@
+{
+  "id": "TS-GEN-075",
+  "title": "Map a related property",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-functions",
+    "callbacks",
+    "keyof",
+    "indexed-access",
+    "multiple-type-parameters"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "generic-callbacks",
+    "indexed-access"
+  ],
+  "hints": [
+    "Three relationships are lost: object to key, key to callback, and callback to result.",
+    "Use T, K extends keyof T, and a separate Result parameter.",
+    "Type the callback from T[K] to Result and return Result."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-005",
+  "title": "Wrap a value without widening",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-functions",
+    "type-inference",
+    "arrays"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The returned element is the same value supplied by the caller.",
+    "Introduce one generic parameter for the value.",
+    "Use that parameter for both the input and array element type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-019",
+  "title": "Parameterize result data",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-types",
+    "discriminated-unions",
+    "api-modeling"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "Only one union member carries caller-defined data.",
+    "Place T on the success data property.",
+    "Leave the error message as string."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

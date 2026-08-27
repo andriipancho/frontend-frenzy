@@ -1,0 +1,23 @@
+{
+  "id": "TS-GEN-057",
+  "title": "Default API response payload",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "default-type-parameters",
+    "generic-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The generic already has a fallback type.",
+    "Use the generic parameter for the payload property.",
+    "Replace only the broad property type with T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

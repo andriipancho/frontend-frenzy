@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-044",
+  "title": "Constrain a constructor type",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-constraints",
+    "constructors",
+    "generic-types"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "Callable and constructable signatures are different contracts.",
+    "Constrain T with an abstract new signature.",
+    "Use a rest parameter of never for constructor arguments and object as the instance constraint."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

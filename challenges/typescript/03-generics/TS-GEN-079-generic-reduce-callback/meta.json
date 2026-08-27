@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-079",
+  "title": "Reduce with a generic accumulator",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-functions",
+    "callbacks",
+    "arrays",
+    "multiple-type-parameters"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "generic-callbacks"
+  ],
+  "hints": [
+    "The array element and accumulator are different relationships.",
+    "Use one parameter for elements and one for the accumulator.",
+    "Type the reducer as (accumulator: A, value: T) => A and return A."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

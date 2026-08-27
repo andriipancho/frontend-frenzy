@@ -1,0 +1,26 @@
+{
+  "id": "TS-GEN-081",
+  "title": "Map an async generic value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-functions",
+    "callbacks",
+    "promises",
+    "multiple-type-parameters"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "generic-callbacks",
+    "promises"
+  ],
+  "hints": [
+    "The input and resolved output need separate parameters.",
+    "Model the callback as an asynchronous transformation.",
+    "Accept (value: T) => Promise<U> and return Promise<U>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

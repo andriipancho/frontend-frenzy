@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-025",
+  "title": "Parameterize a tuple response",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-types",
+    "tuples",
+    "discriminated-unions"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The first tuple element distinguishes success from failure.",
+    "Use T in the second position of the ok tuple.",
+    "Leave the error tuple's message fixed as string."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

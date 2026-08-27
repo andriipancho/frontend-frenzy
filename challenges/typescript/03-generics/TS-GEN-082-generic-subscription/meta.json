@@ -1,0 +1,23 @@
+{
+  "id": "TS-GEN-082",
+  "title": "Create a generic subscription",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "callbacks"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-callbacks"
+  ],
+  "hints": [
+    "The caller needs a way to declare the emitted value type.",
+    "Add a type parameter to the function.",
+    "Use T as the listener argument and keep the unsubscribe return unchanged."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

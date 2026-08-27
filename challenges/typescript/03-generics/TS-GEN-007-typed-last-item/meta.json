@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-007",
+  "title": "Preserve the last item type",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "readonly-arrays",
+    "undefined"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The array element needs a type that can flow into the result.",
+    "Use a generic element parameter with a readonly array.",
+    "Return the element parameter together with undefined."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "TS-GEN-096",
+  "title": "Preserve command payloads",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "production-api",
+    "generic-methods",
+    "keyof",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "type-relationships",
+    "generic-interfaces"
+  ],
+  "hints": [
+    "A union of all payloads loses the command relationship.",
+    "Capture the selected command as a method parameter.",
+    "Index Commands with that selected key for the payload."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

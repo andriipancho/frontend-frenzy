@@ -1,0 +1,23 @@
+{
+  "id": "TS-GEN-017",
+  "title": "Parameterize a box type",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-types",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The alias already receives the stored type as T.",
+    "Use the type parameter in the property position.",
+    "Replace the broad value type with T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

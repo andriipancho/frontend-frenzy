@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-050",
+  "title": "Parameterize a tagged value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "multiple-type-parameters",
+    "generic-types",
+    "object-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "The payload and label have independent contracts.",
+    "Apply the first parameter to value and second to tag.",
+    "Do not replace either with unknown."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

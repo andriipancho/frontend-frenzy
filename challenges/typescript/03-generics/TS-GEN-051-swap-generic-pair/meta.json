@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-051",
+  "title": "Swap independent pair types",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "multiple-type-parameters",
+    "generic-functions",
+    "tuples"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "Input and output positions exchange two independent contracts.",
+    "Use two type parameters for the input tuple.",
+    "Return the tuple with the parameters in reverse order."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

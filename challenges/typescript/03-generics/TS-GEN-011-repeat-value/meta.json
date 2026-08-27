@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-011",
+  "title": "Repeat a typed value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-functions",
+    "arrays",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "Every produced array element is the supplied value.",
+    "Represent the value with a generic parameter.",
+    "Return an array of that parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

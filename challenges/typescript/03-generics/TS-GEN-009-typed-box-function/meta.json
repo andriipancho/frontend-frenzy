@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-009",
+  "title": "Create a typed box",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-functions",
+    "object-types",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The property contains exactly the input value.",
+    "Capture the input with a generic parameter.",
+    "Use the parameter as the value property type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

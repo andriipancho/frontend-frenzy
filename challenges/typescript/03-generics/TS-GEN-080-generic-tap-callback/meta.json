@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-080",
+  "title": "Tap a generic value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "callbacks",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The side effect should not widen the value.",
+    "Use the same parameter for the value, callback argument, and result.",
+    "Make tap generic in T and return T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

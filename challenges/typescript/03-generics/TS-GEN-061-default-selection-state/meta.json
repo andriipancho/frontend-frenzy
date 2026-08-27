@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-061",
+  "title": "Default empty selection",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "default-type-parameters",
+    "generic-types",
+    "never"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The state always permits an empty value.",
+    "Combine the item type with the empty case.",
+    "Use T | null; never disappears from that union when T is omitted."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

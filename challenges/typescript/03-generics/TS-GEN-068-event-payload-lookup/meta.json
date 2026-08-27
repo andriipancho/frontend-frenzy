@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-068",
+  "title": "Look up event payloads",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-types",
+    "keyof",
+    "indexed-access",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "keyof"
+  ],
+  "hints": [
+    "The result currently includes every event payload.",
+    "The Name parameter already identifies one property.",
+    "Index Events with Name instead of all keys."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

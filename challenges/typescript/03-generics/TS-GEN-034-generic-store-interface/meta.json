@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-034",
+  "title": "Parameterize a state store",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-interfaces",
+    "state-management",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-interfaces"
+  ],
+  "hints": [
+    "The store has one state contract flowing in both directions.",
+    "Use TState for the getter result and setter input.",
+    "Apply the existing parameter to both methods."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

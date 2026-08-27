@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-033",
+  "title": "Parameterize a validator interface",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-interfaces",
+    "type-predicates",
+    "unknown"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "generic-interfaces"
+  ],
+  "hints": [
+    "Plain boolean forgets the validation result at the call site.",
+    "Use a type predicate in the method return.",
+    "State that a successful value is T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

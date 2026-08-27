@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-036",
+  "title": "Constrain a named value type",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-constraints",
+    "generic-types",
+    "object-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "The alias should preserve T but limit which T values are accepted.",
+    "Add an object constraint to the type parameter.",
+    "Require a string name in the extends clause."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

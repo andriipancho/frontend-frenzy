@@ -1,0 +1,26 @@
+{
+  "id": "TS-GEN-094",
+  "title": "Preserve form field assignments",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "production-api",
+    "generic-methods",
+    "keyof",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "type-relationships",
+    "generic-interfaces"
+  ],
+  "hints": [
+    "Valid field names and values are checked independently.",
+    "Capture one field name in the method signature.",
+    "Relate the value to that field through indexed access."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

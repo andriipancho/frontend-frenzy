@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-055",
+  "title": "Parameterize transformer boundaries",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "multiple-type-parameters",
+    "generic-interfaces",
+    "callbacks"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "Transformation changes one type into another.",
+    "Use separate parameters for the input and result.",
+    "Apply Input before the arrow and Output after it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

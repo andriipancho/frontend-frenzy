@@ -1,0 +1,27 @@
+{
+  "id": "TS-GEN-095",
+  "title": "Preserve event emitter payloads",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "production-api",
+    "generic-methods",
+    "callbacks",
+    "keyof",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "type-relationships",
+    "generic-callbacks"
+  ],
+  "hints": [
+    "The event name does not currently narrow either payload position.",
+    "Each method needs to capture its selected event key.",
+    "Use one constrained key parameter per method and derive both payloads from it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-052",
+  "title": "Parameterize either values",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "multiple-type-parameters",
+    "generic-types",
+    "unions"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "The alias has two independent possible members.",
+    "Combine A and B as a union.",
+    "Use both existing type parameters directly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

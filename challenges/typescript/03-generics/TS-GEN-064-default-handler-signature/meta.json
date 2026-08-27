@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-064",
+  "title": "Default handler signature",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "default-type-parameters",
+    "callbacks",
+    "multiple-type-parameters"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "default-type-parameters"
+  ],
+  "hints": [
+    "Both defaults already exist but the call signature ignores them.",
+    "Use each parameter in its matching position.",
+    "The argument is Input and the return type is Output."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

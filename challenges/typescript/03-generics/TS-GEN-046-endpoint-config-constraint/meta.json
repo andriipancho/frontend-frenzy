@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-046",
+  "title": "Preserve endpoint configuration",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-constraints",
+    "configuration",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "The function needs one shared field, not one fixed full object type.",
+    "Constrain a generic parameter to the endpoint shape.",
+    "Return the parameter itself to preserve extra configuration."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-042",
+  "title": "Constrain an object key alias",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-constraints",
+    "keyof",
+    "generic-types"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "keyof can operate on primitives, but this contract intentionally accepts objects only.",
+    "Constrain T to object.",
+    "Keep keyof T as the alias result."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

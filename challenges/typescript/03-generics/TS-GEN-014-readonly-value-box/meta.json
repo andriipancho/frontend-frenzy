@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-014",
+  "title": "Create a readonly generic value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "readonly",
+    "object-types"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "Readonly and generic preservation solve different parts of the contract.",
+    "Capture the input type with a parameter.",
+    "Use that parameter on a readonly value property."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

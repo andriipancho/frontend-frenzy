@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-054",
+  "title": "Parameterize three tuple positions",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "multiple-type-parameters",
+    "tuples",
+    "generic-types"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "Each position has a separate type contract.",
+    "Apply A, B, and C in tuple order.",
+    "Replace the three unknown members independently."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

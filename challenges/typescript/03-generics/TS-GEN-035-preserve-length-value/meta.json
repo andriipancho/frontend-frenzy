@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-035",
+  "title": "Preserve a length-bearing value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-constraints",
+    "type-preservation",
+    "intersections"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "The function needs a minimum shape and the caller's full shape.",
+    "Constrain a generic parameter to an object with length.",
+    "Return the preserved parameter intersected with the size property."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

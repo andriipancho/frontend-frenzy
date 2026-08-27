@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-066",
+  "title": "Pluck related property values",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "keyof",
+    "indexed-access",
+    "arrays"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "keyof"
+  ],
+  "hints": [
+    "The selected key determines every result element.",
+    "Introduce parameters for the item type and selected key.",
+    "Use K extends keyof T and return T[K][]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

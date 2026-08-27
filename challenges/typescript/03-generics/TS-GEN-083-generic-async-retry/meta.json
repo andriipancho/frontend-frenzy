@@ -1,0 +1,26 @@
+{
+  "id": "TS-GEN-083",
+  "title": "Preserve retry result types",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "callbacks",
+    "promises",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-callbacks",
+    "promises"
+  ],
+  "hints": [
+    "Retrying should not change the operation's result type.",
+    "Infer a parameter from the callback's Promise.",
+    "Accept () => Promise<T> and return Promise<T>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

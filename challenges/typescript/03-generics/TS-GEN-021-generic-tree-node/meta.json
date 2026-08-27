@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-021",
+  "title": "Parameterize a tree node",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-types",
+    "recursive-types",
+    "arrays"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "A tree node and its descendants store the same value contract.",
+    "Use T for the current value and recursive node type.",
+    "Children should be an array of TreeNode<T>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

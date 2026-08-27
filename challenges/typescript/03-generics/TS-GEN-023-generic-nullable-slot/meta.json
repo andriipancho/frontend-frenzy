@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-023",
+  "title": "Parameterize a nullable slot",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-types",
+    "null",
+    "object-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The slot has one configurable present type and one fixed empty type.",
+    "Combine T with null in the value property.",
+    "Do not replace the whole object with a union."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

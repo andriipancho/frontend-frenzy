@@ -1,0 +1,27 @@
+{
+  "id": "TS-GEN-099",
+  "title": "Preserve repository query values",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "production-api",
+    "generic-functions",
+    "keyof",
+    "indexed-access",
+    "arrays"
+  ],
+  "estimatedMinutes": 11,
+  "prerequisites": [
+    "type-relationships",
+    "generic-functions"
+  ],
+  "hints": [
+    "The repository currently permits values from unrelated entity fields.",
+    "Represent the chosen field with another parameter.",
+    "Constrain it by keyof T and type the query value through that key."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

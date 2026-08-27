@@ -1,0 +1,27 @@
+{
+  "id": "TS-GEN-100",
+  "title": "Design a typed service registry",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "boss",
+  "topics": [
+    "production-api",
+    "generic-methods",
+    "keyof",
+    "indexed-access",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "type-relationships",
+    "generic-interfaces"
+  ],
+  "hints": [
+    "The registry treats all service values as interchangeable.",
+    "Each method should capture the requested service key.",
+    "Index Services with the captured key in both return and parameter positions."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

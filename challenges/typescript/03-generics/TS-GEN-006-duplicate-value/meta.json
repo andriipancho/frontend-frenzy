@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-006",
+  "title": "Duplicate a typed value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-functions",
+    "tuples",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "Both tuple members originate from the same input.",
+    "Represent the input type with one generic parameter.",
+    "Use the parameter in the input and both tuple positions."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

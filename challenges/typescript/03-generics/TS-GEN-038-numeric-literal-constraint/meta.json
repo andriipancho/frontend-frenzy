@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-038",
+  "title": "Preserve a numeric literal",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-constraints",
+    "literal-types",
+    "number"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "A plain number parameter widens numeric literals.",
+    "Constrain a generic parameter to number.",
+    "Use the same parameter for input and output."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-026",
+  "title": "Parameterize load state data",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-types",
+    "discriminated-unions",
+    "state-modeling"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "Only the success state depends on the loaded model.",
+    "Place T on the success data property.",
+    "Leave idle, loading, and failure members unchanged."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

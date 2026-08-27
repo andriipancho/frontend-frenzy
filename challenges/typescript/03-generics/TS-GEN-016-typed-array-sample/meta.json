@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-016",
+  "title": "Preserve an array sample type",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "arrays",
+    "undefined"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The selected item originates from the input array.",
+    "Introduce a generic element parameter.",
+    "Use a readonly array input and return the element parameter with undefined."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

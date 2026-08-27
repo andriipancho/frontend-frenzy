@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-013",
+  "title": "Preserve first-or-fallback elements",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "readonly-arrays",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The result comes from either the array or its fallback, but both share a contract.",
+    "Use one generic element parameter across all positions.",
+    "Type the array as readonly elements and the fallback/result as the same parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

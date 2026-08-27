@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-070",
+  "title": "Preserve a specific sort key",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-types",
+    "keyof",
+    "multiple-type-parameters"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "keyof"
+  ],
+  "hints": [
+    "The descriptor has a key parameter that it does not use.",
+    "Do not widen the key back to keyof T.",
+    "Set the property type to K."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

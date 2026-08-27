@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-024",
+  "title": "Parameterize an event envelope",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-types",
+    "event-modeling",
+    "object-types"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "Envelope metadata is stable while payload varies.",
+    "Apply T to the payload property.",
+    "Leave the topic contract unchanged."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

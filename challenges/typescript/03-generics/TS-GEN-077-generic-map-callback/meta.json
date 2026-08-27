@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-077",
+  "title": "Map with a generic callback",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "callbacks",
+    "arrays",
+    "multiple-type-parameters"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "The source elements and mapped elements can differ.",
+    "Use separate generic parameters for input and output.",
+    "Accept (value: T) => U and return U[]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

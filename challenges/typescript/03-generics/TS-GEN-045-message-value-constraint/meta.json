@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-045",
+  "title": "Preserve a message-bearing value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-constraints",
+    "error-handling",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "The minimum requirement is smaller than the caller's actual error model.",
+    "Constrain T to a string-message object.",
+    "Use T for both input and result."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

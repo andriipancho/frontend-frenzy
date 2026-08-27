@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-039",
+  "title": "Merge constrained objects",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-constraints",
+    "multiple-type-parameters",
+    "intersections"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "Each input has its own shape but both must be objects.",
+    "Use two generic parameters constrained to object.",
+    "Return their intersection from the spread expression."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

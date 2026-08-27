@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-090",
+  "title": "Create a generic registry",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-functions",
+    "factories",
+    "collections"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The factory has no initial value from which to infer a type.",
+    "Let the caller provide a generic type argument.",
+    "Store T values and expose get as T | undefined."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

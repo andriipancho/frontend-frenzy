@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-041",
+  "title": "Preserve a readonly tuple",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-constraints",
+    "readonly-tuples",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "A readonly unknown array constraint admits tuples but a broad signature loses them.",
+    "Capture the complete array type as a constrained parameter.",
+    "Return the same constrained parameter rather than its constraint."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

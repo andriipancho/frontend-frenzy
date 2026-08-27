@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-028",
+  "title": "Parameterize a repository interface",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-interfaces",
+    "repository-pattern",
+    "arrays"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-interfaces"
+  ],
+  "hints": [
+    "The repository storage model varies while identifiers remain stable.",
+    "Use T in both read method results.",
+    "Lookup may be missing; list returns an array of T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

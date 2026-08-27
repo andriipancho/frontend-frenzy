@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-088",
+  "title": "Create a tagged wrapper",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "factories",
+    "literal-types",
+    "multiple-type-parameters"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "The value and tag each need their own inferred type.",
+    "Constrain the tag parameter to string so literals are retained.",
+    "Return { value: T; tag: Tag }."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

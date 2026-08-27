@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-092",
+  "title": "Clone a generic object",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "factories",
+    "constraints",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "The object annotation erases the concrete shape.",
+    "Capture the object with a constrained generic.",
+    "Accept T extends object and return T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

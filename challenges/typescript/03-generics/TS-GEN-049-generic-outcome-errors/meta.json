@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-049",
+  "title": "Parameterize outcome data and errors",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "multiple-type-parameters",
+    "discriminated-unions",
+    "error-modeling"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "Success and failure payloads vary independently.",
+    "Use one parameter for data and another for error.",
+    "Place each parameter only in its corresponding union member."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

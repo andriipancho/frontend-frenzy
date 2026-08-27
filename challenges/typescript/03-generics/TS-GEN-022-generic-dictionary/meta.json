@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-022",
+  "title": "Parameterize dictionary values",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-types",
+    "index-signatures",
+    "object-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The keys are open-ended while the value contract is configurable.",
+    "Use T as the index signature value.",
+    "Replace unknown after the string index signature."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

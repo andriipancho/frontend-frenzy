@@ -1,0 +1,23 @@
+{
+  "id": "TS-GEN-018",
+  "title": "Parameterize a homogeneous pair",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-types",
+    "tuples"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "Both positions share one element contract.",
+    "Apply T to each tuple position.",
+    "Replace both unknown members with the existing parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

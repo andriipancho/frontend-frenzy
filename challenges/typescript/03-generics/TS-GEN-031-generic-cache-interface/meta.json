@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-031",
+  "title": "Parameterize a cache interface",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-interfaces",
+    "cache-modeling",
+    "undefined"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-interfaces"
+  ],
+  "hints": [
+    "The key contract is fixed while cached values vary.",
+    "Use T for set values and get results.",
+    "Union undefined only into the get return."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

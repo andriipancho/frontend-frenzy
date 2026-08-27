@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-065",
+  "title": "Relate update keys and values",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "keyof",
+    "indexed-access",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "keyof"
+  ],
+  "hints": [
+    "The key and value are each valid separately but are not connected.",
+    "Represent the selected key with its own generic parameter.",
+    "Constrain K with keyof T and type the value as T[K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

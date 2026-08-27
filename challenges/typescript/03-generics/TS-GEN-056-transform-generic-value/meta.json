@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-056",
+  "title": "Transform between generic values",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "multiple-type-parameters",
+    "generic-functions",
+    "callbacks"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "The source and transformed result are not necessarily the same type.",
+    "Use one parameter for input and another for output.",
+    "Type the callback from Input to Output and return Output."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

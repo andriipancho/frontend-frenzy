@@ -1,0 +1,25 @@
+{
+  "id": "TS-GEN-069",
+  "title": "Model a related field",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-types",
+    "keyof",
+    "indexed-access",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "indexed-access"
+  ],
+  "hints": [
+    "The value currently includes types from unrelated properties.",
+    "K identifies the one relevant property.",
+    "Use T[K] for the value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "TS-GEN-076",
+  "title": "Type a related key-value callback",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-types",
+    "callbacks",
+    "keyof",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "generic-callbacks",
+    "indexed-access"
+  ],
+  "hints": [
+    "The second argument is wider than the fixed key requires.",
+    "Index the object with the key parameter.",
+    "Keep K for the first argument and use T[K] for the second."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

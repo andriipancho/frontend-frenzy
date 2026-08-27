@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-032",
+  "title": "Parameterize a message interface",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-interfaces",
+    "message-modeling",
+    "object-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-interfaces"
+  ],
+  "hints": [
+    "Message identity is fixed while its payload model varies.",
+    "Apply T to the payload property.",
+    "Leave id as string."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

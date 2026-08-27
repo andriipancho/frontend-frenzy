@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-062",
+  "title": "Default dictionary values",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "default-type-parameters",
+    "index-signatures",
+    "generic-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The index signature currently discards the parameter.",
+    "Keep the key type unchanged.",
+    "Use T as the index signature value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

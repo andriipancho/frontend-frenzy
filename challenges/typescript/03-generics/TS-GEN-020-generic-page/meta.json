@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-020",
+  "title": "Parameterize paginated items",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-types",
+    "arrays",
+    "api-modeling"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The page's metadata is fixed, but its item model varies.",
+    "Use the alias parameter as the array element.",
+    "Replace unknown[] with T[]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

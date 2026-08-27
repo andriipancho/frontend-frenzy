@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-063",
+  "title": "Default paginated items",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "default-type-parameters",
+    "arrays",
+    "generic-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The default is only for callers that omit a type argument.",
+    "The array element should retain T.",
+    "Change the items element type from unknown to T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

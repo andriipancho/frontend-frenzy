@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-053",
+  "title": "Attach typed metadata",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "multiple-type-parameters",
+    "intersections",
+    "generic-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "The output must satisfy two unrelated object contracts simultaneously.",
+    "Use one parameter for data and one for metadata.",
+    "Intersect both parameters in the alias."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

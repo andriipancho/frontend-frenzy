@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-027",
+  "title": "Parameterize a container interface",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-interfaces",
+    "methods",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-interfaces"
+  ],
+  "hints": [
+    "The container reads and writes one shared value contract.",
+    "Use T as the get result and set parameter.",
+    "Apply the existing interface parameter to both method signatures."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

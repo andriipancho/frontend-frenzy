@@ -1,0 +1,23 @@
+{
+  "id": "TS-GEN-059",
+  "title": "Default container value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "default-type-parameters",
+    "generic-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The fallback is already declared.",
+    "The property should not remain unknown.",
+    "Use T as the value property type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

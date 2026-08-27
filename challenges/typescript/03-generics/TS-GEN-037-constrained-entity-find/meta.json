@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-037",
+  "title": "Preserve entities in lookup",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-constraints",
+    "arrays",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "The lookup needs id but should not collapse entities to that minimum shape.",
+    "Constrain a generic entity parameter to a string-id object.",
+    "Use the parameter for the array element and return type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

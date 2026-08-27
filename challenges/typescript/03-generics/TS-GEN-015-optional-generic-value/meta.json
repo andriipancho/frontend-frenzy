@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-015",
+  "title": "Preserve an optional generic value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "undefined",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The result is either the exact input type or missing.",
+    "Capture the input through a generic parameter.",
+    "Return the parameter unioned with undefined."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

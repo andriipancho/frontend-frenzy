@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-012",
+  "title": "Preserve a fallback type",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "undefined",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The fallback replaces only a missing value and should have the same contract.",
+    "Use one generic parameter for both value positions.",
+    "Return that parameter after the undefined check."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

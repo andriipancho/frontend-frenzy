@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-047",
+  "title": "Create a heterogeneous pair",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "multiple-type-parameters",
+    "generic-functions",
+    "tuples"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "The two inputs do not need to share one type.",
+    "Use one generic parameter per tuple position.",
+    "Return a tuple ordered as the two independent parameters."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

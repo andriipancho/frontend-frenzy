@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-008",
+  "title": "Preserve a resolved value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "generic-functions",
+    "promise",
+    "type-inference"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "Promise should carry the same type as the input.",
+    "Introduce a generic parameter for the value.",
+    "Use it in both the parameter and Promise result."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

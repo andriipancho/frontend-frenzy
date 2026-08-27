@@ -1,0 +1,26 @@
+{
+  "id": "TS-GEN-073",
+  "title": "Relate columns and renderers",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-types",
+    "callbacks",
+    "keyof",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "generic-callbacks",
+    "indexed-access"
+  ],
+  "hints": [
+    "The renderer currently sees every property value type.",
+    "The column key should control the callback input.",
+    "Use T[K] as the render argument."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

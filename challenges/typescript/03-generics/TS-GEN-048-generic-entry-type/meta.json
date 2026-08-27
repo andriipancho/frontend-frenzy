@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-048",
+  "title": "Parameterize entry keys and values",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "easy",
+  "topics": [
+    "multiple-type-parameters",
+    "generic-types",
+    "tuples"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "Each tuple position has a separate contract.",
+    "Apply K to the first position and V to the second.",
+    "Do not collapse both positions into a union."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

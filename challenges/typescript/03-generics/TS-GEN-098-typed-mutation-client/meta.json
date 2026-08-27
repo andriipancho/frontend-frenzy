@@ -1,0 +1,27 @@
+{
+  "id": "TS-GEN-098",
+  "title": "Preserve mutation input and output",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "boss",
+  "topics": [
+    "production-api",
+    "generic-methods",
+    "constraints",
+    "keyof",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 14,
+  "prerequisites": [
+    "type-relationships",
+    "generic-interfaces"
+  ],
+  "hints": [
+    "The operation name must select two related types, not broad unions.",
+    "Capture one mutation key on execute.",
+    "Use the selected entry's input for the argument and output for the Promise."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

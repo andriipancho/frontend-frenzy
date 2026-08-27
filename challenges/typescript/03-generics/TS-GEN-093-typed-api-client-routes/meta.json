@@ -1,0 +1,26 @@
+{
+  "id": "TS-GEN-093",
+  "title": "Preserve API route responses",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "production-api",
+    "generic-methods",
+    "keyof",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "type-relationships",
+    "generic-interfaces"
+  ],
+  "hints": [
+    "The method returns every route response because its key is too broad.",
+    "A generic method can capture one endpoint per call.",
+    "Introduce a key constrained by Routes and index the response with that key."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "TS-GEN-072",
+  "title": "Relate event handlers to payloads",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-types",
+    "callbacks",
+    "keyof",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "generic-callbacks",
+    "indexed-access"
+  ],
+  "hints": [
+    "The callback currently accepts payloads from unrelated events.",
+    "Name identifies the callback's event.",
+    "Index Events with Name for the callback argument."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-040",
+  "title": "Preserve a created value",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-constraints",
+    "date",
+    "type-preservation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "The function needs one property but should retain the whole input.",
+    "Constrain T to a Date-bearing object.",
+    "Accept and return T unchanged."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

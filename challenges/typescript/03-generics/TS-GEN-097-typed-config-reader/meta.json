@@ -1,0 +1,26 @@
+{
+  "id": "TS-GEN-097",
+  "title": "Preserve configuration lookups",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "production-api",
+    "generic-methods",
+    "keyof",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "type-relationships",
+    "generic-interfaces"
+  ],
+  "hints": [
+    "The return type is based on every key instead of the chosen key.",
+    "Make get generic over one configuration key.",
+    "Return the value indexed by that key parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

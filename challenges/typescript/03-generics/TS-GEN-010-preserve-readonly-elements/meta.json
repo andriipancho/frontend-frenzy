@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-010",
+  "title": "Preserve readonly array elements",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "readonly-arrays",
+    "type-inference"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The broad unknown element discards the input union.",
+    "Capture the array element with a generic parameter.",
+    "Use readonly arrays on both sides of the function boundary."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

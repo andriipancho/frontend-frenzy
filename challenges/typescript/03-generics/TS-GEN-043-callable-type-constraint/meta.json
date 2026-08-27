@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-043",
+  "title": "Constrain a callable type",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "hard",
+  "topics": [
+    "generic-constraints",
+    "function-types",
+    "generic-types"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "generic-constraints"
+  ],
+  "hints": [
+    "The alias preserves its argument but needs a callable minimum contract.",
+    "Constrain T to a function type.",
+    "Use a rest parameter of never for arguments and unknown for the return constraint."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

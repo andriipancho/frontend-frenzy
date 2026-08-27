@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-058",
+  "title": "Default result error type",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "default-type-parameters",
+    "multiple-type-parameters",
+    "discriminated-unions"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "multiple-type-parameters"
+  ],
+  "hints": [
+    "Each branch loses a different type relationship.",
+    "Use T for success and E for failure.",
+    "The default belongs on E; the properties should reference their matching parameters."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

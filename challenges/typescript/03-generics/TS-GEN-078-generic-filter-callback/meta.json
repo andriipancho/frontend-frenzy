@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-078",
+  "title": "Filter generic values",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "callbacks",
+    "arrays"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "Filtering does not transform the element type.",
+    "Use one parameter for both the array and predicate.",
+    "Accept readonly T[] and return T[]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

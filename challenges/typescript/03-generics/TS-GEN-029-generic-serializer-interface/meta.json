@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-029",
+  "title": "Parameterize a serializer interface",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-interfaces",
+    "serialization",
+    "type-relationships"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-interfaces"
+  ],
+  "hints": [
+    "The same model crosses the string boundary in opposite directions.",
+    "Use T for the encode input and decode result.",
+    "Keep the encoded and decode-input forms as strings."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

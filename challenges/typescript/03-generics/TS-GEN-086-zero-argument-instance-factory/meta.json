@@ -1,0 +1,24 @@
+{
+  "id": "TS-GEN-086",
+  "title": "Instantiate a generic constructor",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "generic-functions",
+    "factories",
+    "constructors"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "generic-functions"
+  ],
+  "hints": [
+    "The constructor contains the instance type to preserve.",
+    "Make the function generic in the constructed value.",
+    "Accept new () => T and return T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

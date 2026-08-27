@@ -1,0 +1,23 @@
+{
+  "id": "TS-GEN-060",
+  "title": "Default event payload",
+  "domain": "typescript",
+  "topic": "generics",
+  "difficulty": "medium",
+  "topics": [
+    "default-type-parameters",
+    "generic-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "generic-types"
+  ],
+  "hints": [
+    "The default controls the omitted type argument.",
+    "Connect payload to the declared parameter.",
+    "The payload property should be T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
