@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-014",
+  "title": "Add runtime state to configuration",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "intersection-types",
+    "readonly",
+    "object-types"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The result must satisfy more than one contract at the same time.",
+    "Use intersection types to represent the relationship without assertions.",
+    "Encode every accepted case directly and let the compiler reject values outside that contract."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

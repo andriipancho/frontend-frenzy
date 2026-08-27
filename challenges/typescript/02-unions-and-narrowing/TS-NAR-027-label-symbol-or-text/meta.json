@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-027",
+  "title": "Label symbol or text",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "typeof-narrowing",
+    "union-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "union-types",
+    "typeof-narrowing"
+  ],
+  "hints": [
+    "Each union member supports different operations, so the shared surface is insufficient.",
+    "Use typeof checks, accounting for JavaScript's runtime categories.",
+    "Split the branches until each branch contains only the member that supports its operation."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

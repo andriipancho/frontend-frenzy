@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-047",
+  "title": "Combine truthiness with unknown",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "truthiness-narrowing",
+    "typeof-narrowing",
+    "unknown"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Truthiness alone does not prove which operations an unknown value supports.",
+    "Combine presence with a primitive runtime check.",
+    "Require a truthy value and string identity before trimming it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-032",
+  "title": "Narrow account access scope",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "in-narrowing",
+    "union-types",
+    "arrays"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Only administrators expose a permissions collection.",
+    "Use a property-presence check before reading variant-specific data.",
+    "Join permissions in one branch and use the team identifier in the other."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-041",
+  "title": "Narrow a custom network failure",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "instanceof-narrowing",
+    "custom-classes",
+    "error-handling"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The specialized error is the only member with a status code.",
+    "Use `instanceof` with the custom subclass.",
+    "Read status in the narrowed branch and return undefined otherwise."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

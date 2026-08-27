@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-035",
+  "title": "Narrow geometric properties",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "in-narrowing",
+    "union-types",
+    "object-types"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Radius exists only on the circular shape.",
+    "Use a property-presence check to establish the circle branch.",
+    "After the radius branch, width and height are safe in the remaining branch."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

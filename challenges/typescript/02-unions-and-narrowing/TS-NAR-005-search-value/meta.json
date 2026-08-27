@@ -1,0 +1,23 @@
+{
+  "id": "TS-NAR-005",
+  "title": "Model searchable primitives",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "easy",
+  "topics": [
+    "union-types",
+    "primitive-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The current type excludes a valid input form required by the contract.",
+    "Use union types to represent the relationship without assertions.",
+    "Encode every accepted case directly and let the compiler reject values outside that contract."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

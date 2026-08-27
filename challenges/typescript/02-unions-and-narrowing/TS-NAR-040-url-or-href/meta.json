@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-040",
+  "title": "Narrow URL or href",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "instanceof-narrowing",
+    "url",
+    "union-types"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "URL is a runtime class; string is already the desired result.",
+    "Use `instanceof URL` before accessing `.href`.",
+    "Return the string member unchanged in the alternate branch."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

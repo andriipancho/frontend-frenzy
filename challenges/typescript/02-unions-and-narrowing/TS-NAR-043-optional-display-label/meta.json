@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-043",
+  "title": "Narrow an optional display label",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "easy",
+  "topics": [
+    "truthiness-narrowing",
+    "null",
+    "undefined"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Nullish values cannot provide string methods.",
+    "A truthiness branch removes null and undefined from this union.",
+    "Normalize the present string and provide a fallback otherwise."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

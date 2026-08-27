@@ -1,0 +1,26 @@
+{
+  "id": "TS-NAR-051",
+  "title": "Guard an identified value",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "custom-type-guards",
+    "type-predicates",
+    "in-narrowing",
+    "unknown"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "union-types",
+    "narrowing"
+  ],
+  "hints": [
+    "Each runtime check should progressively reduce what the value could be.",
+    "Return a predicate for an object containing a string id.",
+    "Check non-null object identity, then key presence, then the id value type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

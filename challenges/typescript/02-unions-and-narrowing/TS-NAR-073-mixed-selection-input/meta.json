@@ -1,0 +1,26 @@
+{
+  "id": "TS-NAR-073",
+  "title": "Narrow mixed selection input",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "typeof-narrowing",
+    "in-narrowing",
+    "truthiness-narrowing",
+    "union-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "discriminated-unions",
+    "narrowing"
+  ],
+  "hints": [
+    "Each member is distinguished by presence, primitive identity, or object structure.",
+    "Handle the nullish case, then the string case, before reading object data.",
+    "After excluding null and string, the remaining member contains id."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

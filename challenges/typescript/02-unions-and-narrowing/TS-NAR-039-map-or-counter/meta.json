@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-039",
+  "title": "Narrow Map or counter",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "instanceof-narrowing",
+    "collections",
+    "union-types"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The Map branch has a runtime constructor and exposes `size`.",
+    "Use `instanceof Map` to establish the collection branch.",
+    "Read the counter object's count in the remaining branch."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

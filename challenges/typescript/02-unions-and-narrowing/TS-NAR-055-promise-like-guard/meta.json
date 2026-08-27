@@ -1,0 +1,26 @@
+{
+  "id": "TS-NAR-055",
+  "title": "Guard a promise-like value",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "custom-type-guards",
+    "type-predicates",
+    "in-narrowing",
+    "callbacks"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "union-types",
+    "narrowing"
+  ],
+  "hints": [
+    "Promise-like behavior is identified by one callable property.",
+    "Expose a predicate for the minimal thenable shape.",
+    "After object and key checks, use typeof on the `then` property."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

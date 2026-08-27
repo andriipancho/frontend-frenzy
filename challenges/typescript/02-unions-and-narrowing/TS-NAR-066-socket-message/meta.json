@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-066",
+  "title": "Narrow socket messages",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "discriminated-unions",
+    "message-modeling",
+    "switch-narrowing"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "The message type determines which payload property exists.",
+    "Switch on the type literal before reading data.",
+    "Use text, userId, or message only within its corresponding case."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

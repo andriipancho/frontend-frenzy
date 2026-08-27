@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-065",
+  "title": "Narrow counter actions",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "discriminated-unions",
+    "reducers",
+    "switch-narrowing"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "Reset has no amount property, while the other actions do.",
+    "Switch on the action type before reading variant data.",
+    "Add or subtract amount in their branches and return zero for reset."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

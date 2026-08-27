@@ -1,0 +1,23 @@
+{
+  "id": "TS-NAR-013",
+  "title": "Combine named and tagged contracts",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "easy",
+  "topics": [
+    "intersection-types",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The result must satisfy more than one contract at the same time.",
+    "Use intersection types to represent the relationship without assertions.",
+    "Encode every accepted case directly and let the compiler reject values outside that contract."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

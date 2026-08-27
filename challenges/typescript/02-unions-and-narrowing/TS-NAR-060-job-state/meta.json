@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-060",
+  "title": "Model background job states",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "discriminated-unions",
+    "state-modeling",
+    "timestamps"
+  ],
+  "estimatedMinutes": 11,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "The lifecycle has distinct snapshots, not one object with optional fields.",
+    "Create one member for each job status.",
+    "Attach startedAt to running, result and finishedAt to completed, and error plus finishedAt to failed."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

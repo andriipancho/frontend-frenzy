@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-061",
+  "title": "Handle transport commands",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "discriminated-unions",
+    "switch-narrowing",
+    "event-modeling"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "Each command has a literal kind and different payload.",
+    "Switch on the kind before reading payload fields.",
+    "Use endpoint for connect, data for send, and reason for disconnect."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

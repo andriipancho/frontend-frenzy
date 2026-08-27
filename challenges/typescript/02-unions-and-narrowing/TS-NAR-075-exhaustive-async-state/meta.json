@@ -1,0 +1,26 @@
+{
+  "id": "TS-NAR-075",
+  "title": "Make async state rendering exhaustive",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "exhaustive-checking",
+    "discriminated-unions",
+    "never",
+    "state-modeling"
+  ],
+  "estimatedMinutes": 12,
+  "prerequisites": [
+    "discriminated-unions",
+    "narrowing"
+  ],
+  "hints": [
+    "The cancelled state still reaches the exhaustive helper.",
+    "Add the missing status branch and use its reason.",
+    "Once every status returns, the default state narrows to never."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

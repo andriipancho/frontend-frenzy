@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-063",
+  "title": "Model cache lookup results",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "discriminated-unions",
+    "cache-modeling",
+    "impossible-states"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "The result has three valid shapes with different guaranteed fields.",
+    "Split the object by the state literal.",
+    "Give hit a value, miss no payload, and stale both value and ageSeconds."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-070",
+  "title": "Narrow a nested source result",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "nested-unions",
+    "discriminated-unions",
+    "api-modeling"
+  ],
+  "estimatedMinutes": 11,
+  "prerequisites": [
+    "discriminated-unions",
+    "narrowing"
+  ],
+  "hints": [
+    "Narrowing the outer source determines which inner union is available.",
+    "Check `source` first, then its corresponding inner discriminant.",
+    "Network uses ok; cache uses state, so narrow each nested union independently."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

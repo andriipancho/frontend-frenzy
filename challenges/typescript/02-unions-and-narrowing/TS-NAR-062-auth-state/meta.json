@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-062",
+  "title": "Model authentication states",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "discriminated-unions",
+    "state-modeling",
+    "security"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "Authentication snapshots have different guaranteed data.",
+    "Create one member per status value.",
+    "Keep anonymous and authenticating payload-free, attach user to authenticated, and error to rejected."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

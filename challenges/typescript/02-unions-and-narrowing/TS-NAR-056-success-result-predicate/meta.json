@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-056",
+  "title": "Guard a successful result",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "type-predicates",
+    "discriminated-unions",
+    "api-modeling"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "union-types",
+    "narrowing"
+  ],
+  "hints": [
+    "The boolean field already identifies one exact union member.",
+    "Use a type predicate naming the success member.",
+    "Describe the true result as the object with `ok: true` and data."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "TS-NAR-053",
+  "title": "Filter defined values",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "type-predicates",
+    "generic-guards",
+    "null",
+    "undefined"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "union-types",
+    "narrowing"
+  ],
+  "hints": [
+    "The implementation already detects nullish values, but boolean does not refine a generic caller.",
+    "Use a generic type predicate for the successful branch.",
+    "State that a successful value is the original generic member without null or undefined."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

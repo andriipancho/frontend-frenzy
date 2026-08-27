@@ -1,0 +1,26 @@
+{
+  "id": "TS-NAR-054",
+  "title": "Narrow a filtered number list",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "type-predicates",
+    "arrays",
+    "typeof-narrowing",
+    "unknown"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "union-types",
+    "narrowing"
+  ],
+  "hints": [
+    "Array.filter has an overload that recognizes predicate callbacks.",
+    "Return a type predicate instead of plain boolean.",
+    "State that the checked value is a number when typeof succeeds."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

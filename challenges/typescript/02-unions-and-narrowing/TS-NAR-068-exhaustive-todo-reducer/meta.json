@@ -1,0 +1,26 @@
+{
+  "id": "TS-NAR-068",
+  "title": "Make a todo reducer exhaustive",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "exhaustive-checking",
+    "discriminated-unions",
+    "never",
+    "reducers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "discriminated-unions",
+    "narrowing"
+  ],
+  "hints": [
+    "One action still reaches the fallback as a real value.",
+    "Add the missing discriminant case before the default.",
+    "When every action is handled, the default action narrows to never."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

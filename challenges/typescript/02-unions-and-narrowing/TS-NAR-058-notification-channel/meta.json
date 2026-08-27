@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-058",
+  "title": "Model notification channels",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "discriminated-unions",
+    "api-design",
+    "impossible-states"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "One optional object currently permits cross-channel combinations.",
+    "Create three union members keyed by the channel literal.",
+    "Attach address, phone, or deviceToken only to its corresponding member."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

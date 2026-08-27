@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-046",
+  "title": "Narrow optional nested settings",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "truthiness-narrowing",
+    "optional-properties",
+    "nested-objects"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The outer settings always exists, but its theme property may not.",
+    "Check the optional property before reading its nested name.",
+    "Use the narrowed theme in one branch and a default label in the other."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

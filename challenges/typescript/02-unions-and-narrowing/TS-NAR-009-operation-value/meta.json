@@ -1,0 +1,23 @@
+{
+  "id": "TS-NAR-009",
+  "title": "Represent an operation value or error",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "union-types",
+    "error-modeling"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The current type excludes a valid input form required by the contract.",
+    "Use union types to represent the relationship without assertions.",
+    "Encode every accepted case directly and let the compiler reject values outside that contract."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

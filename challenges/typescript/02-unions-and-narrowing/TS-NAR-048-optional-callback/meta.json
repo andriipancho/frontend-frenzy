@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-048",
+  "title": "Narrow an optional callback",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "truthiness-narrowing",
+    "callbacks",
+    "undefined"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The callback union includes a non-callable missing value.",
+    "Check whether the callback is present before invoking it.",
+    "Call it only inside the branch where TypeScript narrows it to the function member."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

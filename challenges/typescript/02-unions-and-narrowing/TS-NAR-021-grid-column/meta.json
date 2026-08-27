@@ -1,0 +1,23 @@
+{
+  "id": "TS-NAR-021",
+  "title": "Constrain grid columns",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "literal-unions",
+    "number"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The API accepts a closed set of exact values rather than the broad primitive.",
+    "Use literal unions to represent the relationship without assertions.",
+    "Encode every accepted case directly and let the compiler reject values outside that contract."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

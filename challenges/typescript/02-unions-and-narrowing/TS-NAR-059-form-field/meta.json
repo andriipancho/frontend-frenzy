@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-059",
+  "title": "Model form field variants",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "discriminated-unions",
+    "form-modeling",
+    "literal-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "A single value union loses the relationship between field type and data.",
+    "Create one object member for each field kind.",
+    "Give text a string value, checkbox a boolean value, and select a string value plus options."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

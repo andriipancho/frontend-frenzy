@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-010",
+  "title": "Type a mixed identifier list",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "union-types",
+    "arrays",
+    "string",
+    "number"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The current type excludes a valid input form required by the contract.",
+    "Use union types to represent the relationship without assertions.",
+    "Encode every accepted case directly and let the compiler reject values outside that contract."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

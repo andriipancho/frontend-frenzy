@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-069",
+  "title": "Make notification formatting exhaustive",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "exhaustive-checking",
+    "discriminated-unions",
+    "never"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "discriminated-unions",
+    "narrowing"
+  ],
+  "hints": [
+    "The push member is not eliminated before the fallback.",
+    "Add a case for the remaining channel literal.",
+    "After all three cases, the default value becomes never."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

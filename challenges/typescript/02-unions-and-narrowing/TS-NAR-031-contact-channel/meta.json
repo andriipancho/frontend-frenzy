@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-031",
+  "title": "Narrow a contact channel",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "in-narrowing",
+    "union-types",
+    "object-types"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Each object variant has one unique property.",
+    "The `in` operator narrows unions by property presence.",
+    "Check for the email key; the remaining branch is the phone contact."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

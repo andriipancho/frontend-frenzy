@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-057",
+  "title": "Model payment states",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "discriminated-unions",
+    "state-modeling",
+    "impossible-states"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "Optional fields allow contradictory payment combinations.",
+    "Create one object member per status literal.",
+    "Give paid a receipt, failed an error, and prohibit both on pending."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

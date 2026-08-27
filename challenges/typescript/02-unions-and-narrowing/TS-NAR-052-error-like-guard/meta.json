@@ -1,0 +1,26 @@
+{
+  "id": "TS-NAR-052",
+  "title": "Guard an error-like value",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "custom-type-guards",
+    "type-predicates",
+    "error-handling",
+    "unknown"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "union-types",
+    "narrowing"
+  ],
+  "hints": [
+    "Some error payloads are plain objects, so class identity is too restrictive.",
+    "Expose an ErrorLike predicate after structural checks.",
+    "Prove non-null object identity, message presence, and a string message value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

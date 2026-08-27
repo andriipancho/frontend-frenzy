@@ -1,0 +1,26 @@
+{
+  "id": "TS-NAR-072",
+  "title": "Normalize an unknown failure boundary",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "unknown",
+    "instanceof-narrowing",
+    "in-narrowing",
+    "typeof-narrowing"
+  ],
+  "estimatedMinutes": 12,
+  "prerequisites": [
+    "discriminated-unions",
+    "narrowing"
+  ],
+  "hints": [
+    "Unknown requires a sequence of runtime proofs before property access.",
+    "Check class identity and primitive identity before structural object checks.",
+    "After Error and string branches, prove a non-null object contains a string message."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

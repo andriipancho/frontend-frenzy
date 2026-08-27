@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-071",
+  "title": "Model a plugin lifecycle",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "intersection-types",
+    "discriminated-unions",
+    "state-modeling"
+  ],
+  "estimatedMinutes": 11,
+  "prerequisites": [
+    "discriminated-unions",
+    "narrowing"
+  ],
+  "hints": [
+    "Identity belongs to every plugin, while lifecycle data varies.",
+    "Intersect the base with a union keyed by enabled.",
+    "The true member needs config; the false member needs a reason."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

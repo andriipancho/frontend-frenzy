@@ -1,0 +1,23 @@
+{
+  "id": "TS-NAR-022",
+  "title": "Constrain log levels",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "easy",
+  "topics": [
+    "literal-unions",
+    "string"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The API accepts a closed set of exact values rather than the broad primitive.",
+    "Use literal unions to represent the relationship without assertions.",
+    "Encode every accepted case directly and let the compiler reject values outside that contract."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

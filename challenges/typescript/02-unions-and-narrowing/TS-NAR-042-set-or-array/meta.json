@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-042",
+  "title": "Narrow Set or array",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "instanceof-narrowing",
+    "collections",
+    "arrays"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Set and Array expose their counts through different properties.",
+    "Use `instanceof Set` for the set branch.",
+    "Use `.size` for the Set and `.length` for the array."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

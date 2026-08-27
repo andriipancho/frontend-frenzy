@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-044",
+  "title": "Narrow an optional session",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "easy",
+  "topics": [
+    "truthiness-narrowing",
+    "object-types",
+    "null"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The object member is usable only when the nullable member is excluded.",
+    "A truthiness check narrows an object-or-null union.",
+    "Read userId inside the present branch and return a fallback outside it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-064",
+  "title": "Model upload progress states",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "discriminated-unions",
+    "state-modeling",
+    "progress"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "Progress, URL, and error do not belong to every state.",
+    "Create a union member for each lifecycle status.",
+    "Attach progress to uploading, URL to completed, error to failed, and no payload to idle."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

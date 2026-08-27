@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-067",
+  "title": "Model interactive component props",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "discriminated-unions",
+    "component-api",
+    "impossible-states"
+  ],
+  "estimatedMinutes": 11,
+  "prerequisites": [
+    "union-types",
+    "literal-types"
+  ],
+  "hints": [
+    "Optional href and onClick allow ambiguous components.",
+    "Create link and button members with a literal discriminator.",
+    "Require the matching behavior and prohibit the opposite member with optional never."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-045",
+  "title": "Narrow an optional item list",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "truthiness-narrowing",
+    "arrays",
+    "undefined"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Only the present array has a length property.",
+    "A presence branch removes undefined from the input.",
+    "Read length when truthy and return zero otherwise."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

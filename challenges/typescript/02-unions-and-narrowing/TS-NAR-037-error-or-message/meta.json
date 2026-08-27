@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-037",
+  "title": "Narrow Error or message",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "easy",
+  "topics": [
+    "instanceof-narrowing",
+    "error-handling",
+    "union-types"
+  ],
+  "estimatedMinutes": 5,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Only one union member is constructed by the Error class.",
+    "`instanceof` connects runtime prototypes to static narrowing.",
+    "Read `.message` for Error instances and return the string otherwise."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

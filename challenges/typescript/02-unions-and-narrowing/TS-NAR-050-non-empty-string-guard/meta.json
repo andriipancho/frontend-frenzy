@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-050",
+  "title": "Guard a non-empty string",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "custom-type-guards",
+    "type-predicates",
+    "truthiness-narrowing"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "union-types",
+    "narrowing"
+  ],
+  "hints": [
+    "The runtime logic validates a string, but the signature currently forgets that fact.",
+    "Describe the successful result with a type predicate.",
+    "State that the input value is a string when the boolean result is true."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

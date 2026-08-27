@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-034",
+  "title": "Narrow an API error property",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "in-narrowing",
+    "api-modeling",
+    "union-types"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Only one variant contains the nested error property.",
+    "Use `in` before accessing the nested error message.",
+    "Return the data in the opposite branch."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

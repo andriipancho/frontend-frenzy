@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-036",
+  "title": "Narrow input event data",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "in-narrowing",
+    "event-modeling",
+    "union-types"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Keyboard data exposes a key; pointer data exposes coordinates.",
+    "Use a property-presence check on the keyboard-only field.",
+    "The alternate branch then contains both numeric coordinates."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

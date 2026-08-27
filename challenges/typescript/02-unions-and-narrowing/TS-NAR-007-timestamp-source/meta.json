@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-007",
+  "title": "Accept date or epoch timestamps",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "easy",
+  "topics": [
+    "union-types",
+    "object-types",
+    "number"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The current type excludes a valid input form required by the contract.",
+    "Use union types to represent the relationship without assertions.",
+    "Encode every accepted case directly and let the compiler reject values outside that contract."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

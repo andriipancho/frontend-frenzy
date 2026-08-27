@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-015",
+  "title": "Combine identity with behavior",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "intersection-types",
+    "function-types",
+    "object-types"
+  ],
+  "estimatedMinutes": 9,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The result must satisfy more than one contract at the same time.",
+    "Use intersection types to represent the relationship without assertions.",
+    "Encode every accepted case directly and let the compiler reject values outside that contract."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

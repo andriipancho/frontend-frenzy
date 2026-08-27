@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-033",
+  "title": "Narrow a cache entry",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "in-narrowing",
+    "union-types",
+    "state-modeling"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "The hit carries a value while the miss carries a reason.",
+    "A property-presence check can distinguish structural variants.",
+    "Read value only after checking for it; otherwise use the miss reason."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

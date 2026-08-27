@@ -1,0 +1,24 @@
+{
+  "id": "TS-NAR-038",
+  "title": "Narrow Date or epoch",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "instanceof-narrowing",
+    "date",
+    "union-types"
+  ],
+  "estimatedMinutes": 6,
+  "prerequisites": [
+    "union-types"
+  ],
+  "hints": [
+    "Only Date values provide the time conversion method.",
+    "Use `instanceof Date` before calling the method.",
+    "Return numeric inputs unchanged in the other branch."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

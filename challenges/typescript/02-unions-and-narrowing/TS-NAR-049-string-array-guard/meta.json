@@ -1,0 +1,26 @@
+{
+  "id": "TS-NAR-049",
+  "title": "Guard a string array",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "medium",
+  "topics": [
+    "custom-type-guards",
+    "type-predicates",
+    "arrays",
+    "unknown"
+  ],
+  "estimatedMinutes": 8,
+  "prerequisites": [
+    "union-types",
+    "narrowing"
+  ],
+  "hints": [
+    "Returning boolean alone does not preserve the validated array type for callers.",
+    "Use a type predicate in the return annotation.",
+    "Combine Array.isArray with an every check for string elements."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

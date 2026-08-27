@@ -1,0 +1,25 @@
+{
+  "id": "TS-NAR-074",
+  "title": "Model request body contracts",
+  "domain": "typescript",
+  "topic": "unions-and-narrowing",
+  "difficulty": "hard",
+  "topics": [
+    "discriminated-unions",
+    "api-design",
+    "impossible-states"
+  ],
+  "estimatedMinutes": 12,
+  "prerequisites": [
+    "discriminated-unions",
+    "narrowing"
+  ],
+  "hints": [
+    "A broad optional request object permits bodies and IDs on the wrong methods.",
+    "Create one union member for each method.",
+    "Prohibit unrelated fields with optional never while requiring the method-specific field."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
