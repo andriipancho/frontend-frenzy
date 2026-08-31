@@ -1,0 +1,26 @@
+{
+  "id": "TS-CND-089",
+  "title": "Model ownership access decisions",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "boss",
+  "topics": [
+    "conditional-types",
+    "production-api",
+    "authorization",
+    "nested-conditionals",
+    "boolean-literals"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy role privilege before resource ownership.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

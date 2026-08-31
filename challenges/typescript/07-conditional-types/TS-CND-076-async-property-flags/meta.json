@@ -1,0 +1,25 @@
+{
+  "id": "TS-CND-076",
+  "title": "Map asynchronous property flags",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "medium",
+  "topics": [
+    "conditional-types",
+    "conditional-mappings",
+    "mapped-types",
+    "promises"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy whether each property is promise-like.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

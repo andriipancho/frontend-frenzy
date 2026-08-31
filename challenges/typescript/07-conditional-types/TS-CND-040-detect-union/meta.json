@@ -1,0 +1,25 @@
+{
+  "id": "TS-CND-040",
+  "title": "Detect union inputs",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "hard",
+  "topics": [
+    "conditional-types",
+    "distribution-control",
+    "union-analysis",
+    "generic-defaults"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Compare an individual distributed member with the original complete input.",
+    "Preserve the complete input in a defaulted helper parameter.",
+    "If the whole input does not fit inside one member, the input contains alternatives."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

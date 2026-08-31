@@ -1,0 +1,26 @@
+{
+  "id": "TS-CND-087",
+  "title": "Select event payload contracts",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "boss",
+  "topics": [
+    "conditional-types",
+    "production-api",
+    "event-contracts",
+    "distributive-conditionals",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy each event member's discriminant.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-CND-004",
+  "title": "Detect never safely",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "hard",
+  "topics": [
+    "conditional-types",
+    "never",
+    "distribution-control"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "A naked never input disappears during distribution.",
+    "Wrap the compared type so the check treats it as one value.",
+    "Test the wrapped input against a wrapped never type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

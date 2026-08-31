@@ -1,0 +1,26 @@
+{
+  "id": "TS-CND-099",
+  "title": "Design validation outcomes",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "boss",
+  "topics": [
+    "conditional-types",
+    "production-api",
+    "validation",
+    "result-types",
+    "boolean-literals"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy the validation result flag.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

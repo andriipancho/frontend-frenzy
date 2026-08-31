@@ -1,0 +1,25 @@
+{
+  "id": "TS-CND-020",
+  "title": "Remove broad primitive types",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "hard",
+  "topics": [
+    "conditional-types",
+    "distributive-conditionals",
+    "literal-types",
+    "nested-conditionals"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy literal primitive members rather than their broad primitive.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

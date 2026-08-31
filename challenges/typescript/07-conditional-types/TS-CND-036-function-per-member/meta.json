@@ -1,0 +1,25 @@
+{
+  "id": "TS-CND-036",
+  "title": "Create a function per member",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "medium",
+  "topics": [
+    "conditional-types",
+    "distributive-conditionals",
+    "functions",
+    "union-transformation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy each union member independently.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

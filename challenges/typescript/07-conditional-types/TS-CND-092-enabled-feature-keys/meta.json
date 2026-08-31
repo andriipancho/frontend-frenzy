@@ -1,0 +1,26 @@
+{
+  "id": "TS-CND-092",
+  "title": "Select enabled feature keys",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "boss",
+  "topics": [
+    "conditional-types",
+    "production-api",
+    "feature-flags",
+    "conditional-mappings",
+    "key-selection"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy the literal true state of each feature.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

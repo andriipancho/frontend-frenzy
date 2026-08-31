@@ -1,0 +1,25 @@
+{
+  "id": "TS-CND-065",
+  "title": "Reject empty tuples",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "easy",
+  "topics": [
+    "conditional-types",
+    "conditional-transformation",
+    "tuples",
+    "never"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy the empty tuple shape.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

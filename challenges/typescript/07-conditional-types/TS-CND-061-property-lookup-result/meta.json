@@ -1,0 +1,25 @@
+{
+  "id": "TS-CND-061",
+  "title": "Model a property lookup result",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "medium",
+  "topics": [
+    "conditional-types",
+    "conditional-transformation",
+    "keyof",
+    "result-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy whether the requested key exists.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

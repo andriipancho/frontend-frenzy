@@ -1,0 +1,26 @@
+{
+  "id": "TS-CND-079",
+  "title": "Map validation input types",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "hard",
+  "topics": [
+    "conditional-types",
+    "conditional-mappings",
+    "mapped-types",
+    "validation",
+    "nested-conditionals"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy the validation category of each field.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

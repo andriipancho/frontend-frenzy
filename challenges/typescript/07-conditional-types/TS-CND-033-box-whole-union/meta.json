@@ -1,0 +1,25 @@
+{
+  "id": "TS-CND-033",
+  "title": "Box a union as one value",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "medium",
+  "topics": [
+    "conditional-types",
+    "distribution-control",
+    "object-wrappers",
+    "union-transformation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy the union without member-wise distribution.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

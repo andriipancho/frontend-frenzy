@@ -1,0 +1,26 @@
+{
+  "id": "TS-CND-059",
+  "title": "Require properties by flag",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "medium",
+  "topics": [
+    "conditional-types",
+    "conditional-transformation",
+    "required-properties",
+    "utility-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types",
+    "utility-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy the completeness flag.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

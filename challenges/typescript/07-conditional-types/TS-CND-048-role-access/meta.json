@@ -1,0 +1,25 @@
+{
+  "id": "TS-CND-048",
+  "title": "Derive role access level",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "easy",
+  "topics": [
+    "conditional-types",
+    "nested-conditionals",
+    "authorization",
+    "literal-unions"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy the role hierarchy.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
