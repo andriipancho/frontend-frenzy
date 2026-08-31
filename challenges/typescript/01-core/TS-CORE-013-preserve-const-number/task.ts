@@ -1,1 +1,1 @@
-export const maxRetries: number = 3;
+export const maxRetries: 3 = 3;

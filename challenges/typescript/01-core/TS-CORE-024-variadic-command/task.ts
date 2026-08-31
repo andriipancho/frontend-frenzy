@@ -1,1 +1,1 @@
-export type CommandLine = string[];
+export type CommandLine = [command: string, ...rest: string[]];

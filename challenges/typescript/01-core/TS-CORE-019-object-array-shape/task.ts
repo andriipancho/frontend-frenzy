@@ -4,5 +4,5 @@ export type Metric = {
 };
 
 export const metrics: Metric[] = [
-  { name: "latency", value: "12" },
+  { name: "latency", value: 12 },
 ];

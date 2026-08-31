@@ -1,3 +1,3 @@
-export function healthCheck(): Record<string, unknown> {
+export function healthCheck(): { healthy: boolean, latencyMs: number} {
   return { healthy: true, latencyMs: 12 };
 }

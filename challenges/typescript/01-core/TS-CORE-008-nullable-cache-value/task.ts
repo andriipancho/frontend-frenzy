@@ -1,1 +1,1 @@
-export type CachedName = string;
+export type CachedName = string | null;

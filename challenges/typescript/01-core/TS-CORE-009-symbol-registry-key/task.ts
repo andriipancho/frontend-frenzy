@@ -1,1 +1,1 @@
-export type RegistryKey = string;
+export type RegistryKey = symbol;
