@@ -47,7 +47,7 @@ Run `npm link` once if you prefer the shorter global development command, such a
 | `frenzy stats [--export]` | Show progress or export a public-safe snapshot |
 | `frenzy topics` | List topic-level progress |
 | `frenzy retention` | Select a due retention challenge |
-| `frenzy devices` | List the machines that recorded progress |
+| `frenzy devices` | List the anonymous device shards that recorded progress |
 | `frenzy doctor` | Re-validate every challenge marked completed |
 
 ## TypeScript curriculum
@@ -90,7 +90,7 @@ The normal pass/fail path does not call an LLM, access a network, or inspect unr
 
 ## Progress, retention, and stats
 
-Personal progress is stored in `.frenzy/progress.<device>.json`. It tracks attempts, hints, elapsed time, completion, the active challenge, and retention state.
+Personal progress is stored in `.frenzy/progress.<device-id>.json`. The device ID is random, stable, and stored only in the ignored `.frenzy/device` file, so shared filenames reveal neither the hostname nor the username. Each shard tracks attempts, hints, elapsed time, completion, the active challenge, and retention state.
 
 Each machine writes only its own shard, so shards never conflict, and every read merges them: attempts and time are summed because each shard counts only its own work, the furthest hint reveal wins, and the shard with more reviews holds the current schedule. The active challenge stays local — being midway through one machine's session must not hijack another's.
 

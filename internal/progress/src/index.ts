@@ -1,5 +1,5 @@
+import { randomBytes } from "node:crypto";
 import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
-import { hostname } from "node:os";
 import { dirname, join } from "node:path";
 
 export interface RetentionState {
@@ -47,8 +47,8 @@ function frenzyDirectory(root: string): string {
 }
 
 /**
- * Every machine writes only its own shard, so shards never conflict when they
- * travel through git. The id is stored so that renaming the host does not fork it.
+ * Every device writes only its own shard, so shards never conflict when they
+ * travel through git. The opaque id is stored locally and reveals no host details.
  */
 export function deviceId(root: string): string {
   const path = join(frenzyDirectory(root), "device");
@@ -56,12 +56,7 @@ export function deviceId(root: string): string {
     const stored = readFileSync(path, "utf8").trim();
     if (stored.length > 0) return stored;
   }
-  const generated =
-    hostname()
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "")
-      .slice(0, 32) || "device";
+  const generated = `device-${randomBytes(8).toString("hex")}`;
   mkdirSync(frenzyDirectory(root), { recursive: true });
   writeFileSync(path, `${generated}\n`, "utf8");
   return generated;
@@ -92,7 +87,7 @@ export function readProgress(root: string, device: string = deviceId(root)): Pro
   return parseProgress(path);
 }
 
-/** Every other machine's shard, keyed by device id. */
+/** Every other device's shard, keyed by its opaque id. */
 export function readOtherProgress(root: string, device: string = deviceId(root)): ProgressFile[] {
   const directory = frenzyDirectory(root);
   if (!existsSync(directory)) return [];

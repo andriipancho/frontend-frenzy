@@ -12,6 +12,7 @@ import type { Challenge } from "../challenge-schema/src/discovery.js";
 import { validateChallengeBank } from "../validation/src/bank.js";
 import {
   createProgress,
+  deviceId,
   type ChallengeProgress,
   readProgress,
   startChallenge,
@@ -63,6 +64,17 @@ test("progress is written atomically and can be resumed", () => {
     startChallenge(progress, "TS-GEN-001", new Date("2026-01-01T00:00:00.000Z"));
     writeProgress(directory, progress);
     assert.deepEqual(readProgress(directory), progress);
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+test("device ids are stable and do not expose host details", () => {
+  const directory = mkdtempSync(join(tmpdir(), "frontend-frenzy-device-"));
+  try {
+    const first = deviceId(directory);
+    assert.match(first, /^device-[a-f0-9]{16}$/);
+    assert.equal(deviceId(directory), first);
   } finally {
     rmSync(directory, { recursive: true, force: true });
   }
