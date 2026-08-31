@@ -1,1 +1,1 @@
-export type Command = [name: string, tuple?: boolean];
+export type Command = [name: string];

@@ -1,3 +1,3 @@
-export function parsePort(value: string): number {
-  return Number(value);
+export function parsePort(value: string): string {
+  return value;
 }

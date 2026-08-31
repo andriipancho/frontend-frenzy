@@ -1,1 +1,1 @@
-export const scores: number[] = [82, 91, 76];
+export const scores: string[] = [82, 91, 76];

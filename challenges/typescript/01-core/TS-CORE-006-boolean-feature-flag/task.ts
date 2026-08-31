@@ -1,3 +1,3 @@
-export function isFeatureEnabled(flag: boolean): boolean {
-  return flag;
+export function isFeatureEnabled(flag: boolean): string {
+  return String(flag);
 }

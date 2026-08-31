@@ -1,3 +1,3 @@
-export function userPath(id: string): string {
+export function userPath(id: number): string {
   return `/users/${id}`;
 }

@@ -3,6 +3,6 @@ export type EventPayload = {
   timestamp: number;
 };
 
-export function recordEvent(payload: EventPayload): string {
+export function recordEvent(payload) {
   return `${payload.timestamp}:${payload.name}`;
 }
