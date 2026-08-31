@@ -1,0 +1,24 @@
+{
+  "id": "TS-REC-018",
+  "title": "Keep string tuple members",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "medium",
+  "topics": [
+    "recursive-types",
+    "tuples",
+    "filtering"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for string heads that are retained before recursive filtering.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

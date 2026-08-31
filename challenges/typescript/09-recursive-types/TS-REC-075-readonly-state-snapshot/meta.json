@@ -1,0 +1,27 @@
+{
+  "id": "TS-REC-075",
+  "title": "Design readonly state snapshots",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "boss",
+  "topics": [
+    "recursive-types",
+    "infer",
+    "state-modeling",
+    "readonly-properties",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types",
+    "infer"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for promise resolution and function boundaries before readonly recursion.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

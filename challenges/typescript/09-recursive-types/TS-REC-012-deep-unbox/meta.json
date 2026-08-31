@@ -1,0 +1,26 @@
+{
+  "id": "TS-REC-012",
+  "title": "Unbox nested value wrappers",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "hard",
+  "topics": [
+    "recursive-types",
+    "infer",
+    "mapped-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "mapped-types",
+    "infer"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for value wrappers before recursive tuple and object traversal.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

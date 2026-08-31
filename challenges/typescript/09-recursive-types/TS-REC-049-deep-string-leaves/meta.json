@@ -1,0 +1,25 @@
+{
+  "id": "TS-REC-049",
+  "title": "Convert nested leaves to strings",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "hard",
+  "topics": [
+    "recursive-types",
+    "mapped-types",
+    "leaf-transformation"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "mapped-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for leaf replacement beneath recursive tuples and objects.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

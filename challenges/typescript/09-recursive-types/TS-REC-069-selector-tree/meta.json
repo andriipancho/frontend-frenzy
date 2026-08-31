@@ -1,0 +1,25 @@
+{
+  "id": "TS-REC-069",
+  "title": "Build nested state selectors",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "boss",
+  "topics": [
+    "recursive-types",
+    "state-modeling",
+    "functions",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for whole-value selector leaves beneath state tuples and objects.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

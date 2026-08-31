@@ -1,0 +1,26 @@
+{
+  "id": "TS-REC-060",
+  "title": "Measure array nesting depth",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "hard",
+  "topics": [
+    "recursive-types",
+    "infer",
+    "arrays",
+    "accumulators"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "infer"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for one array layer and a depth accumulator.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

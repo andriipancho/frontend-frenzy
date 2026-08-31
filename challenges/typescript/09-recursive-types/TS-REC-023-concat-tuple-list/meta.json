@@ -1,0 +1,24 @@
+{
+  "id": "TS-REC-023",
+  "title": "Concatenate a tuple list",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "hard",
+  "topics": [
+    "recursive-types",
+    "tuples",
+    "variadic-tuples"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for one tuple segment followed by recursively concatenated segments.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

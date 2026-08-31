@@ -1,0 +1,25 @@
+{
+  "id": "TS-REC-001",
+  "title": "Make nested values readonly",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "medium",
+  "topics": [
+    "recursive-types",
+    "conditional-types",
+    "mapped-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types",
+    "mapped-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for primitive and function boundaries before recursive object mapping.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

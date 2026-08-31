@@ -1,0 +1,25 @@
+{
+  "id": "TS-REC-070",
+  "title": "Build nested change sets",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "boss",
+  "topics": [
+    "recursive-types",
+    "state-modeling",
+    "object-wrappers",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for whole-value change leaves beneath recursive domain structure.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

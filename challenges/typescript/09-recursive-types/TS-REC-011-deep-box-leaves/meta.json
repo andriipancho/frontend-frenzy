@@ -1,0 +1,25 @@
+{
+  "id": "TS-REC-011",
+  "title": "Box every nested leaf value",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "hard",
+  "topics": [
+    "recursive-types",
+    "conditional-types",
+    "mapped-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "mapped-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for primitive leaves beneath recursive tuple and object shapes.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

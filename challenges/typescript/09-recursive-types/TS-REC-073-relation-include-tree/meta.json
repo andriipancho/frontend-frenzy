@@ -1,0 +1,26 @@
+{
+  "id": "TS-REC-073",
+  "title": "Build recursive relation includes",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "boss",
+  "topics": [
+    "recursive-types",
+    "repository-pattern",
+    "mapped-types",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types",
+    "mapped-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for boolean selection at every relation with optional deeper traversal.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

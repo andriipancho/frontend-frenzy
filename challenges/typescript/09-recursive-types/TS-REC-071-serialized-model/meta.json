@@ -1,0 +1,26 @@
+{
+  "id": "TS-REC-071",
+  "title": "Derive serialized model shapes",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "boss",
+  "topics": [
+    "recursive-types",
+    "serialization",
+    "mapped-types",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types",
+    "mapped-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for date and function boundaries before recursive serialization.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
