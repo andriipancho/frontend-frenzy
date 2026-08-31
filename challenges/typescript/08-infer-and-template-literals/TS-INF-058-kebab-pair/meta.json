@@ -1,0 +1,24 @@
+{
+  "id": "TS-INF-058",
+  "title": "Join lowercase kebab pairs",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "medium",
+  "topics": [
+    "template-literal-types",
+    "intrinsic-string-types",
+    "string-construction"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify the fixed and generic string segments that represent two lowercased segments around a hyphen.",
+    "Use a template literal type to compose the output from those segments.",
+    "Apply intrinsic string transforms or mapped key remapping only where the contract requires them."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

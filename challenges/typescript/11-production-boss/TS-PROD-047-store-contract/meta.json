@@ -1,0 +1,27 @@
+{
+  "id": "TS-PROD-047",
+  "title": "Derive a state store contract",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "state-management",
+    "key-remapping",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 20,
+  "prerequisites": [
+    "generics",
+    "mapped-types",
+    "conditional-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Separate the contract into its stable architectural layers before composing them.",
+    "Map each layer from the same selected domain key so inputs and outputs remain correlated.",
+    "Use nested mapping and conditional or template inference only at the boundary that needs it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

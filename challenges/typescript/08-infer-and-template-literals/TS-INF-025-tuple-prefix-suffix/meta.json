@@ -1,0 +1,25 @@
+{
+  "id": "TS-INF-025",
+  "title": "Infer tuple prefix and suffix",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "hard",
+  "topics": [
+    "infer",
+    "tuples",
+    "variadic-tuples",
+    "object-wrappers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes both tuple ends and the segment between them.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

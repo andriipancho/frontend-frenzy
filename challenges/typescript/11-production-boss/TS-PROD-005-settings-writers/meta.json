@@ -1,0 +1,26 @@
+{
+  "id": "TS-PROD-005",
+  "title": "Correlate settings with their writers",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "configuration",
+    "key-remapping",
+    "template-literal-types"
+  ],
+  "estimatedMinutes": 14,
+  "prerequisites": [
+    "mapped-types",
+    "conditional-types",
+    "indexed-access"
+  ],
+  "hints": [
+    "Identify which source member owns each output member.",
+    "Use mapping, remapping, or union extraction to keep correlated data together.",
+    "Index through the currently selected key or discriminant instead of the full union."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

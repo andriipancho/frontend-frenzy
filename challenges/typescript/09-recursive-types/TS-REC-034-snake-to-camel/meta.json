@@ -1,0 +1,25 @@
+{
+  "id": "TS-REC-034",
+  "title": "Convert snake case recursively",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "hard",
+  "topics": [
+    "recursive-types",
+    "template-literal-types",
+    "intrinsic-string-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for one underscore-delimited segment and recursively converted remainder.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

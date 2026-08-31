@@ -1,0 +1,28 @@
+{
+  "id": "TS-MIX-024",
+  "title": "Map mixed null flags",
+  "domain": "typescript",
+  "topic": "advanced-mixed",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "conditional-types",
+    "nullability"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "generics",
+    "mapped-types",
+    "conditional-types",
+    "infer",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Separate the input into the structural cases that produce different outputs.",
+    "Combine conditional inference with mapping, remapping, indexed access, or recursion as required.",
+    "Preserve the correlation between each source member, key, payload, and resulting branch."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

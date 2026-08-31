@@ -1,0 +1,25 @@
+{
+  "id": "TS-CND-009",
+  "title": "Label boolean literals",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "easy",
+  "topics": [
+    "conditional-types",
+    "conditional-selection",
+    "boolean-literals",
+    "distribution"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy the true boolean literal.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

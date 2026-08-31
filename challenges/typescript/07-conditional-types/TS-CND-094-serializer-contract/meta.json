@@ -1,0 +1,26 @@
+{
+  "id": "TS-CND-094",
+  "title": "Select serializer contracts",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "boss",
+  "topics": [
+    "conditional-types",
+    "production-api",
+    "serialization",
+    "functions",
+    "nested-conditionals"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify which inputs satisfy the value's supported wire representation.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

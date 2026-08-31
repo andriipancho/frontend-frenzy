@@ -1,0 +1,26 @@
+{
+  "id": "TS-INF-068",
+  "title": "Infer asynchronous method results",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "boss",
+  "topics": [
+    "infer",
+    "mapped-types",
+    "promises",
+    "methods"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types",
+    "mapped-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes the resolved return position of each method.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

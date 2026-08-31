@@ -1,0 +1,26 @@
+{
+  "id": "TS-PROD-039",
+  "title": "Derive instances from service constructors",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "dependency-injection",
+    "constructors",
+    "mapped-types"
+  ],
+  "estimatedMinutes": 16,
+  "prerequisites": [
+    "infer",
+    "tuples",
+    "mapped-types"
+  ],
+  "hints": [
+    "Identify the callable, constructable, or tuple position that owns each output value.",
+    "Infer parameter and result components before rebuilding the contract.",
+    "Map over keys or tuple positions without widening the currently selected member."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "TS-PROD-016",
+  "title": "Extract successful response data",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "api-design",
+    "distributive-conditionals",
+    "infer"
+  ],
+  "estimatedMinutes": 14,
+  "prerequisites": [
+    "discriminated-unions",
+    "conditional-types",
+    "mapped-types"
+  ],
+  "hints": [
+    "Start from the discriminant that uniquely identifies each branch.",
+    "Distribution, extraction, or key remapping can operate on one branch at a time.",
+    "Carry the selected branch through the entire output instead of indexing the original union broadly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

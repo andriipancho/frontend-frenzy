@@ -1,0 +1,24 @@
+{
+  "id": "TS-INF-001",
+  "title": "Infer array element types",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "easy",
+  "topics": [
+    "infer",
+    "arrays",
+    "conditional-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes an array's element position.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

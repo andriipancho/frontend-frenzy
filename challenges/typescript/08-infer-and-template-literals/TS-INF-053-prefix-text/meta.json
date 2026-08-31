@@ -1,0 +1,23 @@
+{
+  "id": "TS-INF-053",
+  "title": "Build prefixed string types",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "easy",
+  "topics": [
+    "template-literal-types",
+    "string-construction"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify the required order of the two input strings.",
+    "A template literal type can interpolate both generic parameters.",
+    "Place the prefix interpolation before the text interpolation."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

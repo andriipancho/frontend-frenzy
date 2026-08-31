@@ -1,0 +1,25 @@
+{
+  "id": "TS-INF-069",
+  "title": "Parse command descriptors",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "hard",
+  "topics": [
+    "template-literal-types",
+    "infer",
+    "command-contracts",
+    "object-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes domain and action portions around the first dot.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-REC-014",
+  "title": "Reverse tuples recursively",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "medium",
+  "topics": [
+    "recursive-types",
+    "tuples",
+    "variadic-tuples"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for head extraction followed by recursive tail reversal.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

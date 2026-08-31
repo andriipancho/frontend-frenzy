@@ -1,0 +1,29 @@
+{
+  "id": "TS-CND-100",
+  "title": "Design endpoint client signatures",
+  "domain": "typescript",
+  "topic": "conditional-types",
+  "difficulty": "boss",
+  "topics": [
+    "conditional-types",
+    "production-api",
+    "api-client",
+    "conditional-mappings",
+    "promises"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types",
+    "mapped-types",
+    "indexed-access",
+    "promises"
+  ],
+  "hints": [
+    "Identify which inputs satisfy each endpoint's authentication flag.",
+    "Express that relationship in the condition before choosing branch results.",
+    "Check the fallback and union cases after the individual branches are correct."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

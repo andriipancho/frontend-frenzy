@@ -1,0 +1,26 @@
+{
+  "id": "TS-REC-062",
+  "title": "Unnest values to a fixed depth",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "hard",
+  "topics": [
+    "recursive-types",
+    "infer",
+    "accumulators",
+    "object-wrappers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "infer"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for a depth accumulator and inferred value wrappers.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

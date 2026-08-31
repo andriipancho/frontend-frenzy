@@ -1,0 +1,25 @@
+{
+  "id": "TS-REC-032",
+  "title": "Replace every string occurrence",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "hard",
+  "topics": [
+    "recursive-types",
+    "template-literal-types",
+    "string-transformation"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for the first match and recursively remaining text.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

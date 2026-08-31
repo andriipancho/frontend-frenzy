@@ -1,0 +1,24 @@
+{
+  "id": "TS-INF-008",
+  "title": "Infer boxed values",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "easy",
+  "topics": [
+    "infer",
+    "object-types",
+    "structural-typing"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes the value property of an object shape.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

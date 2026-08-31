@@ -1,0 +1,26 @@
+{
+  "id": "TS-REC-068",
+  "title": "Extract nested response data",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "boss",
+  "topics": [
+    "recursive-types",
+    "infer",
+    "api-contracts",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types",
+    "infer"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for data envelopes before recursive tuple traversal.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

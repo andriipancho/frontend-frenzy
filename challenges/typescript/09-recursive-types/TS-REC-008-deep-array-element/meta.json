@@ -1,0 +1,25 @@
+{
+  "id": "TS-REC-008",
+  "title": "Flatten nested array elements",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "medium",
+  "topics": [
+    "recursive-types",
+    "infer",
+    "arrays"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types",
+    "infer"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for array element layers until a non-array base case.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

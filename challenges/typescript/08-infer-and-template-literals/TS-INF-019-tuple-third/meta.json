@@ -1,0 +1,24 @@
+{
+  "id": "TS-INF-019",
+  "title": "Infer tuple third elements",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "easy",
+  "topics": [
+    "infer",
+    "tuples",
+    "variadic-tuples"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes the third position of a tuple.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

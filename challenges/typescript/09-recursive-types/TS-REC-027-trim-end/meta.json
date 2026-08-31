@@ -1,0 +1,25 @@
+{
+  "id": "TS-REC-027",
+  "title": "Trim all trailing spaces",
+  "domain": "typescript",
+  "topic": "recursive-types",
+  "difficulty": "medium",
+  "topics": [
+    "recursive-types",
+    "template-literal-types",
+    "string-normalization"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Identify the non-recursive base case for one trailing space per recursion step.",
+    "Use a conditional or mapped type to reduce the input before the recursive reference.",
+    "Ensure every recursive step consumes a layer, tuple member, string segment, or depth unit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

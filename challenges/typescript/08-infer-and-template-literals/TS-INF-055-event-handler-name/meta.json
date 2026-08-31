@@ -1,0 +1,24 @@
+{
+  "id": "TS-INF-055",
+  "title": "Generate event handler names",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "medium",
+  "topics": [
+    "template-literal-types",
+    "intrinsic-string-types",
+    "generated-names"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "The output combines a fixed handler prefix with the event name.",
+    "Use an intrinsic string transformation before interpolation.",
+    "Capitalize the event and place it after on."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
