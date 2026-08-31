@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-035",
+  "title": "Derive priority values",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "const-assertions",
+    "typeof",
+    "keyof",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "const-assertions",
+    "keyof",
+    "indexed-access"
+  ],
+  "hints": [
+    "Preserve the object's numeric literals before indexing it.",
+    "Derive all keys from the queried object type.",
+    "Index by the full key union to collect every value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

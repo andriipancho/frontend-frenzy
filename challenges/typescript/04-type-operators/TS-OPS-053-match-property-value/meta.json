@@ -1,0 +1,26 @@
+{
+  "id": "TS-OPS-053",
+  "title": "Match a property value",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "generic-relationships"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions"
+  ],
+  "hints": [
+    "The expected value depends on the chosen key.",
+    "Capture K as one key of T.",
+    "Type expected as T[K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

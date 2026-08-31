@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-024",
+  "title": "Select a readonly list element",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "indexed-access",
+    "readonly-arrays",
+    "array-elements"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "readonly-arrays",
+    "indexed-access"
+  ],
+  "hints": [
+    "Readonly arrays still support numeric type indexing.",
+    "Select the items property first.",
+    "Index the resulting readonly array with number."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

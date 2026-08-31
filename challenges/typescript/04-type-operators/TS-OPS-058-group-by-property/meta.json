@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-058",
+  "title": "Group by a property",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "maps",
+    "generic-relationships"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions"
+  ],
+  "hints": [
+    "The Map key is the selected field's value type.",
+    "Capture the field as K extends keyof T.",
+    "Use T[K] as the Map key and T[] as its values."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

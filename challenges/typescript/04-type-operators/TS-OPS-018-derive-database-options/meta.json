@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-018",
+  "title": "Derive nested database options",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "typeof",
+    "indexed-access",
+    "nested-properties"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "typeof",
+    "indexed-access"
+  ],
+  "hints": [
+    "Query the type of the complete config value.",
+    "The database section is a property of that type.",
+    "Use one indexed access with the database key."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

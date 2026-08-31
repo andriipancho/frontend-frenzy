@@ -1,0 +1,26 @@
+{
+  "id": "TS-OPS-049",
+  "title": "Validate page routes",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "satisfies",
+    "const-assertions",
+    "template-literals",
+    "routes"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "satisfies",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Use a template literal type for the required path form.",
+    "Avoid a direct annotation if callers need exact values.",
+    "Combine const preservation with contract validation."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

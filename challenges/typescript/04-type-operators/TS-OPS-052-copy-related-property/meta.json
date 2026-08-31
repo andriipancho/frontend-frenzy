@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-052",
+  "title": "Copy a related property",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "generic-relationships",
+    "mutation"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions"
+  ],
+  "hints": [
+    "A broad PropertyKey cannot safely index either object.",
+    "Capture the shared object type and one of its keys.",
+    "The selected value is T[K] on both sides of the assignment."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

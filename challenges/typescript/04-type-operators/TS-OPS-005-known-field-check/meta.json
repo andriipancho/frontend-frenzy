@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-005",
+  "title": "Restrict a field check",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "keyof",
+    "generic-constraints",
+    "key-relationships"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "keyof",
+    "generic-functions"
+  ],
+  "hints": [
+    "PropertyKey is broader than the keys of a particular object.",
+    "Capture the object type before typing the key.",
+    "Type the key from the captured object's keyof union."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

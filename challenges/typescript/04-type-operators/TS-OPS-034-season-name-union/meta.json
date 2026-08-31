@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-034",
+  "title": "Derive season names",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "const-assertions",
+    "typeof",
+    "indexed-access",
+    "literal-unions"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "const-assertions",
+    "typeof",
+    "indexed-access"
+  ],
+  "hints": [
+    "First preserve the list as a tuple of literals.",
+    "Query the resulting tuple type.",
+    "Index it with number to collect all element types."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

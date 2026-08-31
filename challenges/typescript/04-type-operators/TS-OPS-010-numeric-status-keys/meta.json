@@ -1,0 +1,24 @@
+{
+  "id": "TS-OPS-010",
+  "title": "Preserve numeric status keys",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "keyof",
+    "numeric-keys",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "keyof"
+  ],
+  "hints": [
+    "Explicit numeric properties remain numeric in a key union.",
+    "Derive the union from StatusByCode.",
+    "Avoid replacing the keys with string or number broadly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "TS-OPS-038",
+  "title": "Derive nested route paths",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "const-assertions",
+    "typeof",
+    "keyof",
+    "indexed-access",
+    "nested-objects"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "const-assertions",
+    "keyof",
+    "indexed-access"
+  ],
+  "hints": [
+    "First obtain a union of the route entry object types.",
+    "Index the table type with all of its keys.",
+    "Select path from the resulting union."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

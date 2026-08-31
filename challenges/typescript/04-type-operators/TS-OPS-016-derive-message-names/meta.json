@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-016",
+  "title": "Derive message names",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "typeof",
+    "keyof",
+    "lookup-objects"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "typeof",
+    "keyof"
+  ],
+  "hints": [
+    "typeof turns the catalog value into an object type.",
+    "The desired union is made from that object's keys.",
+    "Combine keyof with typeof."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

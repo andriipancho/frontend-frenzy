@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-042",
+  "title": "Validate complete feature labels",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "satisfies",
+    "key-unions",
+    "record-types",
+    "exact-keys"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "literal-unions",
+    "record-types",
+    "satisfies"
+  ],
+  "hints": [
+    "A broad string record cannot prove completeness.",
+    "Describe the required key set with Record.",
+    "Use satisfies so the value keeps its own exact key type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

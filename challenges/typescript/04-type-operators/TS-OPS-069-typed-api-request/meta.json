@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-069",
+  "title": "Type API requests by route",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "boss",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "api-contracts",
+    "generic-relationships"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions"
+  ],
+  "hints": [
+    "Independent route and body unions permit invalid combinations.",
+    "Capture the route as K constrained by the contract keys.",
+    "Index the selected contract entry for both request and response."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

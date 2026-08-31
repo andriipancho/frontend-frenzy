@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-070",
+  "title": "Type command execution",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "boss",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "commands",
+    "generic-relationships"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions"
+  ],
+  "hints": [
+    "The command key selects two related types.",
+    "Capture the command as K.",
+    "Index Commands[K] separately for input and output."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

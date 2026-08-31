@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-025",
+  "title": "Select a tuple result",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "indexed-access",
+    "tuples",
+    "positional-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "tuples",
+    "indexed-access"
+  ],
+  "hints": [
+    "Tuple positions can be used as numeric type indices.",
+    "The result occupies position zero.",
+    "Index OperationResult with 0."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

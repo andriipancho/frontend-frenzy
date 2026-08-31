@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-033",
+  "title": "Freeze inferred configuration",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "const-assertions",
+    "readonly-properties",
+    "nested-objects"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "const-assertions",
+    "object-types"
+  ],
+  "hints": [
+    "A readonly annotation on the outer property would not freeze nested members.",
+    "Apply a const assertion to the full literal expression.",
+    "The compiler will recursively preserve literal members."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

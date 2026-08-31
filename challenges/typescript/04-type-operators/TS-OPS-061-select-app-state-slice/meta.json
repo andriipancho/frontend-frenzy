@@ -1,0 +1,26 @@
+{
+  "id": "TS-OPS-061",
+  "title": "Select an app state slice",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "state-modeling"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions"
+  ],
+  "hints": [
+    "The state type is fixed, so only the key needs to be generic.",
+    "Constrain K to keyof AppState.",
+    "Return AppState indexed with K."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

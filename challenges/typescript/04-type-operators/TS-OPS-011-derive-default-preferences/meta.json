@@ -1,0 +1,24 @@
+{
+  "id": "TS-OPS-011",
+  "title": "Derive default preferences",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "typeof",
+    "inference",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "type-inference"
+  ],
+  "hints": [
+    "A runtime binding can be referenced from a type position.",
+    "Use typeof on the exported default value.",
+    "Let the initializer determine the property types."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "TS-OPS-015",
+  "title": "Derive a nested region type",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "typeof",
+    "indexed-access",
+    "const-assertions",
+    "nested-properties"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "typeof",
+    "indexed-access"
+  ],
+  "hints": [
+    "The value must retain its exact string first.",
+    "Query the complete constant type.",
+    "Use indexed access for environment and then region."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

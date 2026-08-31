@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-068",
+  "title": "Read a nested service option",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "nested-properties",
+    "generic-relationships"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions"
+  ],
+  "hints": [
+    "The second key depends on the first selected service.",
+    "Capture S from the outer object keys, then K from keyof ServiceOptions[S].",
+    "Return ServiceOptions[S][K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

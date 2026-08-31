@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-032",
+  "title": "Preserve a coordinate tuple",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "const-assertions",
+    "tuples",
+    "literal-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "arrays",
+    "tuples"
+  ],
+  "hints": [
+    "Array literals normally widen to mutable arrays.",
+    "Use a const assertion at the expression boundary.",
+    "Let the assertion infer the readonly tuple."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

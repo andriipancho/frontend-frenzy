@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-014",
+  "title": "Accept the default option shape",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "typeof",
+    "function-parameters",
+    "single-source-of-truth"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "typeof",
+    "object-types"
+  ],
+  "hints": [
+    "The parameter should track changes to the default value.",
+    "Query the type of defaultOptions.",
+    "Use that queried type directly for the parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

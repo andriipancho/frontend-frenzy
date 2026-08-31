@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-017",
+  "title": "Derive message values",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "typeof",
+    "keyof",
+    "indexed-access",
+    "const-assertions"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "typeof",
+    "keyof",
+    "indexed-access"
+  ],
+  "hints": [
+    "Preserve the catalog values before deriving from them.",
+    "Build the catalog's key union.",
+    "Index the catalog type with all of its keys."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

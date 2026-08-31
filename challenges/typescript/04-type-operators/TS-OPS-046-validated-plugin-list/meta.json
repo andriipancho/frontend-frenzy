@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-046",
+  "title": "Validate a plugin list",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "satisfies",
+    "const-assertions",
+    "arrays",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "satisfies",
+    "const-assertions",
+    "indexed-access"
+  ],
+  "hints": [
+    "The array contract verifies each object shape.",
+    "Literal names require a const assertion.",
+    "Derive the name union from the validated tuple's element type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

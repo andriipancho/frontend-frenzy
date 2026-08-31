@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-020",
+  "title": "Derive a validator map",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "typeof",
+    "function-maps",
+    "single-source-of-truth"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "typeof",
+    "function-types"
+  ],
+  "hints": [
+    "The registry value already has distinct function properties.",
+    "Use typeof on the entire validators object.",
+    "Do not widen it to a generic record."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

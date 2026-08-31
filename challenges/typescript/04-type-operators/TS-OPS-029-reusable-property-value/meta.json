@@ -1,0 +1,26 @@
+{
+  "id": "TS-OPS-029",
+  "title": "Create a property value helper",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "generic-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-types"
+  ],
+  "hints": [
+    "The second parameter depends on the first.",
+    "Constrain K with keyof T.",
+    "Use K to index T in the alias body."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

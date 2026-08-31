@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-037",
+  "title": "Derive command names",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "const-assertions",
+    "typeof",
+    "indexed-access",
+    "tuples"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "const-assertions",
+    "tuples",
+    "indexed-access"
+  ],
+  "hints": [
+    "The outer numeric index produces a union of command tuples.",
+    "A second index can select one position across that union.",
+    "Read position zero after preserving the nested tuples."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-047",
+  "title": "Validate environment endpoints",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "satisfies",
+    "const-assertions",
+    "record-types",
+    "template-literals"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "satisfies",
+    "const-assertions",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Represent the environment set as a literal union.",
+    "Use a Record whose values follow an https template.",
+    "Preserve the object before validating it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

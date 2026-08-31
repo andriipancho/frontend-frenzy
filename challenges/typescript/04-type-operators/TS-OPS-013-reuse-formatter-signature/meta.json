@@ -1,0 +1,24 @@
+{
+  "id": "TS-OPS-013",
+  "title": "Reuse a formatter signature",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "typeof",
+    "function-types",
+    "single-source-of-truth"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "function-types"
+  ],
+  "hints": [
+    "Functions are values whose types can be queried.",
+    "Use typeof with the function name in a type position.",
+    "The derived type includes parameters and return type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-054",
+  "title": "Filter by a property value",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "generic-relationships",
+    "arrays"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions"
+  ],
+  "hints": [
+    "The item type comes from the collection.",
+    "Capture one of its keys as K.",
+    "Use T[K] for the comparison value and T[] for the result."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

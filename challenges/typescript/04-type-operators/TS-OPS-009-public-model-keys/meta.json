@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-009",
+  "title": "Expose public model keys",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "keyof",
+    "classes",
+    "public-members"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "keyof",
+    "classes"
+  ],
+  "hints": [
+    "The instance type of a class exposes its public surface.",
+    "Apply keyof to the class instance type.",
+    "Private members do not appear in that public key union."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

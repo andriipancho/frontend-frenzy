@@ -1,0 +1,29 @@
+{
+  "id": "TS-OPS-075",
+  "title": "Design a derived endpoint client",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "boss",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "api-design",
+    "generic-relationships",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions",
+    "api-modeling"
+  ],
+  "hints": [
+    "Each endpoint key selects a complete operation contract.",
+    "Capture the key before choosing input or output.",
+    "Index EndpointContract[K] for request and response independently."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

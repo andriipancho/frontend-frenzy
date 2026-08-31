@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-074",
+  "title": "Read a database row field",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "boss",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "databases",
+    "nested-relationships"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions"
+  ],
+  "hints": [
+    "The field key depends on the table key selected first.",
+    "Capture T from DatabaseTables keys and F from keyof DatabaseTables[T].",
+    "Return DatabaseTables[T][F]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

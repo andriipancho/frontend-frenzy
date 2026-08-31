@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-027",
+  "title": "Select nested response data",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "indexed-access",
+    "nested-properties",
+    "api-modeling"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "indexed-access",
+    "object-types"
+  ],
+  "hints": [
+    "Each indexed access selects one property layer.",
+    "Select body before data.",
+    "Chain the two string-literal indices."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

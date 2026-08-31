@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-023",
+  "title": "Select an audit entry",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "indexed-access",
+    "array-elements",
+    "nested-properties"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "indexed-access",
+    "arrays"
+  ],
+  "hints": [
+    "First select the entries property type.",
+    "Arrays expose their element type through a numeric index.",
+    "Apply number to the selected array type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

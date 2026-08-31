@@ -1,0 +1,26 @@
+{
+  "id": "TS-OPS-050",
+  "title": "Preserve validated feature flags",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "satisfies",
+    "const-assertions",
+    "boolean-literals",
+    "record-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "satisfies",
+    "const-assertions"
+  ],
+  "hints": [
+    "A Record annotation widens each value to boolean.",
+    "Preserve the literal object first.",
+    "Validate the preserved object against a boolean record."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

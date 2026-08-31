@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-028",
+  "title": "Collect model value types",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "value-unions"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "keyof",
+    "indexed-access"
+  ],
+  "hints": [
+    "The complete key union is available from the object type.",
+    "Indexed access accepts a union of keys.",
+    "Index Model with its own keyof union."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-031",
+  "title": "Preserve an action discriminant",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "const-assertions",
+    "literal-types",
+    "readonly-properties"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "literal-types",
+    "object-types"
+  ],
+  "hints": [
+    "Ordinary object properties widen and remain mutable.",
+    "Apply one assertion to the complete object expression.",
+    "The assertion preserves literals and adds readonly modifiers."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-048",
+  "title": "Preserve symbol metric keys",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "satisfies",
+    "symbol-keys",
+    "keyof",
+    "record-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "symbol-types",
+    "keyof",
+    "satisfies"
+  ],
+  "hints": [
+    "A broad annotation erases the concrete key set.",
+    "Validate against a PropertyKey record without using it as an annotation.",
+    "Derive the retained key union with keyof typeof."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

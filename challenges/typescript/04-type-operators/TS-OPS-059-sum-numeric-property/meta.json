@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-059",
+  "title": "Sum a numeric property",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "record-constraints",
+    "numeric-properties"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "generic-constraints",
+    "keyof",
+    "indexed-access"
+  ],
+  "hints": [
+    "Start from the selected property key rather than every object key.",
+    "Require each item type to be a record at that key.",
+    "Constrain the record's selected value to number."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

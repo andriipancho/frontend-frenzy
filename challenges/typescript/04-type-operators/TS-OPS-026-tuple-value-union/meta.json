@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-026",
+  "title": "Collect tuple value types",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "indexed-access",
+    "tuples",
+    "union-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "tuples",
+    "indexed-access"
+  ],
+  "hints": [
+    "A numeric index over a tuple represents every position.",
+    "Index the complete tuple type rather than one position.",
+    "Use number as the index."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

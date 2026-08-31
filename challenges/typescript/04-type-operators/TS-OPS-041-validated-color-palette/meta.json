@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-041",
+  "title": "Validate a color palette",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "satisfies",
+    "const-assertions",
+    "template-literals",
+    "literal-preservation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "const-assertions",
+    "record-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "A direct record annotation widens both access and values.",
+    "Use a template-literal value contract.",
+    "Preserve the expression with a const assertion and validate it with satisfies."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

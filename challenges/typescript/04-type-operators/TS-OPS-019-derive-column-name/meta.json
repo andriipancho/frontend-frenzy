@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-019",
+  "title": "Derive column names",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "typeof",
+    "indexed-access",
+    "const-assertions",
+    "tuples"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "tuples",
+    "typeof",
+    "indexed-access"
+  ],
+  "hints": [
+    "A mutable array widens its elements to string.",
+    "Preserve the array as a readonly tuple.",
+    "Index its queried type with number."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

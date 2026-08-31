@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-022",
+  "title": "Select contact property types",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "indexed-access",
+    "union-indices",
+    "object-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "indexed-access",
+    "union-types"
+  ],
+  "hints": [
+    "Indexed access accepts a union of property names.",
+    "Build the index from the two contact keys.",
+    "Apply that union index to Customer."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

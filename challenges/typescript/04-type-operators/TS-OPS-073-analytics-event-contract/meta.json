@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-073",
+  "title": "Track typed analytics events",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "boss",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "analytics",
+    "generic-relationships"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "generic-functions"
+  ],
+  "hints": [
+    "A union payload is not correlated with a union event name.",
+    "Capture the event name as K.",
+    "Use AnalyticsEvents[K] for its payload."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

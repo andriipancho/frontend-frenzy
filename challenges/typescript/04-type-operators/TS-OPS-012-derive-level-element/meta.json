@@ -1,0 +1,26 @@
+{
+  "id": "TS-OPS-012",
+  "title": "Derive an array element type",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "typeof",
+    "indexed-access",
+    "const-assertions",
+    "array-elements"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "typeof",
+    "indexed-access"
+  ],
+  "hints": [
+    "First preserve the array's exact element literals.",
+    "Obtain the tuple type with typeof.",
+    "Index that type with number to collect its element types."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

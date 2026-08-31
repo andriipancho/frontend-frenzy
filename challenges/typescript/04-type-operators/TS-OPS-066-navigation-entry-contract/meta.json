@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-066",
+  "title": "Derive navigation entry contracts",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "const-assertions",
+    "typeof",
+    "indexed-access",
+    "navigation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "const-assertions",
+    "typeof",
+    "indexed-access"
+  ],
+  "hints": [
+    "The list's element type comes from a numeric index.",
+    "Preserve the list before querying it.",
+    "Select href from the resulting element union."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

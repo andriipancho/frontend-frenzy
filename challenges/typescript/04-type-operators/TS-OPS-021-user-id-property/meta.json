@@ -1,0 +1,24 @@
+{
+  "id": "TS-OPS-021",
+  "title": "Select a user ID type",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "indexed-access",
+    "object-types",
+    "property-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "object-types"
+  ],
+  "hints": [
+    "Object property types can be selected in a type position.",
+    "Use the property name as the index.",
+    "Index User with the id string literal."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

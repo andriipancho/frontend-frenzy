@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-006",
+  "title": "Read a related property",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "generic-relationships"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "keyof",
+    "generic-functions"
+  ],
+  "hints": [
+    "A broad key loses which property was selected.",
+    "Capture the key as a type parameter constrained by the object keys.",
+    "Index the object type with that exact key in the return position."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

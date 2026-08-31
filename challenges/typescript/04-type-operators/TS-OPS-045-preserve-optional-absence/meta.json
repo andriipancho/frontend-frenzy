@@ -1,0 +1,25 @@
+{
+  "id": "TS-OPS-045",
+  "title": "Preserve an absent optional property",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "medium",
+  "topics": [
+    "satisfies",
+    "optional-properties",
+    "exact-keys"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "optional-properties",
+    "satisfies"
+  ],
+  "hints": [
+    "A direct annotation exposes every optional contract property.",
+    "The value only needs validation against the broader contract.",
+    "Use satisfies so the expression retains only the keys it declares."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

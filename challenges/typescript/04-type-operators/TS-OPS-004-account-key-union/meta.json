@@ -1,0 +1,24 @@
+{
+  "id": "TS-OPS-004",
+  "title": "Derive account keys",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "easy",
+  "topics": [
+    "keyof",
+    "object-types",
+    "key-unions"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "object-types"
+  ],
+  "hints": [
+    "The object type already contains the allowed names.",
+    "Apply the operator that produces a union of property keys.",
+    "Derive the alias directly from Account."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

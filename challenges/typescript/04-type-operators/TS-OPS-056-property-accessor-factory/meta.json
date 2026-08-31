@@ -1,0 +1,27 @@
+{
+  "id": "TS-OPS-056",
+  "title": "Create a property accessor",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "keyof",
+    "indexed-access",
+    "generic-functions",
+    "higher-order-functions"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "generic-functions",
+    "indexed-access",
+    "function-types"
+  ],
+  "hints": [
+    "The key type belongs to the outer function.",
+    "The returned function needs its own object type parameter.",
+    "Constrain that object with Record<K, unknown> and return T[K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "TS-OPS-065",
+  "title": "Derive permission matrix values",
+  "domain": "typescript",
+  "topic": "type-operators",
+  "difficulty": "hard",
+  "topics": [
+    "const-assertions",
+    "typeof",
+    "keyof",
+    "indexed-access",
+    "permissions"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "const-assertions",
+    "keyof",
+    "indexed-access"
+  ],
+  "hints": [
+    "Role names are the keys of the matrix type.",
+    "Index the matrix by all roles to get a union of permission tuples.",
+    "Index those tuples with number to get permission literals."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
