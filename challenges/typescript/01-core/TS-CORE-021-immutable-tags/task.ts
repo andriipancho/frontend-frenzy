@@ -1,1 +1,1 @@
-export const tags: string[] = ["frontend", "typescript"];
+export const tags: readonly string[] = ["frontend", "typescript"];

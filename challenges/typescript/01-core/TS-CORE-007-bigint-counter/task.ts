@@ -1,3 +1,3 @@
-export type Counter = number;
+export type Counter = bigint;
 
-export const initialCounter: Counter = 0;
+export const initialCounter: Counter = BigInt(0);
