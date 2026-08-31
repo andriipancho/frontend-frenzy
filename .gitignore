@@ -1,6 +1,8 @@
 node_modules/
 dist/
-.frenzy/
+# Progress shards are shared between machines; everything else in .frenzy is local.
+.frenzy/*
+!.frenzy/progress.*.json
 *.tsbuildinfo
 .DS_Store
 .env

@@ -1,4 +1,4 @@
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { basename, join } from "node:path";
 
 import type { Challenge } from "../../challenge-schema/src/discovery.js";
@@ -22,6 +22,10 @@ const TOPIC_CODES: Readonly<Record<string, Readonly<Record<string, string>>>> = 
     "11-production-boss": "PROD",
   },
 };
+
+// A test that only calls the exported API proves nothing: `any` satisfies it.
+// Every test must pin a type or prove an invalid usage stays invalid.
+const ASSERTION_PATTERN = /Expect<|@ts-expect-error/;
 
 export function validateChallengeBank(challenges: readonly Challenge[]): string[] {
   const errors: string[] = [];
@@ -50,6 +54,10 @@ export function validateChallengeBank(challenges: readonly Challenge[]): string[
       if (!existsSync(join(challenge.directory, required))) {
         errors.push(`${metadata.id}: missing ${required}`);
       }
+    }
+    const testPath = join(challenge.directory, "test.ts");
+    if (existsSync(testPath) && !ASSERTION_PATTERN.test(readFileSync(testPath, "utf8"))) {
+      errors.push(`${metadata.id}: test.ts must assert with Expect<...> or @ts-expect-error`);
     }
   }
 

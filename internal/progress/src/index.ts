@@ -1,4 +1,5 @@
-import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
+import { hostname } from "node:os";
 import { dirname, join } from "node:path";
 
 export interface RetentionState {
@@ -39,13 +40,38 @@ export function createProgress(): ProgressFile {
   };
 }
 
-export function progressPath(root: string): string {
-  return join(root, ".frenzy", "progress.json");
+const SHARD_PATTERN = /^progress\.(.+)\.json$/;
+
+function frenzyDirectory(root: string): string {
+  return join(root, ".frenzy");
 }
 
-export function readProgress(root: string): ProgressFile {
-  const path = progressPath(root);
-  if (!existsSync(path)) return createProgress();
+/**
+ * Every machine writes only its own shard, so shards never conflict when they
+ * travel through git. The id is stored so that renaming the host does not fork it.
+ */
+export function deviceId(root: string): string {
+  const path = join(frenzyDirectory(root), "device");
+  if (existsSync(path)) {
+    const stored = readFileSync(path, "utf8").trim();
+    if (stored.length > 0) return stored;
+  }
+  const generated =
+    hostname()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 32) || "device";
+  mkdirSync(frenzyDirectory(root), { recursive: true });
+  writeFileSync(path, `${generated}\n`, "utf8");
+  return generated;
+}
+
+export function progressPath(root: string, device: string = deviceId(root)): string {
+  return join(frenzyDirectory(root), `progress.${device}.json`);
+}
+
+function parseProgress(path: string): ProgressFile {
   const value = JSON.parse(readFileSync(path, "utf8")) as unknown;
   if (typeof value !== "object" || value === null || (value as { version?: unknown }).version !== 1) {
     throw new Error(`Unsupported or invalid progress file: ${path}`);
@@ -53,8 +79,49 @@ export function readProgress(root: string): ProgressFile {
   return value as ProgressFile;
 }
 
-export function writeProgress(root: string, progress: ProgressFile): void {
-  const path = progressPath(root);
+/** Adopts a pre-sharding progress file as this machine's shard. */
+function migrateLegacyProgress(root: string, path: string): void {
+  const legacy = join(frenzyDirectory(root), "progress.json");
+  if (existsSync(legacy) && !existsSync(path)) renameSync(legacy, path);
+}
+
+export function readProgress(root: string, device: string = deviceId(root)): ProgressFile {
+  const path = progressPath(root, device);
+  migrateLegacyProgress(root, path);
+  if (!existsSync(path)) return createProgress();
+  return parseProgress(path);
+}
+
+/** Every other machine's shard, keyed by device id. */
+export function readOtherProgress(root: string, device: string = deviceId(root)): ProgressFile[] {
+  const directory = frenzyDirectory(root);
+  if (!existsSync(directory)) return [];
+  return readdirSync(directory)
+    .flatMap((entry) => {
+      const match = SHARD_PATTERN.exec(entry);
+      return match && match[1] !== device ? [join(directory, entry)] : [];
+    })
+    .sort()
+    .map(parseProgress);
+}
+
+export function listDevices(root: string): string[] {
+  const directory = frenzyDirectory(root);
+  if (!existsSync(directory)) return [];
+  return readdirSync(directory)
+    .flatMap((entry) => {
+      const match = SHARD_PATTERN.exec(entry);
+      return match?.[1] === undefined ? [] : [match[1]];
+    })
+    .sort();
+}
+
+export function writeProgress(
+  root: string,
+  progress: ProgressFile,
+  device: string = deviceId(root),
+): void {
+  const path = progressPath(root, device);
   mkdirSync(dirname(path), { recursive: true });
   const temporaryPath = `${path}.tmp`;
   writeFileSync(temporaryPath, `${JSON.stringify(progress, null, 2)}\n`, "utf8");

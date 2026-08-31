@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtempSync, rmSync } from "node:fs";
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
@@ -9,12 +9,15 @@ import {
   type ChallengeMetadata,
 } from "../challenge-schema/src/index.js";
 import type { Challenge } from "../challenge-schema/src/discovery.js";
+import { validateChallengeBank } from "../validation/src/bank.js";
 import {
   createProgress,
+  type ChallengeProgress,
   readProgress,
   startChallenge,
   writeProgress,
 } from "../progress/src/index.js";
+import { adoptSharedState, mergeProgress } from "../progress/src/merge.js";
 import {
   recordReview,
   scheduleFirstReview,
@@ -100,4 +103,113 @@ test("retention selects a harder due challenge when other signals are equal", ()
 
   const selected = selectDueChallenge([easy, hard], progress, new Date("2026-01-03T00:00:00.000Z"));
   assert.equal(selected?.metadata.id, "TS-GEN-002");
+});
+
+test("the bank validator rejects a test that asserts nothing", () => {
+  const directory = mkdtempSync(join(tmpdir(), "frontend-frenzy-bank-"));
+  try {
+    const challengeDirectory = join(directory, "TS-GEN-001-identity");
+    mkdirSync(challengeDirectory, { recursive: true });
+    for (const file of ["README.md", "task.ts", "meta.json"]) {
+      writeFileSync(join(challengeDirectory, file), "", "utf8");
+    }
+    const entry: Challenge = {
+      metadata,
+      directory: challengeDirectory,
+      relativeDirectory: "challenges/TS-GEN-001-identity",
+      topicDirectory: "03-generics",
+    };
+
+    writeFileSync(join(challengeDirectory, "test.ts"), 'identity("a");\n', "utf8");
+    assert.ok(
+      validateChallengeBank([entry]).some((error) => error.includes("must assert")),
+      "a call-only test must be rejected",
+    );
+
+    writeFileSync(
+      join(challengeDirectory, "test.ts"),
+      "type Cases = [Expect<Equal<string, string>>];\n",
+      "utf8",
+    );
+    assert.deepEqual(validateChallengeBank([entry]), []);
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+function completed(overrides: Partial<ChallengeProgress> = {}): ChallengeProgress {
+  return {
+    status: "completed",
+    startedAt: "2026-01-01T00:00:00.000Z",
+    completedAt: "2026-01-01T00:10:00.000Z",
+    attempts: 2,
+    hintsUsed: 1,
+    elapsedSeconds: 300,
+    ...overrides,
+  };
+}
+
+test("merging shards sums each machine's own work without double counting", () => {
+  const local = createProgress();
+  local.challenges["TS-GEN-001"] = completed({ attempts: 2, elapsedSeconds: 300, hintsUsed: 1 });
+  const other = createProgress();
+  other.challenges["TS-GEN-001"] = completed({
+    startedAt: "2025-12-31T00:00:00.000Z",
+    completedAt: "2025-12-31T00:05:00.000Z",
+    attempts: 3,
+    elapsedSeconds: 120,
+    hintsUsed: 3,
+  });
+
+  const merged = mergeProgress(local, [other]);
+  const entry = merged.challenges["TS-GEN-001"];
+  assert.ok(entry);
+  assert.equal(entry.attempts, 5, "attempts are summed");
+  assert.equal(entry.elapsedSeconds, 420, "time is summed");
+  assert.equal(entry.hintsUsed, 3, "the furthest hint reveal wins");
+  assert.equal(entry.startedAt, "2025-12-31T00:00:00.000Z", "the earliest start wins");
+  assert.equal(entry.completedAt, "2025-12-31T00:05:00.000Z", "the first solve wins");
+});
+
+test("merging keeps a completion and the further-advanced review schedule", () => {
+  const local = createProgress();
+  local.challenges["TS-GEN-001"] = {
+    status: "started",
+    startedAt: "2026-01-02T00:00:00.000Z",
+    attempts: 1,
+    hintsUsed: 0,
+    elapsedSeconds: 60,
+    retention: { stage: 0, dueAt: "2026-01-03T00:00:00.000Z", reviewCount: 0 },
+  };
+  const other = createProgress();
+  other.challenges["TS-GEN-001"] = completed({
+    retention: { stage: 2, dueAt: "2026-02-01T00:00:00.000Z", reviewCount: 3 },
+  });
+
+  const entry = mergeProgress(local, [other]).challenges["TS-GEN-001"];
+  assert.equal(entry?.status, "completed");
+  assert.equal(entry?.retention?.reviewCount, 3);
+  assert.equal(entry?.retention?.stage, 2);
+});
+
+test("merging leaves the session pointer local to this machine", () => {
+  const local = createProgress();
+  local.currentChallengeId = "TS-GEN-001";
+  const other = createProgress();
+  other.currentChallengeId = "TS-MAP-050";
+
+  assert.equal(mergeProgress(local, [other]).currentChallengeId, "TS-GEN-001");
+});
+
+test("adopting another machine's entry restarts its own counters at zero", () => {
+  const adopted = adoptSharedState(
+    completed({ retention: { stage: 1, dueAt: "2026-02-01T00:00:00.000Z", reviewCount: 2 } }),
+  );
+
+  assert.equal(adopted.status, "completed");
+  assert.equal(adopted.completedAt, "2026-01-01T00:10:00.000Z");
+  assert.equal(adopted.hintsUsed, 1);
+  assert.equal(adopted.retention?.reviewCount, 2);
+  assert.equal(adopted.attempts, 0, "attempts stay with the machine that made them");
+  assert.equal(adopted.elapsedSeconds, 0, "time stays with the machine that spent it");
 });
