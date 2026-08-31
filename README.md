@@ -50,9 +50,9 @@ Run `npm link` once if you prefer the shorter global development command, such a
 
 ## TypeScript curriculum
 
-The seed bank demonstrates the conventions; it does not attempt to fill the eventual curriculum.
+The TypeScript curriculum contains 875 deterministic challenges across 11 progressively harder topics.
 
-| # | Topic | Eventual target |
+| # | Topic | Challenges |
 | --- | --- | ---: |
 | 01 | Core | 50 |
 | 02 | Unions & Narrowing | 75 |
