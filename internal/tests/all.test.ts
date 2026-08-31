@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtempSync, rmSync } from "node:fs";
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
@@ -9,6 +9,7 @@ import {
   type ChallengeMetadata,
 } from "../challenge-schema/src/index.js";
 import type { Challenge } from "../challenge-schema/src/discovery.js";
+import { validateChallengeBank } from "../validation/src/bank.js";
 import {
   createProgress,
   readProgress,
@@ -100,4 +101,36 @@ test("retention selects a harder due challenge when other signals are equal", ()
 
   const selected = selectDueChallenge([easy, hard], progress, new Date("2026-01-03T00:00:00.000Z"));
   assert.equal(selected?.metadata.id, "TS-GEN-002");
+});
+
+test("the bank validator rejects a test that asserts nothing", () => {
+  const directory = mkdtempSync(join(tmpdir(), "frontend-frenzy-bank-"));
+  try {
+    const challengeDirectory = join(directory, "TS-GEN-001-identity");
+    mkdirSync(challengeDirectory, { recursive: true });
+    for (const file of ["README.md", "task.ts", "meta.json"]) {
+      writeFileSync(join(challengeDirectory, file), "", "utf8");
+    }
+    const entry: Challenge = {
+      metadata,
+      directory: challengeDirectory,
+      relativeDirectory: "challenges/TS-GEN-001-identity",
+      topicDirectory: "03-generics",
+    };
+
+    writeFileSync(join(challengeDirectory, "test.ts"), 'identity("a");\n', "utf8");
+    assert.ok(
+      validateChallengeBank([entry]).some((error) => error.includes("must assert")),
+      "a call-only test must be rejected",
+    );
+
+    writeFileSync(
+      join(challengeDirectory, "test.ts"),
+      "type Cases = [Expect<Equal<string, string>>];\n",
+      "utf8",
+    );
+    assert.deepEqual(validateChallengeBank([entry]), []);
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
 });
