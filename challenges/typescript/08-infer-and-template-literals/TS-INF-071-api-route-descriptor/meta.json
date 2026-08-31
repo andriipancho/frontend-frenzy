@@ -1,0 +1,25 @@
+{
+  "id": "TS-INF-071",
+  "title": "Parse versioned API routes",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "boss",
+  "topics": [
+    "template-literal-types",
+    "infer",
+    "constrained-infer",
+    "api-contracts"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes numeric version and resource positions in a route.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

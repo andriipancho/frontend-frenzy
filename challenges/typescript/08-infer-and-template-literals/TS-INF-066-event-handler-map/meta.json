@@ -1,0 +1,26 @@
+{
+  "id": "TS-INF-066",
+  "title": "Generate event handler maps",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "hard",
+  "topics": [
+    "template-literal-types",
+    "mapped-types",
+    "key-remapping",
+    "event-contracts"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Each source property becomes one handler with the same payload relationship.",
+    "Use mapped key remapping with a template literal type.",
+    "Prefix and capitalize string keys while indexing the original payload by the current key."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

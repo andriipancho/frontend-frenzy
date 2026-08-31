@@ -1,0 +1,25 @@
+{
+  "id": "TS-INF-021",
+  "title": "Swap the first two tuple elements",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "medium",
+  "topics": [
+    "infer",
+    "tuples",
+    "variadic-tuples",
+    "tuple-transformation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes the first two positions and remaining tuple segment.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "TS-INF-032",
+  "title": "Infer event payload types",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "medium",
+  "topics": [
+    "infer",
+    "event-contracts",
+    "distributive-conditionals"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes the payload position of an event contract.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

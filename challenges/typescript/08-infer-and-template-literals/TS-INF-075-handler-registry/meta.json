@@ -1,0 +1,28 @@
+{
+  "id": "TS-INF-075",
+  "title": "Design generated handler registries",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "boss",
+  "topics": [
+    "template-literal-types",
+    "mapped-types",
+    "key-remapping",
+    "event-contracts",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types",
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Treat the event union itself as the mapped iteration source.",
+    "Remap each member to a handler key built from its name field.",
+    "Capitalize the name after an on prefix and keep the same member's payload in the function signature."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

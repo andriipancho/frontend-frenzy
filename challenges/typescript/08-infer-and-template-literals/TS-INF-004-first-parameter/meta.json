@@ -1,0 +1,24 @@
+{
+  "id": "TS-INF-004",
+  "title": "Infer first parameters",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "medium",
+  "topics": [
+    "infer",
+    "functions",
+    "parameters"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes the first parameter position of a function.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

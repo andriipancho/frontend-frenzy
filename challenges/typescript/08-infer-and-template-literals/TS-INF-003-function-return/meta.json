@@ -1,0 +1,24 @@
+{
+  "id": "TS-INF-003",
+  "title": "Infer function return types",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "easy",
+  "topics": [
+    "infer",
+    "functions",
+    "conditional-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes a function's return position.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

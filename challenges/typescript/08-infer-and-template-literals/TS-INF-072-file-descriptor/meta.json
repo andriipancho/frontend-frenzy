@@ -1,0 +1,25 @@
+{
+  "id": "TS-INF-072",
+  "title": "Build inferred file descriptors",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "boss",
+  "topics": [
+    "template-literal-types",
+    "infer",
+    "file-names",
+    "object-types"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes base and extension portions of a filename.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-INF-073",
+  "title": "Parse query parameter contracts",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "boss",
+  "topics": [
+    "template-literal-types",
+    "infer",
+    "mapped-types",
+    "query-strings"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes query key and value portions around the first equals marker.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

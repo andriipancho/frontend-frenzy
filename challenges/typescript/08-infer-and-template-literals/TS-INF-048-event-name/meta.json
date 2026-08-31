@@ -1,0 +1,24 @@
+{
+  "id": "TS-INF-048",
+  "title": "Infer namespaced event names",
+  "domain": "typescript",
+  "topic": "infer-and-template-literals",
+  "difficulty": "medium",
+  "topics": [
+    "template-literal-types",
+    "infer",
+    "event-names"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "conditional-types"
+  ],
+  "hints": [
+    "Locate the part of the input that exposes the portion after an event namespace separator.",
+    "Use a conditional pattern with an inferred placeholder for the unknown part.",
+    "Return the captured type only from the matching branch and handle the fallback explicitly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
