@@ -1,0 +1,26 @@
+{
+  "id": "TS-PROD-033",
+  "title": "Resolve values at configuration paths",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "configuration",
+    "recursive-types",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 16,
+  "prerequisites": [
+    "recursive-types",
+    "conditional-types",
+    "mapped-types"
+  ],
+  "hints": [
+    "Decide which values are recursive containers and which are atomic boundaries.",
+    "Order conditional branches from special cases to the general object case.",
+    "Recurse only after handling arrays, functions, or other domain-specific leaves."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

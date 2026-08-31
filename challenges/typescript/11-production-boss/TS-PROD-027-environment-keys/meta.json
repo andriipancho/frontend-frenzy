@@ -1,0 +1,26 @@
+{
+  "id": "TS-PROD-027",
+  "title": "Generate environment variable keys",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "configuration",
+    "key-remapping",
+    "template-literal-types"
+  ],
+  "estimatedMinutes": 14,
+  "prerequisites": [
+    "template-literal-types",
+    "conditional-types",
+    "infer"
+  ],
+  "hints": [
+    "Split the string around the separators that carry domain meaning.",
+    "Infer one segment at a time with a template literal conditional.",
+    "For repeated segments, recurse over the unprocessed suffix and combine the results."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

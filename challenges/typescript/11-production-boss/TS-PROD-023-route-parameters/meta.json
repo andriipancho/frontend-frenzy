@@ -1,0 +1,26 @@
+{
+  "id": "TS-PROD-023",
+  "title": "Infer parameters from application routes",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "routing",
+    "template-literal-types",
+    "recursion"
+  ],
+  "estimatedMinutes": 14,
+  "prerequisites": [
+    "template-literal-types",
+    "conditional-types",
+    "infer"
+  ],
+  "hints": [
+    "Split the string around the separators that carry domain meaning.",
+    "Infer one segment at a time with a template literal conditional.",
+    "For repeated segments, recurse over the unprocessed suffix and combine the results."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

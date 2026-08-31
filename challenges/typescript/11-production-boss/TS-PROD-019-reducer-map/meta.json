@@ -1,0 +1,26 @@
+{
+  "id": "TS-PROD-019",
+  "title": "Derive an exhaustive reducer map",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "state-management",
+    "discriminated-unions",
+    "mapped-types"
+  ],
+  "estimatedMinutes": 14,
+  "prerequisites": [
+    "discriminated-unions",
+    "conditional-types",
+    "mapped-types"
+  ],
+  "hints": [
+    "Start from the discriminant that uniquely identifies each branch.",
+    "Distribution, extraction, or key remapping can operate on one branch at a time.",
+    "Carry the selected branch through the entire output instead of indexing the original union broadly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

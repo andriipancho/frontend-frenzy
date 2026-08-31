@@ -1,0 +1,26 @@
+{
+  "id": "TS-PROD-007",
+  "title": "Build permission-specific checkers",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "authorization",
+    "mapped-types",
+    "key-remapping"
+  ],
+  "estimatedMinutes": 14,
+  "prerequisites": [
+    "mapped-types",
+    "conditional-types",
+    "indexed-access"
+  ],
+  "hints": [
+    "Identify which source member owns each output member.",
+    "Use mapping, remapping, or union extraction to keep correlated data together.",
+    "Index through the currently selected key or discriminant instead of the full union."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

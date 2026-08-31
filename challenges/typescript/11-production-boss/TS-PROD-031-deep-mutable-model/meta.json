@@ -1,0 +1,26 @@
+{
+  "id": "TS-PROD-031",
+  "title": "Derive a deeply mutable working model",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "state-management",
+    "recursive-types",
+    "mapped-modifiers"
+  ],
+  "estimatedMinutes": 16,
+  "prerequisites": [
+    "recursive-types",
+    "conditional-types",
+    "mapped-types"
+  ],
+  "hints": [
+    "Decide which values are recursive containers and which are atomic boundaries.",
+    "Order conditional branches from special cases to the general object case.",
+    "Recurse only after handling arrays, functions, or other domain-specific leaves."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

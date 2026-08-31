@@ -1,0 +1,26 @@
+{
+  "id": "TS-PROD-015",
+  "title": "Generate typed dependency tokens",
+  "domain": "typescript",
+  "topic": "production-boss",
+  "difficulty": "boss",
+  "topics": [
+    "dependency-injection",
+    "key-remapping",
+    "template-literal-types"
+  ],
+  "estimatedMinutes": 14,
+  "prerequisites": [
+    "mapped-types",
+    "key-remapping",
+    "conditional-types"
+  ],
+  "hints": [
+    "Treat the source keys or union members as the registry definition.",
+    "Use a mapped type and preserve the selected member while forming each value.",
+    "Apply key remapping or a conditional branch only where the output contract requires it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
