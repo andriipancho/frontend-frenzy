@@ -1,0 +1,30 @@
+{
+  "id": "TS-MIX-082",
+  "title": "Design mixed repository results",
+  "domain": "typescript",
+  "topic": "advanced-mixed",
+  "difficulty": "boss",
+  "topics": [
+    "production-api",
+    "mapped-types",
+    "conditional-types",
+    "infer",
+    "template-literal-types"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "generics",
+    "mapped-types",
+    "conditional-types",
+    "infer",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Separate the input into the structural cases that produce different outputs.",
+    "Combine conditional inference with mapping, remapping, indexed access, or recursion as required.",
+    "Preserve the correlation between each source member, key, payload, and resulting branch."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
