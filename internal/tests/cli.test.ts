@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
@@ -228,5 +228,77 @@ test("retention reviews are counted separately from practice attempts", async (t
     assert.equal(snapshot.failedAttempts, 0);
     assert.equal(snapshot.accuracy, 100);
     assert.equal(snapshot.retentionReviews, 1);
+  });
+});
+
+/** Makes the CLI believe it is running on a different machine. */
+function useDevice(root: string, name: string): void {
+  mkdirSync(join(root, ".frenzy"), { recursive: true });
+  writeFileSync(join(root, ".frenzy", "device"), `${name}\n`, "utf8");
+}
+
+test("progress recorded on another machine is merged, not restarted", async (t) => {
+  const root = createFixtureRepository();
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  // The other machine solves the first challenge and pushes both its shard and
+  // its solution; this machine then picks the work up.
+  useDevice(root, "desktop");
+  writeFileSync(taskPath(root, "TS-CORE-001"), SOLUTION, "utf8");
+  runCli(root, "start", "typescript");
+  assert.equal(runCli(root, "check").status, 0);
+  const desktopProgress = readProgress(root, "desktop");
+  const desktop = stateOf(desktopProgress, "TS-CORE-001");
+  assert.ok(desktop.retention);
+  desktop.retention.dueAt = new Date(Date.now() - 60_000).toISOString();
+  writeProgress(root, desktopProgress, "desktop");
+
+  useDevice(root, "laptop");
+
+  await t.test("each machine writes only its own shard", () => {
+    assert.ok(existsSync(join(root, ".frenzy", "progress.desktop.json")));
+    runCli(root, "start", "typescript");
+    assert.ok(existsSync(join(root, ".frenzy", "progress.laptop.json")));
+    assert.equal(stateOf(readProgress(root, "desktop"), "TS-CORE-001").attempts, desktop.attempts);
+  });
+
+  await t.test("a challenge solved elsewhere is not offered again", () => {
+    const result = runCli(root, "start", "typescript");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /TS-CORE-002/);
+    assert.match(result.stdout, /Progress: 1 \/ 2/);
+  });
+
+  await t.test("devices lists every machine that recorded work", () => {
+    const result = runCli(root, "devices");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /desktop\s+1 completed/);
+    assert.match(result.stdout, /laptop/);
+  });
+
+  await t.test("a review continues the other machine's schedule", () => {
+    assert.equal(runCli(root, "retention").status, 0);
+    const result = runCli(root, "check");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /Review 1 recorded/);
+
+    const laptop = stateOf(readProgress(root, "laptop"), "TS-CORE-001");
+    assert.equal(laptop.retention?.reviewCount, 1, "the review advances the adopted schedule");
+    assert.equal(laptop.retention?.stage, 1);
+    assert.equal(laptop.attempts, 0, "the other machine's attempts are not re-counted here");
+    assert.equal(laptop.elapsedSeconds, 0, "nor is its time");
+  });
+
+  await t.test("doctor accepts completed work whose solution is present", () => {
+    const result = runCli(root, "doctor");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /Every completed challenge still passes/);
+  });
+
+  await t.test("doctor reports progress that arrived without its solution", () => {
+    writeFileSync(taskPath(root, "TS-CORE-001"), STARTER, "utf8");
+    const result = runCli(root, "doctor");
+    assert.equal(result.status, 1);
+    assert.match(result.stdout, /TS-CORE-001/);
   });
 });

@@ -8,13 +8,17 @@ import {
   type Challenge,
 } from "../../../internal/challenge-schema/src/discovery.js";
 import {
+  deviceId,
   elapsedSince,
+  listDevices,
+  readOtherProgress,
   readProgress,
   startChallenge,
   writeProgress,
   type ActiveSession,
   type ProgressFile,
 } from "../../../internal/progress/src/index.js";
+import { adoptSharedState, mergeProgress } from "../../../internal/progress/src/merge.js";
 import {
   recordReview,
   scheduleFirstReview,
@@ -24,6 +28,32 @@ import { validateTypeScriptChallenge } from "../../../internal/validation/src/ty
 
 const root = findRepositoryRoot();
 const challenges = discoverChallenges(root);
+const device = deviceId(root);
+
+/**
+ * Progress is written to this machine's shard only, but every read that reports
+ * or selects work must see what the other machines recorded too.
+ */
+function mergedView(local: ProgressFile): ProgressFile {
+  return mergeProgress(local, readOtherProgress(root, device));
+}
+
+/**
+ * Makes a challenge current, seeding history another machine already recorded so
+ * that a review continues its schedule instead of restarting it.
+ */
+function activate(
+  local: ProgressFile,
+  merged: ProgressFile,
+  challengeId: string,
+  mode: "practice" | "retention",
+): void {
+  const shared = merged.challenges[challengeId];
+  if (local.challenges[challengeId] === undefined && shared !== undefined) {
+    local.challenges[challengeId] = adoptSharedState(shared);
+  }
+  startChallenge(local, challengeId, new Date(), mode);
+}
 
 function titleCase(value: string): string {
   if (value === "typescript") return "TypeScript";
@@ -86,71 +116,73 @@ function showChallenge(challenge: Challenge, progress: ProgressFile): void {
   );
 }
 
-function selectNext(progress: ProgressFile): Challenge | undefined {
-  const current = challengeById(progress.currentChallengeId);
-  if (current && progress.currentMode === "practice" && progress.challenges[current.metadata.id]?.status !== "completed") {
+function selectNext(local: ProgressFile, merged: ProgressFile): Challenge | undefined {
+  const current = challengeById(local.currentChallengeId);
+  if (current && local.currentMode === "practice" && merged.challenges[current.metadata.id]?.status !== "completed") {
     return current;
   }
   return challenges.find(
     (challenge) =>
-      matchesSession(challenge, progress.activeSession) &&
-      progress.challenges[challenge.metadata.id]?.status !== "completed",
+      matchesSession(challenge, merged.activeSession) &&
+      merged.challenges[challenge.metadata.id]?.status !== "completed",
   );
 }
 
 function commandStart(value: string | undefined): void {
   if (!value) throw new Error("Missing domain. Try: frenzy start typescript");
-  const progress = readProgress(root);
-  progress.activeSession = parseSession(value);
-  delete progress.currentChallengeId;
-  delete progress.currentMode;
-  const challenge = selectNext(progress);
+  const local = readProgress(root, device);
+  local.activeSession = parseSession(value);
+  delete local.currentChallengeId;
+  delete local.currentMode;
+  const merged = mergedView(local);
+  const challenge = selectNext(local, merged);
   if (!challenge) {
-    writeProgress(root, progress);
+    writeProgress(root, local, device);
     console.log("Session complete. No unsolved challenges remain.");
     return;
   }
-  startChallenge(progress, challenge.metadata.id, new Date());
-  writeProgress(root, progress);
-  showChallenge(challenge, progress);
+  activate(local, merged, challenge.metadata.id, "practice");
+  writeProgress(root, local, device);
+  showChallenge(challenge, mergedView(local));
 }
 
 function commandNext(): void {
-  const progress = readProgress(root);
-  const challenge = selectNext(progress);
+  const local = readProgress(root, device);
+  const merged = mergedView(local);
+  const challenge = selectNext(local, merged);
   if (!challenge) {
     console.log("No unsolved challenges in the active session.");
     return;
   }
-  startChallenge(progress, challenge.metadata.id, new Date());
-  writeProgress(root, progress);
-  showChallenge(challenge, progress);
+  activate(local, merged, challenge.metadata.id, "practice");
+  writeProgress(root, local, device);
+  showChallenge(challenge, mergedView(local));
 }
 
 function commandCurrent(): void {
-  const progress = readProgress(root);
-  const challenge = challengeById(progress.currentChallengeId);
+  const local = readProgress(root, device);
+  const challenge = challengeById(local.currentChallengeId);
   if (!challenge) {
     console.log("No active challenge. Run frenzy start typescript.");
     return;
   }
-  showChallenge(challenge, progress);
+  showChallenge(challenge, mergedView(local));
 }
 
 function commandHint(): void {
-  const progress = readProgress(root);
+  const progress = readProgress(root, device);
   const challenge = challengeById(progress.currentChallengeId);
   if (!challenge) throw new Error("No active challenge. Run frenzy start first.");
   const state = progress.challenges[challenge.metadata.id];
   if (!state) throw new Error("Active challenge has no progress state.");
   const nextHint = Math.min(state.hintsUsed, challenge.metadata.hints.length - 1);
   if (state.hintsUsed < challenge.metadata.hints.length) state.hintsUsed += 1;
-  writeProgress(root, progress);
+  writeProgress(root, progress, device);
   console.log(`Hint ${nextHint + 1}/${challenge.metadata.hints.length}:\n${challenge.metadata.hints[nextHint]}`);
 }
 
 function commandCheck(details: boolean): void {
-  const progress = readProgress(root);
+  const progress = readProgress(root, device);
   const challenge = challengeById(progress.currentChallengeId);
   if (!challenge) throw new Error("No active challenge. Run frenzy start first.");
   const state = progress.challenges[challenge.metadata.id];
@@ -185,7 +217,7 @@ function commandCheck(details: boolean): void {
       state.startedAt = now.toISOString();
     }
   }
-  writeProgress(root, progress);
+  writeProgress(root, progress, device);
 
   if (!result.passed) {
     console.log("✗ FAIL\n\nTypeScript validation failed.\nRun with --details to show compiler output.");
@@ -243,8 +275,7 @@ function collectStats(progress: ProgressFile): StatsSnapshot {
 }
 
 function commandStats(exportSnapshot: boolean): void {
-  const progress = readProgress(root);
-  const stats = collectStats(progress);
+  const stats = collectStats(mergedView(readProgress(root, device)));
   if (exportSnapshot) {
     const directory = join(root, "stats");
     mkdirSync(directory, { recursive: true });
@@ -271,7 +302,7 @@ function commandStats(exportSnapshot: boolean): void {
 }
 
 function commandTopics(): void {
-  const progress = readProgress(root);
+  const progress = mergedView(readProgress(root, device));
   const topics = new Map<string, Challenge[]>();
   for (const challenge of challenges) {
     const key = `${challenge.metadata.domain}/${challenge.metadata.topic}`;
@@ -286,20 +317,57 @@ function commandTopics(): void {
 }
 
 function commandRetention(): void {
-  const progress = readProgress(root);
-  const challenge = selectDueChallenge(challenges, progress, new Date());
+  const local = readProgress(root, device);
+  const merged = mergedView(local);
+  const challenge = selectDueChallenge(challenges, merged, new Date());
   if (!challenge) {
     console.log("No retention challenges are due.");
     return;
   }
-  progress.activeSession = { domain: challenge.metadata.domain, topic: challenge.metadata.topic };
-  startChallenge(progress, challenge.metadata.id, new Date(), "retention");
-  writeProgress(root, progress);
-  showChallenge(challenge, progress);
+  local.activeSession = { domain: challenge.metadata.domain, topic: challenge.metadata.topic };
+  activate(local, merged, challenge.metadata.id, "retention");
+  writeProgress(root, local, device);
+  showChallenge(challenge, mergedView(local));
+}
+
+function commandDevices(): void {
+  const devices = listDevices(root);
+  if (devices.length === 0) {
+    console.log("No progress recorded yet.");
+    return;
+  }
+  for (const name of devices) {
+    const shard = readProgress(root, name);
+    const solved = Object.values(shard.challenges).filter(
+      (state) => state.status === "completed",
+    ).length;
+    console.log(`${name === device ? "*" : " "} ${name.padEnd(24)} ${solved} completed`);
+  }
+}
+
+/**
+ * Progress and solutions must travel together: a challenge recorded as completed
+ * whose solution never arrived would fail its next review and corrupt the schedule.
+ */
+function commandDoctor(): void {
+  const merged = mergedView(readProgress(root, device));
+  const completed = challenges.filter(
+    (challenge) => merged.challenges[challenge.metadata.id]?.status === "completed",
+  );
+  const broken = completed.filter((challenge) => !validateTypeScriptChallenge(root, challenge).passed);
+  console.log(`Checked ${completed.length} completed challenges.`);
+  if (broken.length === 0) {
+    console.log("✓ Every completed challenge still passes.");
+    return;
+  }
+  console.log(`✗ ${broken.length} no longer pass:`);
+  for (const challenge of broken) console.log(`  ${challenge.metadata.id}  ${challenge.relativeDirectory}`);
+  console.log("\nCheck out the branch holding your solutions, then run frenzy doctor again.");
+  process.exitCode = 1;
 }
 
 function printHelp(): void {
-  console.log(`Frontend Frenzy\n\nCommands:\n  frenzy start <domain[/topic]>\n  frenzy next\n  frenzy current\n  frenzy check [--details]\n  frenzy hint\n  frenzy stats [--export]\n  frenzy topics\n  frenzy retention`);
+  console.log(`Frontend Frenzy\n\nCommands:\n  frenzy start <domain[/topic]>\n  frenzy next\n  frenzy current\n  frenzy check [--details]\n  frenzy hint\n  frenzy stats [--export]\n  frenzy topics\n  frenzy retention\n  frenzy devices\n  frenzy doctor`);
 }
 
 function main(args: readonly string[]): void {
@@ -313,6 +381,8 @@ function main(args: readonly string[]): void {
     case "stats": commandStats(args.includes("--export")); break;
     case "topics": commandTopics(); break;
     case "retention": commandRetention(); break;
+    case "devices": commandDevices(); break;
+    case "doctor": commandDoctor(); break;
     case "help":
     case "--help":
     case "-h":

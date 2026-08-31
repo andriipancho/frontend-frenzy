@@ -47,6 +47,8 @@ Run `npm link` once if you prefer the shorter global development command, such a
 | `frenzy stats [--export]` | Show progress or export a public-safe snapshot |
 | `frenzy topics` | List topic-level progress |
 | `frenzy retention` | Select a due retention challenge |
+| `frenzy devices` | List the machines that recorded progress |
+| `frenzy doctor` | Re-validate every challenge marked completed |
 
 ## TypeScript curriculum
 
@@ -88,7 +90,11 @@ The normal pass/fail path does not call an LLM, access a network, or inspect unr
 
 ## Progress, retention, and stats
 
-Personal progress is stored in `.frenzy/progress.json` and ignored by Git. It tracks attempts, hints, elapsed time, completion, the active challenge, and retention state.
+Personal progress is stored in `.frenzy/progress.<device>.json`. It tracks attempts, hints, elapsed time, completion, the active challenge, and retention state.
+
+Each machine writes only its own shard, so shards never conflict, and every read merges them: attempts and time are summed because each shard counts only its own work, the furthest hint reveal wins, and the shard with more reviews holds the current schedule. The active challenge stays local — being midway through one machine's session must not hijack another's.
+
+To practise on more than one machine, commit the shards on the branch that holds your solutions and pull it on the other machine. Progress and solutions have to travel together: a challenge recorded as completed whose solution never arrived would fail its next review and corrupt its schedule. `frenzy doctor` re-runs the validation for everything marked completed and reports exactly that.
 
 Completed challenges enter deterministic review intervals at D+1, D+3, D+7, D+14, and D+30. Failed attempts, hint usage, difficulty, time, and the previous review result influence which due challenge is selected first. The algorithm is intentionally small and documented in [retention](retention/README.md).
 
