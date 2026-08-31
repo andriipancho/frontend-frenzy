@@ -1,0 +1,24 @@
+{
+  "id": "TS-UTL-005",
+  "title": "Require connection options",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "required",
+    "configuration",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "optional-properties"
+  ],
+  "hints": [
+    "The source describes user-supplied optional configuration.",
+    "The resolved form needs the inverse property modifier.",
+    "Apply the standard Required utility."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

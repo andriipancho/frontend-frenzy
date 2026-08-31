@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-069",
+  "title": "Reimplement NonNullable",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "utility-reimplementation",
+    "conditional-types",
+    "nullish-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "nullish-types"
+  ],
+  "hints": [
+    "Treat null and undefined as one excluded union.",
+    "Distribute across T's members.",
+    "Return never for nullish members and T otherwise."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

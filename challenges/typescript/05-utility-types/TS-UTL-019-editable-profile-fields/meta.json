@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-019",
+  "title": "Model editable profile fields",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "omit",
+    "partial",
+    "utility-composition",
+    "update-modeling"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "omit",
+    "partial"
+  ],
+  "hints": [
+    "Identity is removed while edit fields become optional.",
+    "Apply Omit to define the editable base.",
+    "Wrap that result with Partial."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

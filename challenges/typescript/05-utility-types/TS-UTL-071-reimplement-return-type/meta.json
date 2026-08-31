@@ -1,0 +1,27 @@
+{
+  "id": "TS-UTL-071",
+  "title": "Reimplement ReturnType",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "utility-reimplementation",
+    "conditional-types",
+    "infer",
+    "return-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "infer",
+    "function-types"
+  ],
+  "hints": [
+    "Match F against a callable with an unknown result.",
+    "Infer the type in the return position.",
+    "Return that inferred result from the matching branch."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

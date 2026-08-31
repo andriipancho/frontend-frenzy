@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-020",
+  "title": "Create a generic selection helper",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "pick",
+    "generic-types",
+    "keyof"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "pick",
+    "generic-types",
+    "keyof"
+  ],
+  "hints": [
+    "The selected key parameter depends on T.",
+    "Constrain K to keyof T.",
+    "Apply Pick<T, K>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

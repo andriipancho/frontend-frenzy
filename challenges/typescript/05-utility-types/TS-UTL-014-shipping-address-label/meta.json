@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-014",
+  "title": "Select shipping label fields",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "pick",
+    "indexed-access",
+    "nested-properties"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "pick",
+    "indexed-access"
+  ],
+  "hints": [
+    "The source object is Checkout's address property.",
+    "Select that nested type first.",
+    "Pick the printable keys from it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-040",
+  "title": "Normalize a present label",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "non-nullable",
+    "function-parameters",
+    "boundary-modeling"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "non-nullable",
+    "nullish-types"
+  ],
+  "hints": [
+    "The function operates after absence has already been handled.",
+    "Narrow its parameter without changing Label itself.",
+    "Use NonNullable<Label>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

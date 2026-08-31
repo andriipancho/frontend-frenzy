@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-010",
+  "title": "Model a readonly feature patch",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "partial",
+    "readonly-utility",
+    "utility-composition"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "partial",
+    "readonly-properties"
+  ],
+  "hints": [
+    "Two independent transformations are required.",
+    "First consider optionality, then the exposed mutation contract.",
+    "Compose Partial with Readonly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

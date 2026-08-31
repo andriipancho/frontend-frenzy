@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-023",
+  "title": "Map features to configuration",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "record",
+    "feature-flags",
+    "configuration"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "record",
+    "literal-unions"
+  ],
+  "hints": [
+    "The keys form a fixed feature union.",
+    "The values all share FeatureConfig.",
+    "Use Record<FeatureName, FeatureConfig>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-051",
+  "title": "Derive a created user type",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "return-type",
+    "factories",
+    "typeof"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "typeof",
+    "function-return-types"
+  ],
+  "hints": [
+    "Query the function value's type first.",
+    "A standard utility extracts its return type.",
+    "Apply ReturnType to typeof createUser."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

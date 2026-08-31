@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-012",
+  "title": "Select invoice summary fields",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "pick",
+    "view-models",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "pick",
+    "object-types"
+  ],
+  "hints": [
+    "The result contains fewer properties than Invoice.",
+    "Choose the required property-name union.",
+    "Pick those keys from Invoice."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

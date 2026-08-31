@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-015",
+  "title": "Remove a password hash",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "omit",
+    "data-exposure",
+    "security"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "object-types",
+    "keyof"
+  ],
+  "hints": [
+    "The result removes fewer fields than it keeps.",
+    "Name the excluded key rather than every retained key.",
+    "Use Omit with UserRecord."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

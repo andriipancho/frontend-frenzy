@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-041",
+  "title": "Derive logger parameters",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "parameters",
+    "function-types",
+    "tuples"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "typeof",
+    "function-types"
+  ],
+  "hints": [
+    "The function type is available through typeof.",
+    "A standard utility extracts its argument tuple.",
+    "Apply Parameters to typeof logMessage."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

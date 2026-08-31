@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-063",
+  "title": "Reimplement Readonly",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "utility-reimplementation",
+    "mapped-types",
+    "readonly-modifiers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "readonly-properties"
+  ],
+  "hints": [
+    "Iterate through keyof T.",
+    "Mapped properties can add readonly directly.",
+    "Keep each value as T[P]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

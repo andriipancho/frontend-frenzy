@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-048",
+  "title": "Forward database constructor arguments",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "constructor-parameters",
+    "rest-parameters",
+    "factories"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "constructor-parameters",
+    "rest-parameters"
+  ],
+  "hints": [
+    "The factory arguments should mirror the constructor tuple.",
+    "Extract them from typeof Database.",
+    "Use the tuple as the rest parameter type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-006",
+  "title": "Connect with resolved options",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "required",
+    "function-parameters",
+    "configuration-boundaries"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "required",
+    "optional-properties"
+  ],
+  "hints": [
+    "The connector receives configuration after defaults are resolved.",
+    "Transform ConnectionOptions at the parameter boundary.",
+    "Use Required rather than changing the source interface."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

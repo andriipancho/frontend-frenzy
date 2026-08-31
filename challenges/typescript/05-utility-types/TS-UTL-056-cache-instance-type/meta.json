@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-056",
+  "title": "Derive a cache instance",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "instance-type",
+    "classes",
+    "constructor-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "classes",
+    "typeof"
+  ],
+  "hints": [
+    "typeof Cache describes the constructor side.",
+    "A standard utility maps a constructor to its instance.",
+    "Apply InstanceType to typeof Cache."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

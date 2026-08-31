@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-021",
+  "title": "Create a status label record",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "record",
+    "literal-unions",
+    "lookup-objects"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "literal-unions",
+    "object-types"
+  ],
+  "hints": [
+    "The object has a known key union and one shared value type.",
+    "Use the standard dictionary utility.",
+    "Map OrderStatus to string."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

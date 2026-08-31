@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-029",
+  "title": "Protect a locale catalog",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "record",
+    "readonly-utility",
+    "localization",
+    "utility-composition"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "record",
+    "readonly-properties"
+  ],
+  "hints": [
+    "Record provides completeness but not immutability.",
+    "Build the locale dictionary first.",
+    "Wrap it with Readonly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

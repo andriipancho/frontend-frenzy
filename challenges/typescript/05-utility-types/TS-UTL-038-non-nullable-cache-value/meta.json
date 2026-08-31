@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-038",
+  "title": "Require a cache value",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "non-nullable",
+    "nullish-types",
+    "cache-modeling"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "nullish-types",
+    "union-types"
+  ],
+  "hints": [
+    "A standard utility removes both nullish members together.",
+    "Apply it to CachedValue.",
+    "Do not list the retained string separately."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

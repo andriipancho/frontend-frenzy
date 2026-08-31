@@ -1,0 +1,27 @@
+{
+  "id": "TS-UTL-065",
+  "title": "Reimplement Omit",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "utility-reimplementation",
+    "mapped-types",
+    "key-remapping",
+    "conditional-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "key-remapping",
+    "conditional-types"
+  ],
+  "hints": [
+    "Map across every key of T.",
+    "Remap excluded keys to never.",
+    "Keep other keys and index their original values."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-042",
+  "title": "Derive callback parameters",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "parameters",
+    "generic-types",
+    "callbacks"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "parameters",
+    "generic-constraints"
+  ],
+  "hints": [
+    "The utility works on a function type parameter.",
+    "Constrain F to a callable type.",
+    "Return Parameters<F>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

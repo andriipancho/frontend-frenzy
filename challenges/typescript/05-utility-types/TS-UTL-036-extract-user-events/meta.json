@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-036",
+  "title": "Extract user events",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "extract",
+    "template-literals",
+    "events",
+    "union-filtering"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "extract",
+    "template-literal-types"
+  ],
+  "hints": [
+    "The retained members share a template-literal pattern.",
+    "Describe that pattern as user followed by any string.",
+    "Extract matching members from EventName."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-003",
+  "title": "Model partial display preferences",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "partial",
+    "indexed-access",
+    "nested-properties"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "partial",
+    "indexed-access"
+  ],
+  "hints": [
+    "Select the display section before transforming it.",
+    "Indexed access obtains the nested object type.",
+    "Apply Partial to that selected section."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-027",
+  "title": "Map roles to permissions",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "record",
+    "readonly-arrays",
+    "permissions"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "record",
+    "literal-unions",
+    "readonly-arrays"
+  ],
+  "hints": [
+    "The role union supplies the keys.",
+    "The value type is a readonly array of Permission.",
+    "Use that collection type as Record's second parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

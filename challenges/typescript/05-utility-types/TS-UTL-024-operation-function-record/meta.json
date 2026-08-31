@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-024",
+  "title": "Map operations to functions",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "record",
+    "function-types",
+    "lookup-objects"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "record",
+    "function-types"
+  ],
+  "hints": [
+    "The keys are a closed operation union.",
+    "The value is one reusable function type.",
+    "Use Record with both."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

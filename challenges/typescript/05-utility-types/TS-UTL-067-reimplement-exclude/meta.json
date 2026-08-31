@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-067",
+  "title": "Reimplement Exclude",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "utility-reimplementation",
+    "conditional-types",
+    "distributive-conditionals"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "union-types"
+  ],
+  "hints": [
+    "A naked type parameter makes a conditional distribute.",
+    "Return never for members assignable to U.",
+    "Return the original member otherwise."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

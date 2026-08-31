@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-044",
+  "title": "Create a first-parameter helper",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "parameters",
+    "indexed-access",
+    "generic-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "parameters",
+    "indexed-access",
+    "generic-types"
+  ],
+  "hints": [
+    "Parameters<F> produces a tuple.",
+    "The first argument occupies position zero.",
+    "Index the extracted tuple with 0."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

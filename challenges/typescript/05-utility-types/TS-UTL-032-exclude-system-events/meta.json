@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-032",
+  "title": "Exclude system events",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "exclude",
+    "literal-unions",
+    "events"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "exclude",
+    "literal-unions"
+  ],
+  "hints": [
+    "The internal event names are known union members.",
+    "Remove their union from EventName.",
+    "Use Exclude rather than restating application events."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

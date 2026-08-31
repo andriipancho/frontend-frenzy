@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-061",
+  "title": "Reimplement Partial",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "utility-reimplementation",
+    "mapped-types",
+    "optional-modifiers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "keyof",
+    "indexed-access",
+    "mapped-types"
+  ],
+  "hints": [
+    "Iterate over every key of T.",
+    "Keep each value as T[P].",
+    "Add the optional modifier in the mapped property declaration."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

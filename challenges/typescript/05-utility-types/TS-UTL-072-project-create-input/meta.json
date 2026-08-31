@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-072",
+  "title": "Derive a project create input",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "omit",
+    "dto-modeling",
+    "production-api"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "omit",
+    "object-types"
+  ],
+  "hints": [
+    "Generated fields are excluded rather than optional.",
+    "List only the three generated keys.",
+    "Omit them from Project."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-017",
+  "title": "Sanitize a session result",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "omit",
+    "return-types",
+    "security"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "omit",
+    "object-rest"
+  ],
+  "hints": [
+    "The runtime removes exactly one property.",
+    "The return type should describe the same exclusion.",
+    "Use Omit<Session, \"token\">."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

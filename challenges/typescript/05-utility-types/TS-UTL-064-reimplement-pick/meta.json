@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-064",
+  "title": "Reimplement Pick",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "utility-reimplementation",
+    "mapped-types",
+    "keyof"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "keyof",
+    "indexed-access"
+  ],
+  "hints": [
+    "The mapped key union is K rather than every key of T.",
+    "Constrain K to keyof T.",
+    "Index T with each mapped key."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

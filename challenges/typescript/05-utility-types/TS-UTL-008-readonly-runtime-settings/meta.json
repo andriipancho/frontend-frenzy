@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-008",
+  "title": "Protect runtime settings",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "readonly-utility",
+    "immutability",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "readonly-properties",
+    "object-types"
+  ],
+  "hints": [
+    "The shape stays the same while property modifiers change.",
+    "Use the standard utility that adds readonly to each property.",
+    "Apply it to RuntimeSettings."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

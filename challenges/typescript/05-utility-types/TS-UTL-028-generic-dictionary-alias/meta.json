@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-028",
+  "title": "Create a generic dictionary alias",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "record",
+    "generic-types",
+    "property-key"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "record",
+    "generic-constraints"
+  ],
+  "hints": [
+    "Record requires its key parameter to be a PropertyKey.",
+    "Constrain K accordingly.",
+    "Forward K and V to Record."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

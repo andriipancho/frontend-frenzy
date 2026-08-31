@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-037",
+  "title": "Extract a success result",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "extract",
+    "discriminated-unions",
+    "api-modeling"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "extract",
+    "discriminated-unions"
+  ],
+  "hints": [
+    "Extract can match structural object types, not only primitives.",
+    "Describe the member with status ok.",
+    "Extract that shape from ApiResult."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-004",
+  "title": "Save an incomplete form draft",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "partial",
+    "forms",
+    "function-parameters"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "partial",
+    "object-types"
+  ],
+  "hints": [
+    "Draft values share the final form keys and value types.",
+    "Make every property of FormValues optional.",
+    "Use that transformed type for the parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

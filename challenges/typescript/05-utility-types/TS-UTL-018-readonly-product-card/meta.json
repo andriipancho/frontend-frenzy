@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-018",
+  "title": "Create a readonly product card",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "pick",
+    "readonly-utility",
+    "utility-composition",
+    "view-models"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "pick",
+    "readonly-properties"
+  ],
+  "hints": [
+    "First identify the selected product view.",
+    "Pick the four presentation fields.",
+    "Wrap that selection in Readonly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

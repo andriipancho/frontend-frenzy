@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-001",
+  "title": "Model a partial profile patch",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "partial",
+    "object-types",
+    "update-modeling"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "object-types",
+    "optional-properties"
+  ],
+  "hints": [
+    "A patch reuses the original fields but makes each optional.",
+    "Use the standard object utility for optionalizing properties.",
+    "Apply it directly to Profile."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

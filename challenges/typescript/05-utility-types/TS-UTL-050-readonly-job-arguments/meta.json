@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-050",
+  "title": "Protect job constructor arguments",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "constructor-parameters",
+    "readonly-utility",
+    "tuples",
+    "utility-composition"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "constructor-parameters",
+    "readonly-tuples"
+  ],
+  "hints": [
+    "Extract the mutable constructor tuple first.",
+    "Readonly also transforms tuple mutability.",
+    "Wrap ConstructorParameters with Readonly."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

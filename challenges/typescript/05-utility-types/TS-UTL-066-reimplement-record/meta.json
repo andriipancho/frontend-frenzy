@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-066",
+  "title": "Reimplement Record",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "utility-reimplementation",
+    "mapped-types",
+    "property-key"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "property-key"
+  ],
+  "hints": [
+    "The mapped domain is the supplied key union K.",
+    "Constrain K to PropertyKey.",
+    "Assign V to every mapped property."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

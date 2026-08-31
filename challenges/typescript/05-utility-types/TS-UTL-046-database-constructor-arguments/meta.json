@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-046",
+  "title": "Derive database constructor arguments",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "constructor-parameters",
+    "classes",
+    "tuples"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "classes",
+    "typeof"
+  ],
+  "hints": [
+    "A class name refers to its constructor value under typeof.",
+    "Use the constructor-argument utility on that type.",
+    "The result is a labeled tuple."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

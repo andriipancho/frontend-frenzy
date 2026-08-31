@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-057",
+  "title": "Extract a repository instance",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "instance-type",
+    "constructor-types",
+    "interfaces"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "instance-type",
+    "constructor-signatures"
+  ],
+  "hints": [
+    "InstanceType accepts a constructor type alias directly.",
+    "The source is RepositoryConstructor.",
+    "No typeof query is needed for a type-only constructor."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

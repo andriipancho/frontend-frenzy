@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-002",
+  "title": "Apply an account patch",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "partial",
+    "function-parameters",
+    "object-spread"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "partial",
+    "object-types"
+  ],
+  "hints": [
+    "Only the second argument represents an incomplete object.",
+    "Use Partial on the patch parameter, not the return type.",
+    "Merging a complete account with that patch remains an Account."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-045",
+  "title": "Reuse event emitter arguments",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "parameters",
+    "events",
+    "tuples"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "parameters",
+    "typeof"
+  ],
+  "hints": [
+    "The existing function is the source of truth.",
+    "Query its type with typeof.",
+    "Extract its parameters as one tuple."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

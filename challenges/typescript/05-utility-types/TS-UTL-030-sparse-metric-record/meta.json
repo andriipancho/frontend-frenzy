@@ -1,0 +1,26 @@
+{
+  "id": "TS-UTL-030",
+  "title": "Model sparse metrics",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "record",
+    "partial",
+    "metrics",
+    "utility-composition"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "record",
+    "partial"
+  ],
+  "hints": [
+    "Record closes the key set and assigns the shared value type.",
+    "A snapshot may omit any of those keys.",
+    "Wrap the complete record with Partial."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

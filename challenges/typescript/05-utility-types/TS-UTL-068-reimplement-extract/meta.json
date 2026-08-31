@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-068",
+  "title": "Reimplement Extract",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "utility-reimplementation",
+    "conditional-types",
+    "distributive-conditionals"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "conditional-types",
+    "union-types"
+  ],
+  "hints": [
+    "The conditional structure resembles union exclusion.",
+    "Return the original member when it matches U.",
+    "Return never for non-matching members."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

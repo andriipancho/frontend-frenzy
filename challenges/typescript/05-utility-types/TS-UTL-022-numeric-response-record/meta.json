@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-022",
+  "title": "Map numeric response codes",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "record",
+    "numeric-keys",
+    "lookup-objects"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "record",
+    "numeric-literal-types"
+  ],
+  "hints": [
+    "Record keys can be numeric literal unions.",
+    "Use ResponseCode as the key parameter.",
+    "Use the metadata object as the value parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-039",
+  "title": "Require a loaded user",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "non-nullable",
+    "indexed-access",
+    "state-modeling"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "non-nullable",
+    "indexed-access"
+  ],
+  "hints": [
+    "The nullable type is nested in SessionState.",
+    "Select it with indexed access.",
+    "Apply NonNullable to the selected property."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

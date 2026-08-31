@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-060",
+  "title": "Resolve an async result union",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "awaited",
+    "union-types",
+    "promises"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "awaited",
+    "union-types"
+  ],
+  "hints": [
+    "Awaited distributes across union members.",
+    "Promise values are unwrapped while non-promises remain.",
+    "Apply Awaited once to AsyncLookup."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

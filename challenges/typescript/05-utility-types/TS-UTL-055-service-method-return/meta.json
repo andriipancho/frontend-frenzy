@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-055",
+  "title": "Derive a service method result",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "return-type",
+    "indexed-access",
+    "methods"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "return-type",
+    "indexed-access"
+  ],
+  "hints": [
+    "Indexed access can select the method's function type.",
+    "Select Service[\"health\"] first.",
+    "Apply ReturnType to that method type."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

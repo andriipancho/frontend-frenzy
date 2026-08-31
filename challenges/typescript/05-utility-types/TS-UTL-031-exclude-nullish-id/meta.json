@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-031",
+  "title": "Exclude nullish IDs",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "exclude",
+    "nullish-types",
+    "union-filtering"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "union-types",
+    "nullish-types"
+  ],
+  "hints": [
+    "The source is a union and the removed set is also a union.",
+    "Use the utility that removes assignable union members.",
+    "Exclude null | undefined from MaybeId."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

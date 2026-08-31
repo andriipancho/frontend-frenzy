@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-052",
+  "title": "Derive a parser result",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "return-type",
+    "union-types",
+    "parsers"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "return-type",
+    "union-types"
+  ],
+  "hints": [
+    "The implementation already determines all possible results.",
+    "Use typeof to reference the function type.",
+    "Extract its return type as a whole."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "TS-UTL-075",
+  "title": "Resolve a service factory registry",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "boss",
+  "topics": [
+    "return-type",
+    "awaited",
+    "mapped-types",
+    "factories",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "return-type",
+    "awaited",
+    "keyof",
+    "mapped-types"
+  ],
+  "hints": [
+    "Iterate over each key of the factory registry.",
+    "Extract each selected factory's return type.",
+    "Resolve that return with Awaited for the final property value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "TS-UTL-025",
+  "title": "Derive a region endpoint record",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "record",
+    "typeof",
+    "indexed-access",
+    "template-literals"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "record",
+    "const-assertions",
+    "indexed-access"
+  ],
+  "hints": [
+    "Preserve the region list as a readonly tuple.",
+    "Derive its element union with typeof and number.",
+    "Use that union as Record keys."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

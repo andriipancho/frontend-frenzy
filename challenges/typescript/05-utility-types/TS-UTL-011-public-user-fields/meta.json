@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-011",
+  "title": "Select public user fields",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "pick",
+    "data-exposure",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "keyof",
+    "object-types"
+  ],
+  "hints": [
+    "The public shape is a subset of an existing object type.",
+    "List the allowed keys as the utility's second argument.",
+    "Use Pick with User."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

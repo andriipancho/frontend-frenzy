@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-016",
+  "title": "Remove authentication secrets",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "omit",
+    "security",
+    "session-modeling"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "omit",
+    "union-types"
+  ],
+  "hints": [
+    "Several keys can be excluded in one operation.",
+    "Build a union of secret property names.",
+    "Pass that union to Omit."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

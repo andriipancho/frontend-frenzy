@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-007",
+  "title": "Require upload limits",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "required",
+    "indexed-access",
+    "nested-properties"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "required",
+    "indexed-access"
+  ],
+  "hints": [
+    "The target is a nested property, not the entire policy.",
+    "Select UploadPolicy's limits type first.",
+    "Apply Required to the selected object."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

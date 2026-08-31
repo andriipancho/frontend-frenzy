@@ -1,0 +1,27 @@
+{
+  "id": "TS-UTL-059",
+  "title": "Derive a fetched user result",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "awaited",
+    "return-type",
+    "async-functions",
+    "nullish-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "awaited",
+    "return-type",
+    "typeof"
+  ],
+  "hints": [
+    "ReturnType obtains the Promise type first.",
+    "Awaited resolves the value inside that Promise.",
+    "Compose both utilities around typeof fetchUser."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

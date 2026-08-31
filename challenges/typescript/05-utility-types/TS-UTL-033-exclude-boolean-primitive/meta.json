@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-033",
+  "title": "Exclude boolean values",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "exclude",
+    "primitive-types",
+    "union-filtering"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "exclude",
+    "union-types"
+  ],
+  "hints": [
+    "Each union member is considered independently.",
+    "Specify boolean as the excluded type.",
+    "Apply Exclude to PrimitiveInput."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

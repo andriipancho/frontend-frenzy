@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-047",
+  "title": "Extract service constructor arguments",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "constructor-parameters",
+    "constructor-types",
+    "tuples"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "constructor-parameters",
+    "constructor-signatures"
+  ],
+  "hints": [
+    "The utility accepts constructor types as well as classes.",
+    "Apply it directly to ServiceConstructor.",
+    "No typeof query is needed for an existing type alias."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

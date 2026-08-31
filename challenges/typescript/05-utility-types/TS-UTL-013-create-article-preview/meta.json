@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-013",
+  "title": "Create an article preview",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "pick",
+    "return-types",
+    "view-models"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "pick",
+    "function-return-types"
+  ],
+  "hints": [
+    "The returned object is a selected view of Article.",
+    "Describe that view with Pick.",
+    "Use the same selected keys in the runtime object."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

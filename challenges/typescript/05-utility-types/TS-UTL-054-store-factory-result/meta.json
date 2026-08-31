@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-054",
+  "title": "Derive a store factory result",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "return-type",
+    "factories",
+    "state-modeling"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "return-type",
+    "function-types"
+  ],
+  "hints": [
+    "The factory's implementation is the source of truth.",
+    "Use typeof createStore as the function input.",
+    "Extract its return with ReturnType."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

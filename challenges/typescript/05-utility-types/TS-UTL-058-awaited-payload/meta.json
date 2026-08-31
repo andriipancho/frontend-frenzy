@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-058",
+  "title": "Resolve a promised payload",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "awaited",
+    "promises",
+    "async-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "promises",
+    "generic-types"
+  ],
+  "hints": [
+    "The desired type is what await produces.",
+    "Use the standard async resolution utility.",
+    "Apply Awaited to PayloadPromise."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

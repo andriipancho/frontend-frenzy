@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-053",
+  "title": "Derive an async operation return",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "return-type",
+    "promises",
+    "async-functions"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "return-type",
+    "promises"
+  ],
+  "hints": [
+    "ReturnType does not unwrap asynchronous functions.",
+    "Query typeof saveRecord.",
+    "Apply ReturnType to retain its Promise result."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

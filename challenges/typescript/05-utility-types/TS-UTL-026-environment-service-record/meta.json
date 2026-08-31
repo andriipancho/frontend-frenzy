@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-026",
+  "title": "Map environments to services",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "record",
+    "configuration",
+    "nested-objects"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "record",
+    "literal-unions"
+  ],
+  "hints": [
+    "The environment union defines the required outer keys.",
+    "The value parameter can be an object contract.",
+    "Map Environment to ServiceConfig."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

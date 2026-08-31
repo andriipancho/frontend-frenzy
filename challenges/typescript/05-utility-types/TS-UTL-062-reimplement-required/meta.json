@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-062",
+  "title": "Reimplement Required",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "utility-reimplementation",
+    "mapped-types",
+    "required-modifiers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "optional-properties"
+  ],
+  "hints": [
+    "Map across keyof T.",
+    "The mapped modifier syntax can explicitly remove optionality.",
+    "Use T[P] for every resulting value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

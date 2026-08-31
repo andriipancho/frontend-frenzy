@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-035",
+  "title": "Extract text values",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "easy",
+  "topics": [
+    "extract",
+    "primitive-types",
+    "union-filtering"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "extract",
+    "union-types"
+  ],
+  "hints": [
+    "The desired members are assignable to string.",
+    "Use the utility that keeps matching union members.",
+    "Extract string from MixedValue."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

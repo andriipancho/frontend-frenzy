@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-043",
+  "title": "Select scheduler options",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "parameters",
+    "indexed-access",
+    "function-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "parameters",
+    "indexed-access"
+  ],
+  "hints": [
+    "First extract the complete parameter tuple.",
+    "Tuple positions are available through numeric indexed access.",
+    "Select position one."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

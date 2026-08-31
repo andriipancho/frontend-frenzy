@@ -1,0 +1,29 @@
+{
+  "id": "TS-UTL-074",
+  "title": "Derive command call contracts",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "boss",
+  "topics": [
+    "parameters",
+    "return-type",
+    "keyof",
+    "indexed-access",
+    "commands"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "parameters",
+    "return-type",
+    "keyof",
+    "indexed-access"
+  ],
+  "hints": [
+    "Each command key selects one function type.",
+    "Apply Parameters to the selected function for arguments.",
+    "Apply ReturnType to the same selected function for results."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-049",
+  "title": "Select worker constructor config",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "constructor-parameters",
+    "indexed-access",
+    "configuration"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "constructor-parameters",
+    "indexed-access"
+  ],
+  "hints": [
+    "Extract the complete constructor tuple first.",
+    "The configuration occupies position zero.",
+    "Index ConstructorParameters<typeof Worker> with 0."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

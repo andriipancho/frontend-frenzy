@@ -1,0 +1,27 @@
+{
+  "id": "TS-UTL-073",
+  "title": "Derive a project update input",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "hard",
+  "topics": [
+    "partial",
+    "omit",
+    "dto-modeling",
+    "utility-composition"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "partial",
+    "omit",
+    "production-modeling"
+  ],
+  "hints": [
+    "Begin with the project fields callers may edit.",
+    "Remove all immutable fields with Omit.",
+    "Wrap the editable result in Partial."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-009",
+  "title": "Return a readonly profile",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "readonly-utility",
+    "object-freeze",
+    "return-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "readonly-properties",
+    "function-return-types"
+  ],
+  "hints": [
+    "The runtime operation already prevents top-level writes.",
+    "The public return type should express the same guarantee.",
+    "Return Readonly<Profile>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

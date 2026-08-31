@@ -1,0 +1,25 @@
+{
+  "id": "TS-UTL-034",
+  "title": "Exclude immutable account keys",
+  "domain": "typescript",
+  "topic": "utility-types",
+  "difficulty": "medium",
+  "topics": [
+    "exclude",
+    "keyof",
+    "update-modeling"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "exclude",
+    "keyof"
+  ],
+  "hints": [
+    "Start with the complete property-name union.",
+    "The immutable names form the excluded set.",
+    "Apply Exclude to keyof Account."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}
