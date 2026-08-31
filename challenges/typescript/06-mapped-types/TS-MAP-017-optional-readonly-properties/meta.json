@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-017",
+  "title": "Map optional readonly properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "optional-modifiers",
+    "readonly-modifiers"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "property-modifiers"
+  ],
+  "hints": [
+    "Both modifiers can appear on the same mapped property.",
+    "Iterate over keyof T.",
+    "Add readonly and optionality around the indexed value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-082",
+  "title": "Map property patch operations",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "optional-modifiers",
+    "patch-modeling",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "optional-properties"
+  ],
+  "hints": [
+    "Each output property is optional.",
+    "Its wrapper has an optional set using T[K].",
+    "Add a shared optional clear boolean."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

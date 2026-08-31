@@ -1,0 +1,1 @@
+import type { Equal, Expect } from "../../../../internal/validation/type-assertions.js";import type { Questions } from "./task.js";type Cases=[Expect<Equal<Questions<{ready:Date;admin:string}>,{isReady:boolean;isAdmin:boolean}>>];export type TestCases=Cases;

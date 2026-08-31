@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { CallbacksByName } from "./task.js";type U={name:"open";payload:{id:string}}|{name:"close";payload:{reason:string}};type E={open:(payload:{id:string})=>void;close:(payload:{reason:string})=>void};type C=[Expect<Equal<CallbacksByName<U>,E>>];export type TestCases=C;

@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-020",
+  "title": "Map mutable optional properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "optional-modifiers",
+    "readonly-modifiers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "property-modifiers"
+  ],
+  "hints": [
+    "One modifier is removed while another is added.",
+    "Use negative readonly before the mapped key.",
+    "Add the optional marker after it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

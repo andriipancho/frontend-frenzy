@@ -1,0 +1,1 @@
+import type { Equal, Expect } from "../../../../internal/validation/type-assertions.js";import type { Namespaced } from "./task.js";type Cases=[Expect<Equal<Namespaced<{created:{id:string};deleted:{id:string}},"user">,{"user.created":{id:string};"user.deleted":{id:string}}>>];export type TestCases=Cases;

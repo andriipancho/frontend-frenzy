@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-093",
+  "title": "Map entity repositories",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "boss",
+  "topics": [
+    "mapped-types",
+    "repositories",
+    "generics",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "Each entity key maps to a two-method repository.",
+    "Both methods reference T[K].",
+    "Find returns a nullable Promise and save returns Promise<void>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-027",
+  "title": "Suffix property keys",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "template-literals"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Use the as clause to emit a new key.",
+    "Restrict K to string keys.",
+    "Interpolate K followed by the suffix parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

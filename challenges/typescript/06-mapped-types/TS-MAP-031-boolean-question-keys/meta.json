@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-031",
+  "title": "Generate boolean question keys",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "boolean-flags"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Remap each string key with an is prefix.",
+    "Capitalize the source name.",
+    "Discard original value types in favor of boolean."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

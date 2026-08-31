@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-004",
+  "title": "Map properties to arrays",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "indexed-access",
+    "arrays"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "indexed-access"
+  ],
+  "hints": [
+    "Each mapped key can index the source type.",
+    "Use T[K] as the element type.",
+    "Wrap that indexed value in an array."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

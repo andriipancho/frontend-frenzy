@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-041",
+  "title": "Keep function properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-filtering",
+    "conditional-types",
+    "functions"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "conditional-types",
+    "key-remapping"
+  ],
+  "hints": [
+    "Inspect each T[K] in the key remapping clause.",
+    "Keep K when the value is callable.",
+    "Remap non-matching keys to never."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

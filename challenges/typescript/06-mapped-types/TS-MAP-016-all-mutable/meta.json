@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-016",
+  "title": "Map all properties mutable",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "readonly-modifiers",
+    "mutable-properties"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "readonly-properties"
+  ],
+  "hints": [
+    "Map over the full source key set.",
+    "Mapped modifier syntax can subtract readonly.",
+    "Keep T[K] as the output value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

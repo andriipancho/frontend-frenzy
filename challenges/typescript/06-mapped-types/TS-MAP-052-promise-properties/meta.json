@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-052",
+  "title": "Keep Promise properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-filtering",
+    "promises",
+    "conditional-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "conditional-types",
+    "promises"
+  ],
+  "hints": [
+    "Inspect T[K] during key remapping.",
+    "Keep K when the value extends Promise<unknown>.",
+    "Preserve T[K] unchanged."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

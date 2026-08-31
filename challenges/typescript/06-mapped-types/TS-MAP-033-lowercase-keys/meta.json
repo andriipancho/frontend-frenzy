@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-033",
+  "title": "Lowercase property keys",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "lowercase"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "intrinsic-string-types"
+  ],
+  "hints": [
+    "Transform keys in the as clause.",
+    "Narrow the key to string.",
+    "Apply Lowercase<K>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

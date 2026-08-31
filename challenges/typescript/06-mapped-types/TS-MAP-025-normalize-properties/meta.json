@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-025",
+  "title": "Normalize property modifiers",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "property-modifiers",
+    "normalization"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "property-modifiers"
+  ],
+  "hints": [
+    "The mapped type iterates over every source key.",
+    "Use subtraction syntax for both modifiers.",
+    "Keep each value indexed from T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

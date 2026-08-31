@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-046",
+  "title": "Collect optional key names",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "optional-properties",
+    "key-unions"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "optional-properties",
+    "indexed-access"
+  ],
+  "hints": [
+    "Map every key to either itself or never.",
+    "An empty object is assignable to a pick of an optional property.",
+    "Index the mapped helper by keyof T to collect results."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

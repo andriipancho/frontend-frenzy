@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-072",
+  "title": "Map nested optional sections",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "nested-mapping",
+    "optional-modifiers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "indexed-access"
+  ],
+  "hints": [
+    "Use one mapped type for sections.",
+    "Nest another mapped type over keyof T[S].",
+    "Add optionality only to the inner mapped property."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

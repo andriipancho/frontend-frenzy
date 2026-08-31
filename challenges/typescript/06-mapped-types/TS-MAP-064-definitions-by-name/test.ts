@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { DefinitionsByName } from "./task.js";type U={name:"api";url:string}|{name:"cache";ttl:number};type E={api:{name:"api";url:string};cache:{name:"cache";ttl:number}};type C=[Expect<Equal<DefinitionsByName<U>,E>>];export type TestCases=C;

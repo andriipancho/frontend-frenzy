@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { HandlersByKind } from "./task.js";type U={kind:"ok";data:string}|{kind:"error";message:string};type E={ok:(value:{kind:"ok";data:string})=>void;error:(value:{kind:"error";message:string})=>void};type C=[Expect<Equal<HandlersByKind<U>,E>>];export type TestCases=C;

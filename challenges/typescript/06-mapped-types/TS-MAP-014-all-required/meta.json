@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-014",
+  "title": "Map all properties required",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "required-modifiers",
+    "utility-reimplementation"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "optional-properties"
+  ],
+  "hints": [
+    "Map across every key.",
+    "Mapped modifier syntax can remove optionality.",
+    "Use the negative optional modifier before the value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-011",
+  "title": "Map property state tuples",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "tuples",
+    "readonly-tuples",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "tuples"
+  ],
+  "hints": [
+    "The mapped output value is a tuple.",
+    "Use T[K] in the first position and boolean in the second.",
+    "Add readonly to the tuple shape."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

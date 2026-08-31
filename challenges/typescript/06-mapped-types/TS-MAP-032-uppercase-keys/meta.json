@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-032",
+  "title": "Uppercase property keys",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "uppercase"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "intrinsic-string-types"
+  ],
+  "hints": [
+    "Key remapping can apply intrinsic string utilities.",
+    "Guard K as a string.",
+    "Emit Uppercase<K> in the as clause."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

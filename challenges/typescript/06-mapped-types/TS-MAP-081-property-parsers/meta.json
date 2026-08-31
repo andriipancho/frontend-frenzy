@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-081",
+  "title": "Map property parsers",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "parsers",
+    "callbacks",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "The input type is shared across the mapping.",
+    "The output varies through T[K].",
+    "Map every key to a string-to-value function."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

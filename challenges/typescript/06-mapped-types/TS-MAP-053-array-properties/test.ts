@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { ArrayProperties } from "./task.js";type S={name:string;tags:string[];coords:readonly [number,number]};type E={tags:string[];coords:readonly [number,number]};type C=[Expect<Equal<ArrayProperties<S>,E>>];export type TestCases=C;

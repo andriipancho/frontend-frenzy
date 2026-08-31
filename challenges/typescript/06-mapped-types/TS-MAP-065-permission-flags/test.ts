@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { PermissionFlags } from "./task.js";type C=[Expect<Equal<PermissionFlags<"read"|"write">,{read:boolean;write:boolean}>>];export type TestCases=C;

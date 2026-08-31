@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-008",
+  "title": "Map property validators",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "validators",
+    "callbacks",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "The mapped property value is a function.",
+    "Its input comes from T[K].",
+    "Use boolean as the shared callback result."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

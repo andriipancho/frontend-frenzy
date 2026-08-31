@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { Accessors } from "./task.js";type E={name:{get:()=>string;set:(value:string)=>void};age:{get:()=>number;set:(value:number)=>void}};type C=[Expect<Equal<Accessors<{name:string;age:number}>,E>>];export type TestCases=C;

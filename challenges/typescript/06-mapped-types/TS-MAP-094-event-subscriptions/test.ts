@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { Subscriptions } from "./task.js";type E={onConnected:(handler:(payload:{at:Date})=>void)=>()=>void;onMessage:(handler:(payload:{text:string})=>void)=>()=>void};type C=[Expect<Equal<Subscriptions<{connected:{at:Date};message:{text:string}}>,E>>];export type TestCases=C;

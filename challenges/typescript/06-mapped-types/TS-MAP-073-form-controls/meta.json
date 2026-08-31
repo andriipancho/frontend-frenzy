@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-073",
+  "title": "Map form controls",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "forms",
+    "state-modeling",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "object-types"
+  ],
+  "hints": [
+    "Map over each form value key.",
+    "Use T[K] for the control's value.",
+    "Add shared boolean state fields."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

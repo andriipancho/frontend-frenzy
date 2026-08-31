@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { NamedGetters } from "./task.js";type C=[Expect<Equal<NamedGetters<"name"|"email",string>,{getName:()=>string;getEmail:()=>string}>>];export type TestCases=C;

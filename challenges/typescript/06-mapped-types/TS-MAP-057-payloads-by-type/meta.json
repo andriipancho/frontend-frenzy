@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-057",
+  "title": "Index payloads by event type",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "events",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "discriminated-unions"
+  ],
+  "hints": [
+    "Map across each event union member.",
+    "Emit E[\"type\"] as the key.",
+    "Use E[\"payload\"] as the mapped value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

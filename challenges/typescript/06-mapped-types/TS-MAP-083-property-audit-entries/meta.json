@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-083",
+  "title": "Map property audit entries",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "audit-modeling",
+    "indexed-access",
+    "metadata"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "object-types"
+  ],
+  "hints": [
+    "The wrapper shape repeats for every key.",
+    "Both change values use T[K].",
+    "Add shared actorId and at properties."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-028",
+  "title": "Generate getter methods",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "template-literals",
+    "methods"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Remap each key to a template-literal method name.",
+    "Capitalize the string key.",
+    "Map the value to a zero-argument function returning T[K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

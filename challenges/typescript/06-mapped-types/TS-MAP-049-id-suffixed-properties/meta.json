@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-049",
+  "title": "Keep ID-suffixed properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-filtering",
+    "template-literals",
+    "identifiers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Use a template pattern ending with Id.",
+    "Check each mapped key against it.",
+    "Emit never for non-matching names."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

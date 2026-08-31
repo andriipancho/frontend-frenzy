@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-061",
+  "title": "Map command inputs",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "commands",
+    "api-contracts"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "discriminated-unions"
+  ],
+  "hints": [
+    "Map over command union members.",
+    "Remap each member to its command field.",
+    "Select its input field for the output value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

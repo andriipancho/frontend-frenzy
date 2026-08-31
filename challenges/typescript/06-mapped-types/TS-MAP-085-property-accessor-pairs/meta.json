@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-085",
+  "title": "Map property accessor pairs",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "methods",
+    "indexed-access",
+    "api-design"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "Each mapped value is a two-method object.",
+    "Both methods reference T[K].",
+    "Get returns it while set accepts it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

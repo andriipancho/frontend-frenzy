@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { FeatureResolvers } from "./task.js";type E={search:()=>boolean|Promise<boolean>;limit:()=>number|Promise<number>};type C=[Expect<Equal<FeatureResolvers<{search:boolean;limit:number}>,E>>];export type TestCases=C;

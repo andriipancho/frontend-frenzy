@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { AsyncSetters } from "./task.js";type E={name:(value:string)=>Promise<void>;count:(value:number)=>Promise<void>};type C=[Expect<Equal<AsyncSetters<{name:string;count:number}>,E>>];export type TestCases=C;

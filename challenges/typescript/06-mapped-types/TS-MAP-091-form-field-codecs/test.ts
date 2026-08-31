@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { FieldCodecs } from "./task.js";type E={age:{parse:(input:string)=>number;format:(value:number)=>string};active:{parse:(input:string)=>boolean;format:(value:boolean)=>string}};type C=[Expect<Equal<FieldCodecs<{age:number;active:boolean}>,E>>];export type TestCases=C;

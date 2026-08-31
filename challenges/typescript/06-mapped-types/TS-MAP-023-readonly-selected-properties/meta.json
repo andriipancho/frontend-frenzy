@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-023",
+  "title": "Protect selected properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "readonly-modifiers",
+    "selective-transformation"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "key-remapping",
+    "conditional-types"
+  ],
+  "hints": [
+    "Separate selected keys from the remaining keys.",
+    "Add readonly only in the selected mapped group.",
+    "Recombine it with an unchanged mapped group."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

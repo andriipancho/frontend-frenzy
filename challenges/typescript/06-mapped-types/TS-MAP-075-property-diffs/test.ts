@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { PropertyDiffs } from "./task.js";type E={name:{before:string;after:string};active:{before:boolean;after:boolean}};type C=[Expect<Equal<PropertyDiffs<{name:string;active:boolean}>,E>>];export type TestCases=C;

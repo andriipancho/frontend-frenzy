@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-074",
+  "title": "Map optional field errors",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "easy",
+  "topics": [
+    "mapped-types",
+    "forms",
+    "optional-modifiers",
+    "errors"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "mapped-types",
+    "optional-properties"
+  ],
+  "hints": [
+    "Iterate over keyof T.",
+    "Add optionality to every mapped property.",
+    "Replace original values with string."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

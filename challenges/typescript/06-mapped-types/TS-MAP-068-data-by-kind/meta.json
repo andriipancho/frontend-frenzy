@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-068",
+  "title": "Map payload data by kind",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "omit",
+    "discriminated-unions"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "key-remapping",
+    "omit"
+  ],
+  "hints": [
+    "Map across union members and remap to E[\"kind\"].",
+    "The mapped value should omit one known key.",
+    "Apply Omit to the current member."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

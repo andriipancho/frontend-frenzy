@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { AnalyticsNormalizers } from "./task.js";type E={view:(payload:{path:string})=>Record<string,string>;purchase:(payload:{total:number})=>Record<string,string>};type C=[Expect<Equal<AnalyticsNormalizers<{view:{path:string};purchase:{total:number}}>,E>>];export type TestCases=C;

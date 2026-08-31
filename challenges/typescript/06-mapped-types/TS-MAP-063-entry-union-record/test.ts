@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { EntriesToRecord } from "./task.js";type U=readonly["id",string]|readonly["count",number];type C=[Expect<Equal<EntriesToRecord<U>,{id:string;count:number}>>];export type TestCases=C;

@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-066",
+  "title": "Map optional feature flags",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "optional-modifiers",
+    "feature-flags"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "optional-properties"
+  ],
+  "hints": [
+    "Use the feature union as the mapped domain.",
+    "Add the optional property modifier.",
+    "Assign boolean to each feature."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

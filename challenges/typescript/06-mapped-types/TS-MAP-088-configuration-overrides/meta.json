@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-088",
+  "title": "Map configuration overrides",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "nested-mapping",
+    "configuration",
+    "optional-modifiers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "optional-properties"
+  ],
+  "hints": [
+    "Both mapped levels need optional modifiers.",
+    "Map sections at the outer level.",
+    "Map each selected section's keys at the inner level."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

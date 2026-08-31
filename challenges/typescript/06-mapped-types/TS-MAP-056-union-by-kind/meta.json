@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-056",
+  "title": "Index a union by kind",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "key-remapping",
+    "discriminated-unions"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "discriminated-unions",
+    "key-remapping"
+  ],
+  "hints": [
+    "Iterate over union members rather than keyof an object.",
+    "Remap each member to its kind.",
+    "Use the whole member as the property value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

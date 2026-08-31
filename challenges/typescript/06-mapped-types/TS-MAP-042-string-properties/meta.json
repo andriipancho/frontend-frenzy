@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-042",
+  "title": "Keep string properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-filtering",
+    "conditional-types",
+    "string-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "conditional-types"
+  ],
+  "hints": [
+    "Test T[K] against string while remapping keys.",
+    "Keep matching K.",
+    "Map other keys to never."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

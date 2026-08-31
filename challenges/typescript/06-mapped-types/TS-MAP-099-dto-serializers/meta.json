@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-099",
+  "title": "Map DTO serializers",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "dto-modeling",
+    "serialization",
+    "production-api"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "Map over each DTO name.",
+    "Use T[K] as the serializer input.",
+    "Use string as the shared output."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

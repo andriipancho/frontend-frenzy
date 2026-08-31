@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-091",
+  "title": "Map form field codecs",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "boss",
+  "topics": [
+    "mapped-types",
+    "forms",
+    "parsers",
+    "serialization"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "Each mapped value contains two opposite functions.",
+    "Both functions reference T[K].",
+    "Parse returns it and format accepts it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "TS-MAP-100",
+  "title": "Design endpoint adapters",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "boss",
+  "topics": [
+    "mapped-types",
+    "conditional-types",
+    "infer",
+    "api-design",
+    "production-api"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "mapped-types",
+    "conditional-types",
+    "infer",
+    "type-predicates"
+  ],
+  "hints": [
+    "Inspect each endpoint value for request and response fields.",
+    "Infer both related types inside a conditional.",
+    "Build validate and execute methods from those inferred types."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

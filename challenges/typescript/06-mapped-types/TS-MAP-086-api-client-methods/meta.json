@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-086",
+  "title": "Generate API client methods",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "boss",
+  "topics": [
+    "mapped-types",
+    "api-client",
+    "promises",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "mapped-types",
+    "indexed-access",
+    "promises"
+  ],
+  "hints": [
+    "Each route value contains request and response fields.",
+    "Map over route keys.",
+    "Use both indexed fields in the method signature."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

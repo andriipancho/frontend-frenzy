@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-065",
+  "title": "Map permission flags",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "easy",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "permissions",
+    "boolean-flags"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "mapped-types",
+    "property-key"
+  ],
+  "hints": [
+    "Map directly over the supplied key union.",
+    "Each mapped value is boolean.",
+    "No source object type is needed."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-063",
+  "title": "Map entry tuples to a record",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "tuples",
+    "key-remapping"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "tuples",
+    "indexed-access"
+  ],
+  "hints": [
+    "Each tuple union member can be the mapped iterator.",
+    "Remap E to E[0].",
+    "Use E[1] as its property value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

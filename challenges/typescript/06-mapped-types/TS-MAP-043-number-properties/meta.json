@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-043",
+  "title": "Keep number properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-filtering",
+    "conditional-types",
+    "number-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "conditional-types"
+  ],
+  "hints": [
+    "Use the value type to decide whether K survives.",
+    "Check T[K] against number.",
+    "Preserve the original T[K] for retained keys."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

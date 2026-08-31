@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-075",
+  "title": "Map property differences",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "diff-modeling",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "object-types"
+  ],
+  "hints": [
+    "Each mapped value is a two-field object.",
+    "Both fields use the same indexed source value.",
+    "Map every key without property modifiers."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

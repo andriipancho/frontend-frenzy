@@ -1,0 +1,1 @@
+import type { Equal, Expect } from "../../../../internal/validation/type-assertions.js";import type { CapitalizedKeys } from "./task.js";type Cases=[Expect<Equal<CapitalizedKeys<{firstName:string;age:number}>,{FirstName:string;Age:number}>>];export type TestCases=Cases;

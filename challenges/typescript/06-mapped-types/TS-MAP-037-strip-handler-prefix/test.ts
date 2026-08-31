@@ -1,0 +1,1 @@
+import type { Equal, Expect } from "../../../../internal/validation/type-assertions.js";import type { EventNames } from "./task.js";type Source={onConnected:()=>void;onMessage:(text:string)=>void;version:string};type Expected={connected:()=>void;message:(text:string)=>void};type Cases=[Expect<Equal<EventNames<Source>,Expected>>];export type TestCases=Cases;

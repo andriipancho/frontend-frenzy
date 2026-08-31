@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-022",
+  "title": "Require selected properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "required-modifiers",
+    "selective-transformation"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "key-remapping",
+    "conditional-types"
+  ],
+  "hints": [
+    "Build separate selected and unselected mapped groups.",
+    "Remove optionality in the selected group.",
+    "Keep original modifiers in the other group."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

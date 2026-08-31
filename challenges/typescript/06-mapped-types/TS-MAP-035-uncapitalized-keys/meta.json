@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-035",
+  "title": "Uncapitalize property keys",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "uncapitalize"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "intrinsic-string-types"
+  ],
+  "hints": [
+    "The output key is computed in an as clause.",
+    "Restrict mapped keys to string.",
+    "Apply Uncapitalize<K>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

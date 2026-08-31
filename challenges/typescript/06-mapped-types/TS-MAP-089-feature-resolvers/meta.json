@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-089",
+  "title": "Map feature resolvers",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "feature-flags",
+    "promises",
+    "callbacks"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "promises"
+  ],
+  "hints": [
+    "Each feature becomes a zero-argument resolver.",
+    "Use T[K] as the synchronous result.",
+    "Union it with Promise<T[K]>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

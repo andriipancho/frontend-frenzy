@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-055",
+  "title": "Keep always-defined properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-filtering",
+    "nullish-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "conditional-types"
+  ],
+  "hints": [
+    "Test null and undefined separately against T[K].",
+    "Remap a key to never if either is allowed.",
+    "Keep all remaining keys."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

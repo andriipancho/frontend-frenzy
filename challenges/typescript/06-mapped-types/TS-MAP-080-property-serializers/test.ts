@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { Serializers } from "./task.js";type E={date:(value:Date)=>string;active:(value:boolean)=>string};type C=[Expect<Equal<Serializers<{date:Date;active:boolean}>,E>>];export type TestCases=C;

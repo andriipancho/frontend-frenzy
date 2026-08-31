@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { MockHandlers } from "./task.js";type R={create:{request:{name:string};response:{id:string}}};type E={create:(request:{name:string})=>{id:string}|Promise<{id:string}>};type C=[Expect<Equal<MockHandlers<R>,E>>];export type TestCases=C;

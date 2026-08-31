@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-096",
+  "title": "Generate permission guards",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "permissions",
+    "authorization"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Map over the permission string union.",
+    "Remap each key to can plus Capitalize.",
+    "Use Context as the method parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

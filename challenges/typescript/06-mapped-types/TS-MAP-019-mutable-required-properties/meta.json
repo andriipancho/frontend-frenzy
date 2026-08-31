@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-019",
+  "title": "Normalize mutable required properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "required-modifiers",
+    "readonly-modifiers",
+    "normalization"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "property-modifiers"
+  ],
+  "hints": [
+    "Both modifiers need negative forms.",
+    "Remove readonly before the mapped key.",
+    "Remove optionality after the mapped key."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

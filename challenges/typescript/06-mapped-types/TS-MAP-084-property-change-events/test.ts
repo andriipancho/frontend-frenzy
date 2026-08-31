@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { ChangeEvents } from "./task.js";type E={nameChanged:{previous:string;next:string};countChanged:{previous:number;next:number}};type C=[Expect<Equal<ChangeEvents<{name:string;count:number}>,E>>];export type TestCases=C;

@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-015",
+  "title": "Map all properties readonly",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "easy",
+  "topics": [
+    "mapped-types",
+    "readonly-modifiers",
+    "utility-reimplementation"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "mapped-types",
+    "readonly-properties"
+  ],
+  "hints": [
+    "The output repeats the source shape.",
+    "Add readonly in the mapped declaration.",
+    "Keep each source value as T[K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

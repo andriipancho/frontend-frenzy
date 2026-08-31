@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-009",
+  "title": "Map keys to their names",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "keyof",
+    "key-literals"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "keyof"
+  ],
+  "hints": [
+    "Mapped keys are available as type variables.",
+    "The output value does not need T[K].",
+    "Use the current key K as the property value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-007",
+  "title": "Map property listeners",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "callbacks",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "Each key selects a different callback input.",
+    "Use T[K] in the function parameter.",
+    "Map all keys to a void-returning listener."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

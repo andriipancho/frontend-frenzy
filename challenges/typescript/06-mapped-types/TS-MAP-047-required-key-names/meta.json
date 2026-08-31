@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-047",
+  "title": "Collect required key names",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "required-properties",
+    "key-unions"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "optional-properties"
+  ],
+  "hints": [
+    "Map each key to itself or never.",
+    "Use the empty-object assignability check for optionality.",
+    "Invert the branch and index by keyof T."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

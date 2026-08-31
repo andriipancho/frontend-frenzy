@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { PromiseProperties } from "./task.js";type S={name:string;user:Promise<{id:string}>;saved:Promise<boolean>};type E={user:Promise<{id:string}>;saved:Promise<boolean>};type C=[Expect<Equal<PromiseProperties<S>,E>>];export type TestCases=C;

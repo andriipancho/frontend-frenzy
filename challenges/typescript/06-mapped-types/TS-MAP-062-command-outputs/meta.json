@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-062",
+  "title": "Map command outputs",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "commands",
+    "results"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "discriminated-unions"
+  ],
+  "hints": [
+    "The command union is the mapped domain.",
+    "Use E[\"command\"] for key remapping.",
+    "Use E[\"output\"] for values."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

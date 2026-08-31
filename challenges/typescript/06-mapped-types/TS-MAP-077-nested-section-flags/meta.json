@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-077",
+  "title": "Map nested section flags",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "nested-mapping",
+    "boolean-flags"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "indexed-access"
+  ],
+  "hints": [
+    "Map outer section keys first.",
+    "Map over keyof T[S] inside each section.",
+    "Replace leaf values with boolean."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

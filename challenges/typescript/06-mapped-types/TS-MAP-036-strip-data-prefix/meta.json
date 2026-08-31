@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-036",
+  "title": "Strip data prefixes",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "template-inference"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types",
+    "infer"
+  ],
+  "hints": [
+    "Match each string key against a data-prefixed template.",
+    "Infer the remaining segment.",
+    "Uncapitalize the remainder or keep the original key."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

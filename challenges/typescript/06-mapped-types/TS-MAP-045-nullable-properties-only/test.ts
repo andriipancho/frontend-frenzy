@@ -1,0 +1,1 @@
+import type { Equal, Expect } from "../../../../internal/validation/type-assertions.js";import type { NullableOnly } from "./task.js";type Source={name:string;avatar:string|null;lastSeen:Date|null};type Expected={avatar:string|null;lastSeen:Date|null};type Cases=[Expect<Equal<NullableOnly<Source>,Expected>>];export type TestCases=Cases;

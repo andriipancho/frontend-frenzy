@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { FeatureFlags } from "./task.js";type C=[Expect<Equal<FeatureFlags<"search"|"billing">,{search?:boolean;billing?:boolean}>>];export type TestCases=C;

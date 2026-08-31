@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-010",
+  "title": "Map tagged property values",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "indexed-access",
+    "key-literals",
+    "object-wrappers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "indexed-access"
+  ],
+  "hints": [
+    "The wrapper can reference both the mapped key and T[K].",
+    "Use K for the tag field.",
+    "Use the indexed source value for the value field."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

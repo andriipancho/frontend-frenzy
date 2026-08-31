@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-058",
+  "title": "Map union handlers by kind",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "callbacks",
+    "discriminated-unions"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "function-types",
+    "discriminated-unions"
+  ],
+  "hints": [
+    "Iterate over U's members.",
+    "Remap each member to E[\"kind\"].",
+    "Use E itself as the callback parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

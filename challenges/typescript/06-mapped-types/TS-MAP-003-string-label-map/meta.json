@@ -1,0 +1,24 @@
+{
+  "id": "TS-MAP-003",
+  "title": "Map properties to labels",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "easy",
+  "topics": [
+    "mapped-types",
+    "value-transformation",
+    "object-types"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "mapped-types"
+  ],
+  "hints": [
+    "Iterate over keyof T.",
+    "The original T[K] values are intentionally discarded.",
+    "Assign string at every mapped property."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { Selectors } from "./task.js";type S={user:{id:string}|null;online:boolean};type E={selectUser:(state:S)=>{id:string}|null;selectOnline:(state:S)=>boolean};type C=[Expect<Equal<Selectors<S>,E>>];export type TestCases=C;

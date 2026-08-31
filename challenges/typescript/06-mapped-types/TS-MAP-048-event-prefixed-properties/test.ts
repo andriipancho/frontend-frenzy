@@ -1,0 +1,1 @@
+import type { Equal, Expect } from "../../../../internal/validation/type-assertions.js";import type { EventProperties } from "./task.js";type Source={onClick:()=>void;onFocus:()=>void;label:string};type Expected={onClick:()=>void;onFocus:()=>void};type Cases=[Expect<Equal<EventProperties<Source>,Expected>>];export type TestCases=Cases;

@@ -1,0 +1,1 @@
+import type { Equal, Expect } from "../../../../internal/validation/type-assertions.js";import type { StripData } from "./task.js";type Cases=[Expect<Equal<StripData<{dataUserId:string;dataCount:number;ready:boolean}>,{userId:string;count:number;ready:boolean}>>];export type TestCases=Cases;

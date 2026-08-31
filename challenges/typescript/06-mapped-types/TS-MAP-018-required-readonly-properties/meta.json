@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-018",
+  "title": "Map required readonly properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "required-modifiers",
+    "readonly-modifiers"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "property-modifiers"
+  ],
+  "hints": [
+    "One modifier must be added and another removed.",
+    "Place readonly before the mapped key.",
+    "Use the negative optional marker after the key."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

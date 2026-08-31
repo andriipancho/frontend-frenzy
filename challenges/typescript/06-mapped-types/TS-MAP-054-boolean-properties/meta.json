@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-054",
+  "title": "Keep boolean properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-filtering",
+    "boolean-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "conditional-types"
+  ],
+  "hints": [
+    "Use T[K] to select keys.",
+    "Boolean literals also extend boolean.",
+    "Keep K only for that value category."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

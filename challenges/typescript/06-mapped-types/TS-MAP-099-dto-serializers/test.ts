@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { DtoSerializers } from "./task.js";type E={user:(value:{id:string})=>string;invoice:(value:{total:number})=>string};type C=[Expect<Equal<DtoSerializers<{user:{id:string};invoice:{total:number}}>,E>>];export type TestCases=C;

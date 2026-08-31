@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { Parsers } from "./task.js";type E={port:(input:string)=>number;secure:(input:string)=>boolean};type C=[Expect<Equal<Parsers<{port:number;secure:boolean}>,E>>];export type TestCases=C;

@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-040",
+  "title": "Namespace property keys",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "namespaced-keys",
+    "template-literals"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "The new key combines two string parts.",
+    "Place the namespace before a dot.",
+    "Append the current mapped key after it."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

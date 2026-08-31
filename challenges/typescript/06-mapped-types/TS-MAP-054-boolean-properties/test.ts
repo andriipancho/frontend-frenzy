@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { BooleanProperties } from "./task.js";type C=[Expect<Equal<BooleanProperties<{active:boolean;ready:true;name:string}>,{active:boolean;ready:true}>>];export type TestCases=C;

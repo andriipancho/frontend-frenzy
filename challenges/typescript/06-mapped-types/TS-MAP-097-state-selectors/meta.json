@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-097",
+  "title": "Generate state selectors",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "boss",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "state-modeling",
+    "selectors"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types",
+    "indexed-access"
+  ],
+  "hints": [
+    "Remap each slice key to a selector name.",
+    "Every selector receives State.",
+    "Its result is State[K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

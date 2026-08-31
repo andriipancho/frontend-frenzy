@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-098",
+  "title": "Generate state set actions",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "boss",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "state-modeling",
+    "actions"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types",
+    "indexed-access"
+  ],
+  "hints": [
+    "Use the same computed name for method and action type.",
+    "Each creator accepts State[K].",
+    "Return an object containing the literal type and related payload."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

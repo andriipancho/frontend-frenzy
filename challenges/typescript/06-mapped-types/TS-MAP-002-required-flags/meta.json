@@ -1,0 +1,24 @@
+{
+  "id": "TS-MAP-002",
+  "title": "Map required flags",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "easy",
+  "topics": [
+    "mapped-types",
+    "keyof",
+    "value-transformation"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "keyof"
+  ],
+  "hints": [
+    "The source keys form the mapped iteration domain.",
+    "The output value no longer depends on the original property type.",
+    "Map every key to boolean without an optional modifier."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

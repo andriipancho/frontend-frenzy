@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-012",
+  "title": "Map property metadata",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "indexed-access",
+    "metadata"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "object-types"
+  ],
+  "hints": [
+    "Every output property has the same wrapper shape.",
+    "Only the value field varies with K.",
+    "Index T by K inside that wrapper."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

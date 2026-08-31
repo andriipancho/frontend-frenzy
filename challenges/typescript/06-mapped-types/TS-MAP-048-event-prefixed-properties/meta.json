@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-048",
+  "title": "Keep event-prefixed properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-filtering",
+    "template-literals",
+    "events"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Pattern-match string keys in the remapping clause.",
+    "Keep keys matching on plus any suffix.",
+    "Remap all others to never."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

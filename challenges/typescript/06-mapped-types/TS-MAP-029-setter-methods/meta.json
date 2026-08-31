@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-029",
+  "title": "Generate setter methods",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "template-literals",
+    "methods"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "Build method names in the key remapping clause.",
+    "Use Capitalize for the original name.",
+    "Use T[K] as the setter parameter."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

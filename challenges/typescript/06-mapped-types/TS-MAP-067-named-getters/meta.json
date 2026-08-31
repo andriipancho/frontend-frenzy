@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-067",
+  "title": "Map named getters",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "key-remapping",
+    "methods"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Map across the string-name union.",
+    "Remap K to get plus Capitalize<K>.",
+    "Use a zero-argument function returning V."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

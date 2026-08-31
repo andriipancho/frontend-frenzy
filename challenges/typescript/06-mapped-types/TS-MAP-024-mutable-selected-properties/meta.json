@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-024",
+  "title": "Unlock selected properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "readonly-modifiers",
+    "selective-transformation"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "key-remapping",
+    "conditional-types"
+  ],
+  "hints": [
+    "Split the key set by membership in K.",
+    "Remove readonly in the selected mapped group.",
+    "Leave the remaining group with its original modifiers."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

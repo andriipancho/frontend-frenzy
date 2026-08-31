@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-013",
+  "title": "Map all properties optional",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "easy",
+  "topics": [
+    "mapped-types",
+    "optional-modifiers",
+    "utility-reimplementation"
+  ],
+  "estimatedMinutes": 4,
+  "prerequisites": [
+    "mapped-types",
+    "optional-properties"
+  ],
+  "hints": [
+    "Iterate over keyof T.",
+    "Keep each value as T[K].",
+    "Add the optional marker on the mapped property."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

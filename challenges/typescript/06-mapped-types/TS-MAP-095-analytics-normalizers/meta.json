@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-095",
+  "title": "Map analytics normalizers",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "analytics",
+    "callbacks",
+    "serialization"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "Every event key gets a callback.",
+    "Use T[K] as the payload input.",
+    "Use Record<string,string> as the normalized output."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

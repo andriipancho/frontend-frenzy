@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-079",
+  "title": "Resolve promised properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "awaited",
+    "promises",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "awaited"
+  ],
+  "hints": [
+    "Map over each key independently.",
+    "Apply Awaited to T[K].",
+    "Awaited also preserves non-Promise values."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

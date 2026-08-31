@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { TimestampProperties } from "./task.js";type S={id:string;createdAt:Date;updatedAt:Date};type C=[Expect<Equal<TimestampProperties<S>,{createdAt:Date;updatedAt:Date}>>];export type TestCases=C;

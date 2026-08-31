@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-092",
+  "title": "Map table insert inputs",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "boss",
+  "topics": [
+    "mapped-types",
+    "databases",
+    "omit",
+    "dto-modeling"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "mapped-types",
+    "omit",
+    "indexed-access"
+  ],
+  "hints": [
+    "Map over table names.",
+    "Each T[K] is one row contract.",
+    "Omit the shared generated keys from that row."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

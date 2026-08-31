@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-034",
+  "title": "Capitalize property keys",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "capitalize"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "intrinsic-string-types"
+  ],
+  "hints": [
+    "Use key remapping over keyof T.",
+    "Guard K to string.",
+    "Emit Capitalize<K>."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

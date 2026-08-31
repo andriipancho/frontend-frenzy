@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-039",
+  "title": "Generate default value keys",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "defaults"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "Use a template-literal key remap.",
+    "Interpolate the source key before Default.",
+    "Keep T[K] as the mapped value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

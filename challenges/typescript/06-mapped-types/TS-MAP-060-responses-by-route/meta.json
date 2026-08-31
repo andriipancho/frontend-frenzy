@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-060",
+  "title": "Map responses by route",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "routes",
+    "api-contracts"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "discriminated-unions"
+  ],
+  "hints": [
+    "Each union member describes one route.",
+    "Emit its route field as a key.",
+    "Index the member's response field for the value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-080",
+  "title": "Map property serializers",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "serialization",
+    "callbacks"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "Each property becomes a callback.",
+    "Use T[K] as its parameter.",
+    "Use string as the common result."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

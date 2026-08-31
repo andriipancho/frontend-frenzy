@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-006",
+  "title": "Map promised properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "promises",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "promises"
+  ],
+  "hints": [
+    "The transformation happens once per property.",
+    "Use T[K] for the selected property value.",
+    "Place Promise around that indexed value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

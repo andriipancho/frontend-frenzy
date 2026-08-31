@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-030",
+  "title": "Generate event handler methods",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "events",
+    "callbacks"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types"
+  ],
+  "hints": [
+    "The source key becomes a handler name.",
+    "Use on plus Capitalize<K>.",
+    "Map the value to a payload callback using T[K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-078",
+  "title": "Map async property setters",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "callbacks",
+    "promises",
+    "indexed-access"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "function-types",
+    "promises"
+  ],
+  "hints": [
+    "Each mapped value is a function.",
+    "Use T[K] for its input.",
+    "Use Promise<void> as the shared return."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

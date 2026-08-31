@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { EntitiesByType } from "./task.js";type U={type:"user";id:string;email:string}|{type:"team";id:string;members:number};type E={user:{type:"user";id:string;email:string};team:{type:"team";id:string;members:number}};type C=[Expect<Equal<EntitiesByType<U>,E>>];export type TestCases=C;

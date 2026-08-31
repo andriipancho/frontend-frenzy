@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-053",
+  "title": "Keep array properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-filtering",
+    "arrays",
+    "conditional-types"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "conditional-types",
+    "readonly-arrays"
+  ],
+  "hints": [
+    "Both array kinds extend readonly unknown[].",
+    "Use that broad check only for key selection.",
+    "Keep the original T[K] value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

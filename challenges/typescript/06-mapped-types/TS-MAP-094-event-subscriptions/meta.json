@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-094",
+  "title": "Generate event subscriptions",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "boss",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "events",
+    "subscriptions"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "mapped-types",
+    "template-literal-types",
+    "callbacks"
+  ],
+  "hints": [
+    "Remap each event key to an on-prefixed name.",
+    "The method accepts a payload callback using T[K].",
+    "Return a zero-argument unsubscribe callback."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

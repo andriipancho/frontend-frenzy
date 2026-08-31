@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { ConfigOverrides } from "./task.js";type S={api:{url:string;timeout:number};ui:{theme:string}};type E={api?:{url?:string;timeout?:number};ui?:{theme?:string}};type C=[Expect<Equal<ConfigOverrides<S>,E>>];export type TestCases=C;

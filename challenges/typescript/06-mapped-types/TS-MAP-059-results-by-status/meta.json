@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-059",
+  "title": "Index results by status",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "union-mapping",
+    "results",
+    "discriminated-unions"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "discriminated-unions"
+  ],
+  "hints": [
+    "The mapped iteration domain is the result union.",
+    "Remap each variant to E[\"status\"].",
+    "Keep E as the output value."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

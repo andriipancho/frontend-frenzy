@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-087",
+  "title": "Generate API mock handlers",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "boss",
+  "topics": [
+    "mapped-types",
+    "api-mocks",
+    "promises",
+    "testing"
+  ],
+  "estimatedMinutes": 15,
+  "prerequisites": [
+    "mapped-types",
+    "indexed-access",
+    "union-types"
+  ],
+  "hints": [
+    "Map each route to a handler function.",
+    "Read request and response from T[K].",
+    "Union the response with Promise of the response."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

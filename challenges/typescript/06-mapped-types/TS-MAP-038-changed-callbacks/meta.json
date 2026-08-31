@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-038",
+  "title": "Generate changed callbacks",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "callbacks",
+    "template-literals"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "Build the new name in the key remapping clause.",
+    "Append Changed to each string key.",
+    "Use T[K] as the callback input."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

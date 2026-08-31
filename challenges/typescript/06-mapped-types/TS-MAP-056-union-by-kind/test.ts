@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { ByKind } from "./task.js";type U={kind:"circle";radius:number}|{kind:"square";size:number};type E={circle:{kind:"circle";radius:number};square:{kind:"square";size:number}};type C=[Expect<Equal<ByKind<U>,E>>];export type TestCases=C;

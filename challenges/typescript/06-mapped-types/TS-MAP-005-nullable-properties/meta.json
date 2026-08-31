@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-005",
+  "title": "Map nullable properties",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "indexed-access",
+    "nullish-types"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "union-types"
+  ],
+  "hints": [
+    "Map over every key of T.",
+    "Read each original value through T[K].",
+    "Form a union of that value with null."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

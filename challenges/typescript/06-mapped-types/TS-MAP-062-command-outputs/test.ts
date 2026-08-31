@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { CommandOutputs } from "./task.js";type U={command:"create";output:{id:string}}|{command:"remove";output:{deleted:true}};type E={create:{id:string};remove:{deleted:true}};type C=[Expect<Equal<CommandOutputs<U>,E>>];export type TestCases=C;

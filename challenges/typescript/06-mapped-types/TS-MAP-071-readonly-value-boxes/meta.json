@@ -1,0 +1,25 @@
+{
+  "id": "TS-MAP-071",
+  "title": "Map readonly value boxes",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "medium",
+  "topics": [
+    "mapped-types",
+    "readonly-properties",
+    "object-wrappers"
+  ],
+  "estimatedMinutes": 7,
+  "prerequisites": [
+    "mapped-types",
+    "readonly-properties"
+  ],
+  "hints": [
+    "The outer mapping preserves keys.",
+    "Each mapped value is a small object.",
+    "Use readonly value with T[K]."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

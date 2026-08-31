@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { SetActions } from "./task.js";type E={setName:(payload:string)=>{type:"setName";payload:string};setCount:(payload:number)=>{type:"setCount";payload:number}};type C=[Expect<Equal<SetActions<{name:string;count:number}>,E>>];export type TestCases=C;

@@ -1,0 +1,1 @@
+import type { Equal, Expect } from "../../../../internal/validation/type-assertions.js";import type { PublicProperties } from "./task.js";type Source={id:string;name:string;_token:string;_version:number};type Cases=[Expect<Equal<PublicProperties<Source>,{id:string;name:string}>>];export type TestCases=Cases;

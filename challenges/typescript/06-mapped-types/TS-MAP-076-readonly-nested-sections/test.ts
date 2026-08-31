@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { ReadonlySections } from "./task.js";type S={ui:{theme:string;compact:boolean};api:{url:string}};type E={readonly ui:{readonly theme:string;readonly compact:boolean};readonly api:{readonly url:string}};type C=[Expect<Equal<ReadonlySections<S>,E>>];export type TestCases=C;

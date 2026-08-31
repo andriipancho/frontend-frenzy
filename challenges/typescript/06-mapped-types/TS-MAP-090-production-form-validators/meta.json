@@ -1,0 +1,26 @@
+{
+  "id": "TS-MAP-090",
+  "title": "Map production form validators",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "forms",
+    "validators",
+    "optional-modifiers"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "function-types"
+  ],
+  "hints": [
+    "Each mapped property is optional.",
+    "Its callback input is T[K].",
+    "The validation result is string or undefined."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

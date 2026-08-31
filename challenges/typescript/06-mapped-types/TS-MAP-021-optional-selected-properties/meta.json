@@ -1,0 +1,27 @@
+{
+  "id": "TS-MAP-021",
+  "title": "Make selected properties optional",
+  "domain": "typescript",
+  "topic": "mapped-types",
+  "difficulty": "hard",
+  "topics": [
+    "mapped-types",
+    "key-remapping",
+    "optional-modifiers",
+    "selective-transformation"
+  ],
+  "estimatedMinutes": 10,
+  "prerequisites": [
+    "mapped-types",
+    "key-remapping",
+    "conditional-types"
+  ],
+  "hints": [
+    "Split source keys into selected and unselected groups.",
+    "Remap each group with a conditional key clause.",
+    "Add optionality only in the selected mapped half."
+  ],
+  "validation": {
+    "type": "typescript"
+  }
+}

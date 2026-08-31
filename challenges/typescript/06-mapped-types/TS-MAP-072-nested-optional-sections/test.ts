@@ -1,0 +1,1 @@
+import type { Equal,Expect } from "../../../../internal/validation/type-assertions.js";import type { OptionalSections } from "./task.js";type S={ui:{theme:string;compact:boolean};api:{url:string;timeout:number}};type E={ui:{theme?:string;compact?:boolean};api:{url?:string;timeout?:number}};type C=[Expect<Equal<OptionalSections<S>,E>>];export type TestCases=C;
