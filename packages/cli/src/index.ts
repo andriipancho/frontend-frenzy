@@ -158,27 +158,47 @@ function commandCheck(details: boolean): void {
 
   const now = new Date();
   const result = validateTypeScriptChallenge(root, challenge);
-  state.attempts += 1;
-  state.elapsedSeconds += elapsedSince(state.startedAt, now);
+  const review = progress.currentMode === "retention" ? state.retention : undefined;
+
+  // Re-checking a completed challenge outside an open review reports the result
+  // without recording another attempt, more elapsed time, or another review.
+  if (!review && state.status === "completed") {
+    console.log(`${result.passed ? "✓ PASS" : "✗ FAIL"} (already completed, not recorded)`);
+    if (details && result.output) console.log(`\n${result.output}`);
+    if (!result.passed) process.exitCode = 1;
+    return;
+  }
+
+  if (review) {
+    // Reviews are counted by the retention state, never as practice attempts.
+    recordReview(review, result.passed, now);
+    // The review is consumed, so a repeated check cannot advance the schedule again.
+    progress.currentMode = "practice";
+  } else {
+    state.attempts += 1;
+    state.elapsedSeconds += elapsedSince(state.startedAt, now);
+    if (result.passed) {
+      state.status = "completed";
+      state.completedAt = now.toISOString();
+      state.retention ??= scheduleFirstReview(now);
+    } else {
+      state.startedAt = now.toISOString();
+    }
+  }
+  writeProgress(root, progress);
 
   if (!result.passed) {
-    if (progress.currentMode === "retention" && state.retention) recordReview(state.retention, false, now);
-    state.startedAt = now.toISOString();
-    writeProgress(root, progress);
     console.log("✗ FAIL\n\nTypeScript validation failed.\nRun with --details to show compiler output.");
     if (details && result.output) console.log(`\n${result.output}`);
+    if (review) console.log(`\nReview ${review.reviewCount} failed. Due again ${review.dueAt.slice(0, 10)}.`);
     process.exitCode = 1;
     return;
   }
 
-  if (progress.currentMode === "retention" && state.retention) {
-    recordReview(state.retention, true, now);
-  } else {
-    state.status = "completed";
-    state.completedAt = now.toISOString();
-    state.retention ??= scheduleFirstReview(now);
+  if (review) {
+    console.log(`✓ PASS\nReview ${review.reviewCount} recorded. Next due ${review.dueAt.slice(0, 10)}.`);
+    return;
   }
-  writeProgress(root, progress);
   console.log(`✓ PASS\nTime: ${formatDuration(state.elapsedSeconds)}\nHints: ${state.hintsUsed}`);
 }
 
