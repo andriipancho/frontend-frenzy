@@ -4,13 +4,31 @@
   "domain": "typescript",
   "topic": "production-boss",
   "difficulty": "boss",
-  "topics": ["api-design", "generics", "keyof", "indexed-access", "maintainability"],
+  "topics": [
+    "api-design",
+    "generics",
+    "keyof",
+    "indexed-access",
+    "maintainability"
+  ],
   "estimatedMinutes": 12,
-  "prerequisites": ["generic-constraints", "keyof", "indexed-access"],
+  "prerequisites": [
+    "generic-constraints",
+    "keyof",
+    "indexed-access"
+  ],
   "hints": [
     "The two arguments are currently checked against independent unions, so their relationship is lost.",
     "Represent the selected key as its own constrained generic parameter.",
     "Index the User model using the exact key parameter when describing the value argument."
   ],
-  "validation": { "type": "typescript" }
+  "validation": {
+    "type": "typescript"
+  },
+  "constraints": {
+    "forbid": [
+      "any",
+      "type-assertion"
+    ]
+  }
 }

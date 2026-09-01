@@ -19,5 +19,10 @@
   ],
   "validation": {
     "type": "typescript"
+  },
+  "constraints": {
+    "forbid": [
+      "any"
+    ]
   }
 }

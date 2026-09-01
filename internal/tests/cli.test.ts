@@ -322,3 +322,42 @@ test("topics reports only the active domain", async (t) => {
   assert.match(result.stdout, /typescript\/core/);
   assert.doesNotMatch(result.stdout, /javascript/, "another domain must not be listed");
 });
+
+test("a solution that compiles by cheating is rejected by its constraints", async (t) => {
+  const root = createFixtureRepository();
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  const challenge = join(root, "challenges", "typescript", "01-core", "TS-CORE-001-label-union");
+  const declared = JSON.parse(readFileSync(join(challenge, "meta.json"), "utf8")) as Record<
+    string,
+    unknown
+  >;
+  declared.constraints = { forbid: ["any", "type-assertion"] };
+  writeFileSync(join(challenge, "meta.json"), `${JSON.stringify(declared, null, 2)}\n`, "utf8");
+
+  runCli(root, "start", "typescript");
+
+  await t.test("the cheat compiles but does not pass", () => {
+    // The signature is untouched, so the type assertions in test.ts are satisfied.
+    writeFileSync(
+      taskPath(root, "TS-CORE-001"),
+      "export function toLabel(value: string | number): string {\n" +
+        "  return (value as any).toUpperCase();\n" +
+        "}\n",
+      "utf8",
+    );
+    const result = runCli(root, "check");
+    assert.equal(result.status, 1);
+    assert.match(result.stdout, /breaks the constraints/);
+    assert.match(result.stdout, /any/);
+    assert.equal(stateOf(readProgress(root), "TS-CORE-001").status, "started");
+  });
+
+  await t.test("the honest solution passes", () => {
+    writeFileSync(taskPath(root, "TS-CORE-001"), SOLUTION, "utf8");
+    const result = runCli(root, "check");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /✓ PASS/);
+    assert.equal(stateOf(readProgress(root), "TS-CORE-001").status, "completed");
+  });
+});

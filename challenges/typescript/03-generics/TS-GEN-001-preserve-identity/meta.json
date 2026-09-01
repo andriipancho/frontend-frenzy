@@ -4,13 +4,28 @@
   "domain": "typescript",
   "topic": "generics",
   "difficulty": "easy",
-  "topics": ["generic-functions", "type-inference", "type-relationships"],
+  "topics": [
+    "generic-functions",
+    "type-inference",
+    "type-relationships"
+  ],
   "estimatedMinutes": 3,
-  "prerequisites": ["function-types", "unknown"],
+  "prerequisites": [
+    "function-types",
+    "unknown"
+  ],
   "hints": [
     "The input and output are the same value, so their types should remain connected.",
     "Represent the caller's type with one generic parameter.",
     "Use the same type parameter for both the parameter and return positions."
   ],
-  "validation": { "type": "typescript" }
+  "validation": {
+    "type": "typescript"
+  },
+  "constraints": {
+    "forbid": [
+      "any",
+      "type-assertion"
+    ]
+  }
 }

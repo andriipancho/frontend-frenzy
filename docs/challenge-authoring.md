@@ -33,6 +33,19 @@ IDs use `DOMAIN-TOPIC-NNN`, such as `TS-GEN-005`. Assign the next unused number 
 
 Metadata includes a stable ID, title, domain, topic, difficulty, concept tags, estimated time, prerequisites, progressive hints, and validation type. Run `npm run lint` to validate it.
 
+A README constraint is only a promise until something checks it. When the README
+forbids syntax, declare it so `frenzy check` enforces it against the solution:
+
+```json
+"constraints": { "forbid": ["any", "type-assertion", "non-null-assertion", "ts-ignore"] }
+```
+
+The check reads the syntax tree, so the words in comments, strings, and
+identifiers are never mistaken for the constructs, and `as const` is allowed. It
+runs only after the challenge compiles: a solution that reached a passing
+compile by widening to `any` still fails. Omit the block when the challenge is
+about the construct itself.
+
 ## Tests and validation
 
 Prefer `Expect<Equal<A, B>>` from `internal/validation/type-assertions.ts`. Use `@ts-expect-error` to prove invalid calls remain invalid. TypeScript validation runs the challenge's `test.ts` in isolation under strict settings and `tsc --noEmit`.

@@ -4,13 +4,27 @@
   "domain": "typescript",
   "topic": "unions-and-narrowing",
   "difficulty": "medium",
-  "topics": ["type-predicates", "custom-type-guards", "unknown"],
+  "topics": [
+    "type-predicates",
+    "custom-type-guards",
+    "unknown"
+  ],
   "estimatedMinutes": 7,
-  "prerequisites": ["typeof-narrowing", "object-types"],
+  "prerequisites": [
+    "typeof-narrowing",
+    "object-types"
+  ],
   "hints": [
     "A boolean return does not communicate a narrowed type to the caller.",
     "Use a type predicate in the return position.",
     "After establishing a non-null object, check for both keys and validate each value type."
   ],
-  "validation": { "type": "typescript" }
+  "validation": {
+    "type": "typescript"
+  },
+  "constraints": {
+    "forbid": [
+      "any"
+    ]
+  }
 }
