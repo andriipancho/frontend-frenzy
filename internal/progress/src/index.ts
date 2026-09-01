@@ -66,12 +66,93 @@ export function progressPath(root: string, device: string = deviceId(root)): str
   return join(frenzyDirectory(root), `progress.${device}.json`);
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function isTimestamp(value: unknown): boolean {
+  return typeof value === "string" && !Number.isNaN(new Date(value).getTime());
+}
+
+function isCount(value: unknown): boolean {
+  return typeof value === "number" && Number.isInteger(value) && value >= 0;
+}
+
+function retentionErrors(value: unknown): string[] {
+  if (!isRecord(value)) return ["retention must be an object"];
+  const errors: string[] = [];
+  if (!isCount(value.stage)) errors.push("retention.stage must be a non-negative integer");
+  if (!isTimestamp(value.dueAt)) errors.push("retention.dueAt must be a timestamp");
+  if (!isCount(value.reviewCount)) errors.push("retention.reviewCount must be a non-negative integer");
+  if (value.lastResult !== undefined && value.lastResult !== "passed" && value.lastResult !== "failed") {
+    errors.push("retention.lastResult must be passed or failed");
+  }
+  return errors;
+}
+
+function entryErrors(id: string, value: unknown): string[] {
+  if (!isRecord(value)) return [`${id} must be an object`];
+  const errors: string[] = [];
+  if (value.status !== "started" && value.status !== "completed") {
+    errors.push(`${id}.status must be started or completed`);
+  }
+  if (!isTimestamp(value.startedAt)) errors.push(`${id}.startedAt must be a timestamp`);
+  if (value.completedAt !== undefined && !isTimestamp(value.completedAt)) {
+    errors.push(`${id}.completedAt must be a timestamp`);
+  }
+  for (const key of ["attempts", "hintsUsed", "elapsedSeconds"] as const) {
+    if (!isCount(value[key])) errors.push(`${id}.${key} must be a non-negative integer`);
+  }
+  if (value.retention !== undefined) {
+    errors.push(...retentionErrors(value.retention).map((error) => `${id}.${error}`));
+  }
+  return errors;
+}
+
+/**
+ * Shards travel between machines through git, so a malformed one must fail with
+ * the field that is wrong rather than with a stack trace deep in a command.
+ */
+export function progressErrors(value: unknown): string[] {
+  if (!isRecord(value)) return ["progress must be a JSON object"];
+  if (value.version !== 1) return [`unsupported progress version: ${JSON.stringify(value.version)}`];
+
+  const errors: string[] = [];
+  if (!isRecord(value.activeSession) || typeof value.activeSession.domain !== "string") {
+    errors.push("activeSession.domain must be a string");
+  } else if (
+    value.activeSession.topic !== undefined &&
+    typeof value.activeSession.topic !== "string"
+  ) {
+    errors.push("activeSession.topic must be a string");
+  }
+  if (value.currentChallengeId !== undefined && typeof value.currentChallengeId !== "string") {
+    errors.push("currentChallengeId must be a string");
+  }
+  if (
+    value.currentMode !== undefined &&
+    value.currentMode !== "practice" &&
+    value.currentMode !== "retention"
+  ) {
+    errors.push("currentMode must be practice or retention");
+  }
+  if (!isRecord(value.challenges)) {
+    errors.push("challenges must be an object");
+  } else {
+    for (const [id, entry] of Object.entries(value.challenges)) {
+      errors.push(...entryErrors(id, entry));
+    }
+  }
+  return errors;
+}
+
 function parseProgress(path: string): ProgressFile {
   const value = JSON.parse(readFileSync(path, "utf8")) as unknown;
-  if (typeof value !== "object" || value === null || (value as { version?: unknown }).version !== 1) {
-    throw new Error(`Unsupported or invalid progress file: ${path}`);
+  const errors = progressErrors(value);
+  if (errors.length > 0) {
+    throw new Error(`Invalid progress file ${path}:\n${errors.map((e) => `  - ${e}`).join("\n")}`);
   }
-  return value as ProgressFile;
+  return value as unknown as ProgressFile;
 }
 
 /** Adopts a pre-sharding progress file as this machine's shard. */

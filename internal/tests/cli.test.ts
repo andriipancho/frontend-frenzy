@@ -38,13 +38,13 @@ toLabel("ready");
 toLabel(42);
 `;
 
-function metadata(id: string): string {
+function metadata(id: string, domain = "typescript", topic = "core"): string {
   return `${JSON.stringify(
     {
       id,
       title: `Fixture ${id}`,
-      domain: "typescript",
-      topic: "core",
+      domain,
+      topic,
       difficulty: "easy",
       topics: ["narrowing"],
       estimatedMinutes: 4,
@@ -301,4 +301,24 @@ test("progress recorded on another machine is merged, not restarted", async (t) 
     assert.equal(result.status, 1);
     assert.match(result.stdout, /TS-CORE-001/);
   });
+});
+
+test("topics reports only the active domain", async (t) => {
+  const root = createFixtureRepository();
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  // A second domain must not leak into a TypeScript session's report.
+  const other = join(root, "challenges", "javascript", "01-basics", "JS-BAS-001-closures");
+  mkdirSync(other, { recursive: true });
+  writeFileSync(join(other, "meta.json"), metadata("JS-BAS-001", "javascript", "basics"), "utf8");
+  writeFileSync(join(other, "README.md"), "# JS-BAS-001\n", "utf8");
+  writeFileSync(join(other, "task.ts"), STARTER, "utf8");
+  writeFileSync(join(other, "test.ts"), TEST_FILE, "utf8");
+
+  runCli(root, "start", "typescript");
+  const result = runCli(root, "topics");
+
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /typescript\/core/);
+  assert.doesNotMatch(result.stdout, /javascript/, "another domain must not be listed");
 });
