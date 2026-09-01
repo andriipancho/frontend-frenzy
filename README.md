@@ -44,7 +44,7 @@ Run `npm link` once if you prefer the shorter global development command, such a
 | `frenzy current` | Show the active challenge and its path |
 | `frenzy check [--details]` | Run deterministic local validation |
 | `frenzy hint` | Reveal the next predefined hint |
-| `frenzy stats [--export]` | Show progress or export a public-safe snapshot |
+| `frenzy stats [--export \| --by-tag]` | Show progress, export a public-safe snapshot, or report concept coverage |
 | `frenzy topics` | List topic-level progress |
 | `frenzy retention` | Select a due retention challenge |
 | `frenzy devices` | List the anonymous device shards that recorded progress |
@@ -103,7 +103,9 @@ To practise on more than one machine, commit the shards on the branch that holds
 
 Completed challenges enter deterministic review intervals at D+1, D+3, D+7, D+14, and D+30. Failed attempts, hint usage, difficulty, time, and the previous review result influence which due challenge is selected first. The algorithm is intentionally small and documented in [retention](retention/README.md).
 
-`frenzy stats --export` writes an aggregate, public-safe `stats/typescript.json` without personal data or per-attempt history.
+`frenzy stats --export` writes an aggregate, public-safe `stats/typescript.json` without personal data or per-attempt history. `frenzy stats --by-tag` reports coverage per concept tag, weakest first.
+
+Selection follows the curriculum order first. Within a topic, challenges whose prerequisite concepts are already covered by solved work come first, then the gentler ones. A prerequisite that no challenge in the bank teaches can never be earned, so it never blocks.
 
 ## AI philosophy
 

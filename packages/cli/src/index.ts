@@ -116,16 +116,50 @@ function showChallenge(challenge: Challenge, progress: ProgressFile): void {
   );
 }
 
+/** Every concept tag the bank teaches. A prerequisite outside it can never be earned. */
+const TEACHABLE = new Set(challenges.flatMap((challenge) => challenge.metadata.topics));
+
+const DIFFICULTY_ORDER: Readonly<Record<string, number>> = { easy: 0, medium: 1, hard: 2, boss: 3 };
+
+function conceptsLearned(progress: ProgressFile): Set<string> {
+  const learned = new Set<string>();
+  for (const challenge of challenges) {
+    if (progress.challenges[challenge.metadata.id]?.status !== "completed") continue;
+    for (const topic of challenge.metadata.topics) learned.add(topic);
+  }
+  return learned;
+}
+
+function prerequisitesMet(challenge: Challenge, learned: ReadonlySet<string>): boolean {
+  return challenge.metadata.prerequisites.every(
+    (prerequisite) => !TEACHABLE.has(prerequisite) || learned.has(prerequisite),
+  );
+}
+
+/**
+ * Curriculum order stays primary; inside a topic, challenges whose prerequisites
+ * are already covered come first, then the gentler ones.
+ */
 function selectNext(local: ProgressFile, merged: ProgressFile): Challenge | undefined {
   const current = challengeById(local.currentChallengeId);
   if (current && local.currentMode === "practice" && merged.challenges[current.metadata.id]?.status !== "completed") {
     return current;
   }
-  return challenges.find(
-    (challenge) =>
-      matchesSession(challenge, merged.activeSession) &&
-      merged.challenges[challenge.metadata.id]?.status !== "completed",
-  );
+  const learned = conceptsLearned(merged);
+  return challenges
+    .filter(
+      (challenge) =>
+        matchesSession(challenge, merged.activeSession) &&
+        merged.challenges[challenge.metadata.id]?.status !== "completed",
+    )
+    .sort(
+      (left, right) =>
+        left.topicDirectory.localeCompare(right.topicDirectory) ||
+        Number(prerequisitesMet(right, learned)) - Number(prerequisitesMet(left, learned)) ||
+        (DIFFICULTY_ORDER[left.metadata.difficulty] ?? 0) -
+          (DIFFICULTY_ORDER[right.metadata.difficulty] ?? 0) ||
+        left.metadata.id.localeCompare(right.metadata.id),
+    )[0];
 }
 
 function commandStart(value: string | undefined): void {
@@ -278,6 +312,37 @@ function collectStats(progress: ProgressFile): StatsSnapshot {
   return snapshot;
 }
 
+/** Concept-level coverage: the aggregate weak-area view the README promises. */
+function commandTags(progress: ProgressFile): void {
+  const totals = new Map<string, { solved: number; total: number }>();
+  for (const challenge of challenges) {
+    if (!matchesSession(challenge, progress.activeSession)) continue;
+    const solved = progress.challenges[challenge.metadata.id]?.status === "completed";
+    for (const tag of challenge.metadata.topics) {
+      const entry = totals.get(tag) ?? { solved: 0, total: 0 };
+      entry.total += 1;
+      if (solved) entry.solved += 1;
+      totals.set(tag, entry);
+    }
+  }
+  const rows = [...totals.entries()]
+    .filter(([, entry]) => entry.solved > 0 || entry.total > 0)
+    .sort(
+      ([leftTag, left], [rightTag, right]) =>
+        left.solved / left.total - right.solved / right.total ||
+        right.total - left.total ||
+        leftTag.localeCompare(rightTag),
+    );
+  if (rows.length === 0) {
+    console.log("No concept tags in the active session.");
+    return;
+  }
+  console.log("Weakest concepts first\n");
+  for (const [tag, entry] of rows) {
+    console.log(`${tag.padEnd(34)} ${String(entry.solved).padStart(3)} / ${String(entry.total).padEnd(3)}`);
+  }
+}
+
 function commandStats(exportSnapshot: boolean): void {
   const stats = collectStats(mergedView(readProgress(root, device)));
   if (exportSnapshot) {
@@ -374,7 +439,7 @@ function commandDoctor(): void {
 }
 
 function printHelp(): void {
-  console.log(`Frontend Frenzy\n\nCommands:\n  frenzy start <domain[/topic]>\n  frenzy next\n  frenzy current\n  frenzy check [--details]\n  frenzy hint\n  frenzy stats [--export]\n  frenzy topics\n  frenzy retention\n  frenzy devices\n  frenzy doctor`);
+  console.log(`Frontend Frenzy\n\nCommands:\n  frenzy start <domain[/topic]>\n  frenzy next\n  frenzy current\n  frenzy check [--details]\n  frenzy hint\n  frenzy stats [--export | --by-tag]\n  frenzy topics\n  frenzy retention\n  frenzy devices\n  frenzy doctor`);
 }
 
 function main(args: readonly string[]): void {
@@ -385,7 +450,10 @@ function main(args: readonly string[]): void {
     case "current": commandCurrent(); break;
     case "check": commandCheck(args.includes("--details")); break;
     case "hint": commandHint(); break;
-    case "stats": commandStats(args.includes("--export")); break;
+    case "stats":
+      if (args.includes("--by-tag")) commandTags(mergedView(readProgress(root, device)));
+      else commandStats(args.includes("--export"));
+      break;
     case "topics": commandTopics(); break;
     case "retention": commandRetention(); break;
     case "devices": commandDevices(); break;
