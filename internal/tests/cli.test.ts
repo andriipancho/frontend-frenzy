@@ -445,3 +445,65 @@ test("stats --by-tag reports concept coverage, weakest first", async (t) => {
   assert.match(result.stdout, /Weakest concepts first/);
   assert.match(result.stdout, /narrowing\s+1 \/ 2/, "both fixtures carry the tag, one is solved");
 });
+
+function writeReference(root: string, id: string, code: string): void {
+  const directory = join(root, "reference", "typescript");
+  mkdirSync(directory, { recursive: true });
+  writeFileSync(join(directory, `${id}.ts`), code, "utf8");
+}
+
+test("verify proves a challenge is solvable and its starter is not", async (t) => {
+  const root = createFixtureRepository();
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  await t.test("a challenge with no reference is reported, not passed", () => {
+    const result = runCli(root, "verify", "--all");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /No reference solutions yet/);
+  });
+
+  await t.test("a correct reference verifies", () => {
+    writeReference(root, "TS-CORE-001", SOLUTION);
+    const result = runCli(root, "verify", "TS-CORE-001");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /solvable and its starter still fails/);
+  });
+
+  await t.test("a reference that does not satisfy the challenge is caught", () => {
+    writeReference(
+      root,
+      "TS-CORE-001",
+      "export function toLabel(value: string | number): number {\n  return 0;\n}\n",
+    );
+    const result = runCli(root, "verify", "TS-CORE-001");
+    assert.equal(result.status, 1);
+    assert.match(result.stdout, /reference solution does not pass/);
+  });
+
+  await t.test("a reference breaking the challenge's own constraints is caught", () => {
+    const challenge = join(root, "challenges", "typescript", "01-core", "TS-CORE-001-label-union");
+    const meta = JSON.parse(readFileSync(join(challenge, "meta.json"), "utf8")) as Record<string, unknown>;
+    meta.constraints = { forbid: ["any"] };
+    writeFileSync(join(challenge, "meta.json"), `${JSON.stringify(meta, null, 2)}\n`, "utf8");
+    writeReference(
+      root,
+      "TS-CORE-001",
+      "export function toLabel(value: string | number): string {\n" +
+        "  return (value as any).toString();\n" +
+        "}\n",
+    );
+    const result = runCli(root, "verify", "TS-CORE-001");
+    assert.equal(result.status, 1);
+    assert.match(result.stdout, /breaks its own constraints/);
+  });
+
+  await t.test("a starter that already passes is caught", () => {
+    const challenge = join(root, "challenges", "typescript", "01-core", "TS-CORE-002-label-union");
+    writeReference(root, "TS-CORE-002", SOLUTION);
+    // A starter that needs no work would let the challenge pass without asking anything.
+    writeFileSync(join(challenge, "task.ts"), SOLUTION, "utf8");
+    const result = runCli(root, "verify", "TS-CORE-002");
+    assert.equal(result.status, 1);
+    assert.match(result.stdout, /starter already passes/);
+  });
+});

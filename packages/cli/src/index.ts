@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 import {
@@ -25,6 +25,7 @@ import {
   selectDueChallenge,
 } from "../../../internal/retention/src/index.js";
 import { validateTypeScriptChallenge } from "../../../internal/validation/src/typescript.js";
+import { referencePath, verifyChallenge } from "../../../internal/validation/src/verify.js";
 
 const root = findRepositoryRoot();
 const challenges = discoverChallenges(root);
@@ -438,8 +439,48 @@ function commandDoctor(): void {
   process.exitCode = 1;
 }
 
+/**
+ * The bank's own correctness check: a challenge is sound only if a reference
+ * solution passes it and the published starter does not.
+ */
+function commandVerify(target: string | undefined): void {
+  const selected =
+    target === undefined || target === "--all"
+      ? challenges.filter(
+          (challenge) => target === "--all" || matchesSession(challenge, readProgress(root, device).activeSession),
+        )
+      : challenges.filter((challenge) => challenge.metadata.id === target);
+  if (selected.length === 0) throw new Error(`No challenges matched: ${target ?? "the active session"}`);
+
+  const withReference = selected.filter((challenge) => existsSync(referencePath(root, challenge)));
+  if (withReference.length === 0) {
+    console.log(`No reference solutions yet for ${selected.length} challenges.`);
+    return;
+  }
+
+  const broken: string[] = [];
+  for (const [index, challenge] of withReference.entries()) {
+    const result = verifyChallenge(root, challenge);
+    if (result.problems.length > 0) {
+      broken.push(result.id);
+      console.log(`✗ ${result.id}\n  ${result.problems.join("\n  ")}`);
+    }
+    if ((index + 1) % 25 === 0) console.log(`  … ${index + 1}/${withReference.length}`);
+  }
+
+  const missing = selected.length - withReference.length;
+  console.log(`\nVerified ${withReference.length} of ${selected.length} challenges.`);
+  if (missing > 0) console.log(`${missing} have no reference solution yet.`);
+  if (broken.length === 0) {
+    console.log("✓ Every verified challenge is solvable and its starter still fails.");
+    return;
+  }
+  console.log(`✗ ${broken.length} unsound: ${broken.join(", ")}`);
+  process.exitCode = 1;
+}
+
 function printHelp(): void {
-  console.log(`Frontend Frenzy\n\nCommands:\n  frenzy start <domain[/topic]>\n  frenzy next\n  frenzy current\n  frenzy check [--details]\n  frenzy hint\n  frenzy stats [--export | --by-tag]\n  frenzy topics\n  frenzy retention\n  frenzy devices\n  frenzy doctor`);
+  console.log(`Frontend Frenzy\n\nCommands:\n  frenzy start <domain[/topic]>\n  frenzy next\n  frenzy current\n  frenzy check [--details]\n  frenzy hint\n  frenzy stats [--export | --by-tag]\n  frenzy topics\n  frenzy retention\n  frenzy devices\n  frenzy doctor\n  frenzy verify [ID | --all]`);
 }
 
 function main(args: readonly string[]): void {
@@ -458,6 +499,7 @@ function main(args: readonly string[]): void {
     case "retention": commandRetention(); break;
     case "devices": commandDevices(); break;
     case "doctor": commandDoctor(); break;
+    case "verify": commandVerify(value); break;
     case "help":
     case "--help":
     case "-h":
