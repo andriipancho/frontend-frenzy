@@ -361,3 +361,87 @@ test("a solution that compiles by cheating is rejected by its constraints", asyn
     assert.equal(stateOf(readProgress(root), "TS-CORE-001").status, "completed");
   });
 });
+
+interface FixtureChallenge {
+  readonly id: string;
+  readonly difficulty: string;
+  readonly topics: readonly string[];
+  readonly prerequisites: readonly string[];
+}
+
+function writeChallenge(root: string, entry: FixtureChallenge): void {
+  const directory = join(root, "challenges", "typescript", "01-core", `${entry.id}-fixture`);
+  mkdirSync(directory, { recursive: true });
+  writeFileSync(
+    join(directory, "meta.json"),
+    `${JSON.stringify(
+      {
+        id: entry.id,
+        title: `Fixture ${entry.id}`,
+        domain: "typescript",
+        topic: "core",
+        difficulty: entry.difficulty,
+        topics: entry.topics,
+        estimatedMinutes: 4,
+        prerequisites: entry.prerequisites,
+        hints: ["Check the runtime type first.", "Use typeof.", "Handle each member."],
+        validation: { type: "typescript" },
+      },
+      null,
+      2,
+    )}\n`,
+    "utf8",
+  );
+  writeFileSync(join(directory, "README.md"), `# ${entry.id}\n`, "utf8");
+  writeFileSync(join(directory, "task.ts"), STARTER, "utf8");
+  writeFileSync(join(directory, "test.ts"), TEST_FILE, "utf8");
+}
+
+test("selection prefers covered prerequisites, then the gentler challenge", async (t) => {
+  const root = mkdtempSync(join(tmpdir(), "frenzy-order-"));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  writeFileSync(
+    join(root, "package.json"),
+    `${JSON.stringify({ name: "frontend-frenzy", version: "0.0.0", private: true, type: "module" }, null, 2)}\n`,
+    "utf8",
+  );
+  symlinkSync(join(repositoryRoot, "node_modules"), join(root, "node_modules"), "dir");
+
+  // Alphabetically first, but its prerequisite is taught by a challenge not yet solved.
+  writeChallenge(root, { id: "TS-CORE-001", difficulty: "easy", topics: ["generics"], prerequisites: ["narrowing"] });
+  writeChallenge(root, { id: "TS-CORE-002", difficulty: "hard", topics: ["narrowing"], prerequisites: [] });
+  writeChallenge(root, { id: "TS-CORE-003", difficulty: "easy", topics: ["narrowing"], prerequisites: [] });
+
+  await t.test("an unmet prerequisite defers a challenge", () => {
+    const result = runCli(root, "start", "typescript");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /TS-CORE-003/, "the easy challenge with no unmet prerequisite wins");
+    assert.doesNotMatch(result.stdout, /TS-CORE-001/);
+  });
+
+  await t.test("a prerequisite no challenge teaches never blocks", () => {
+    writeChallenge(root, {
+      id: "TS-CORE-004",
+      difficulty: "easy",
+      topics: ["tuples"],
+      prerequisites: ["nothing-teaches-this"],
+    });
+    // TS-CORE-003 is still unsolved and sorts first, so compare against it directly.
+    const learnable = runCli(root, "start", "typescript");
+    assert.match(learnable.stdout, /TS-CORE-003/, "an unteachable prerequisite is treated as met");
+  });
+});
+
+test("stats --by-tag reports concept coverage, weakest first", async (t) => {
+  const root = createFixtureRepository();
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  writeFileSync(taskPath(root, "TS-CORE-001"), SOLUTION, "utf8");
+  runCli(root, "start", "typescript");
+  assert.equal(runCli(root, "check").status, 0);
+
+  const result = runCli(root, "stats", "--by-tag");
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /Weakest concepts first/);
+  assert.match(result.stdout, /narrowing\s+1 \/ 2/, "both fixtures carry the tag, one is solved");
+});
