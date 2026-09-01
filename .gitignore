@@ -5,9 +5,6 @@ dist/
 !.frenzy/progress.*.json
 *.tsbuildinfo
 .DS_Store
-.env
-.env.*
-!.env.example
 
 # Scratch copies made while verifying a challenge
 challenges/**/.verify-*
