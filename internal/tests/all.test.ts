@@ -10,6 +10,7 @@ import {
 } from "../challenge-schema/src/index.js";
 import type { Challenge } from "../challenge-schema/src/discovery.js";
 import { validateChallengeBank } from "../validation/src/bank.js";
+import { findViolations } from "../validation/src/constraints.js";
 import {
   createProgress,
   deviceId,
@@ -251,4 +252,62 @@ test("a malformed progress shard is rejected with the field that is wrong", () =
   assert.ok(errors.some((error: string) => error.includes("TS-GEN-001.status")));
   assert.ok(errors.some((error: string) => error.includes("TS-GEN-001.startedAt")));
   assert.ok(errors.some((error: string) => error.includes("TS-GEN-001.attempts")));
+});
+
+test("the constraint checker reads syntax, not text", () => {
+  const code = [
+    "// many values are any here, and `x as Y` in a comment",
+    'const note = "cast with as User and any";',
+    "const many = 1;",
+    "export const ok = { a: 1 } as const;",
+  ].join("\n");
+
+  assert.deepEqual(
+    findViolations(code, ["any", "type-assertion"]),
+    [],
+    "comments, strings, identifiers, and `as const` are not violations",
+  );
+});
+
+test("the constraint checker reports each forbidden construct with its line", () => {
+  const code = [
+    "export function toLabel(value: any): string {",
+    "  const forced = value as string;",
+    "  return forced!.trim();",
+    "}",
+  ].join("\n");
+
+  const all = findViolations(code, ["any", "type-assertion", "non-null-assertion"]);
+  assert.deepEqual(
+    all.map((violation) => [violation.restriction, violation.line]),
+    [
+      ["any", 1],
+      ["type-assertion", 2],
+      ["non-null-assertion", 3],
+    ],
+  );
+
+  assert.deepEqual(
+    findViolations(code, ["non-null-assertion"]).map((violation) => violation.restriction),
+    ["non-null-assertion"],
+    "only the declared restrictions are reported",
+  );
+  assert.deepEqual(findViolations(code, []), [], "no constraints means no checking");
+});
+
+test("challenge metadata validation accepts and guards the constraints block", () => {
+  assert.deepEqual(
+    validateChallengeMetadata({ ...metadata, constraints: { forbid: ["any", "type-assertion"] } }),
+    [],
+  );
+  assert.ok(
+    validateChallengeMetadata({ ...metadata, constraints: { forbid: ["casting"] } }).some(
+      (error: string) => error.includes("constraints.forbid entries"),
+    ),
+  );
+  assert.ok(
+    validateChallengeMetadata({ ...metadata, constraints: { forbid: [] } }).some((error: string) =>
+      error.includes("non-empty"),
+    ),
+  );
 });

@@ -196,7 +196,7 @@ function commandCheck(details: boolean): void {
   // without recording another attempt, more elapsed time, or another review.
   if (!review && state.status === "completed") {
     console.log(`${result.passed ? "✓ PASS" : "✗ FAIL"} (already completed, not recorded)`);
-    if (details && result.output) console.log(`\n${result.output}`);
+    if (result.output && (details || result.kind !== "compiler")) console.log(`\n${result.output}`);
     if (!result.passed) process.exitCode = 1;
     return;
   }
@@ -220,8 +220,12 @@ function commandCheck(details: boolean): void {
   writeProgress(root, progress, device);
 
   if (!result.passed) {
-    console.log("✗ FAIL\n\nTypeScript validation failed.\nRun with --details to show compiler output.");
-    if (details && result.output) console.log(`\n${result.output}`);
+    if (result.kind === "compiler") {
+      console.log("✗ FAIL\n\nTypeScript validation failed.\nRun with --details to show compiler output.");
+      if (details && result.output) console.log(`\n${result.output}`);
+    } else {
+      console.log(`✗ FAIL\n\n${result.output}`);
+    }
     if (review) console.log(`\nReview ${review.reviewCount} failed. Due again ${review.dueAt.slice(0, 10)}.`);
     process.exitCode = 1;
     return;

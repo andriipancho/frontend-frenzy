@@ -4,7 +4,9 @@
   "domain": "typescript",
   "topic": "topic-slug",
   "difficulty": "medium",
-  "topics": ["primary-concept"],
+  "topics": [
+    "primary-concept"
+  ],
   "estimatedMinutes": 5,
   "prerequisites": [],
   "hints": [
@@ -14,5 +16,11 @@
   ],
   "validation": {
     "type": "typescript"
+  },
+  "constraints": {
+    "forbid": [
+      "any",
+      "type-assertion"
+    ]
   }
 }

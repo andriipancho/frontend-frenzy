@@ -4,13 +4,26 @@
   "domain": "typescript",
   "topic": "core",
   "difficulty": "medium",
-  "topics": ["readonly", "object-types", "immutability"],
+  "topics": [
+    "readonly",
+    "object-types",
+    "immutability"
+  ],
   "estimatedMinutes": 5,
-  "prerequisites": ["object-types"],
+  "prerequisites": [
+    "object-types"
+  ],
   "hints": [
     "Readonly prevents mutation; it does not prevent creating a changed copy.",
     "Object spread can preserve existing properties in a new value.",
     "Create a new object from the configuration and override only the retry count."
   ],
-  "validation": { "type": "typescript" }
+  "validation": {
+    "type": "typescript"
+  },
+  "constraints": {
+    "forbid": [
+      "type-assertion"
+    ]
+  }
 }

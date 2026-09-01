@@ -1,5 +1,9 @@
 export const DIFFICULTIES = ["easy", "medium", "hard", "boss"] as const;
 
+export const RESTRICTIONS = ["any", "type-assertion", "non-null-assertion", "ts-ignore"] as const;
+
+export type Restriction = (typeof RESTRICTIONS)[number];
+
 export type Difficulty = (typeof DIFFICULTIES)[number];
 
 export interface ChallengeMetadata {
@@ -14,6 +18,10 @@ export interface ChallengeMetadata {
   readonly hints: readonly string[];
   readonly validation: {
     readonly type: "typescript";
+  };
+  /** Syntax the solution may not use. Absent means the challenge imposes none. */
+  readonly constraints?: {
+    readonly forbid: readonly Restriction[];
   };
 }
 
@@ -45,6 +53,7 @@ export function validateChallengeMetadata(value: unknown): string[] {
     "prerequisites",
     "hints",
     "validation",
+    "constraints",
   ]);
 
   for (const key of Object.keys(value)) {
@@ -97,6 +106,19 @@ export function validateChallengeMetadata(value: unknown): string[] {
     errors.push("validation.type must be typescript");
   } else if (Object.keys(value.validation).some((key) => key !== "type")) {
     errors.push("validation contains an unexpected property");
+  }
+  if (value.constraints !== undefined) {
+    if (!isRecord(value.constraints) || Object.keys(value.constraints).some((key) => key !== "forbid")) {
+      errors.push("constraints may only contain forbid");
+    } else if (!isStringArray(value.constraints.forbid) || value.constraints.forbid.length === 0) {
+      errors.push("constraints.forbid must be a non-empty string array");
+    } else if (new Set(value.constraints.forbid).size !== value.constraints.forbid.length) {
+      errors.push("constraints.forbid must not contain duplicates");
+    } else if (
+      value.constraints.forbid.some((entry) => !RESTRICTIONS.includes(entry as Restriction))
+    ) {
+      errors.push(`constraints.forbid entries must be one of: ${RESTRICTIONS.join(", ")}`);
+    }
   }
 
   return errors;

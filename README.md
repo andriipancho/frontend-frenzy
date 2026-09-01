@@ -86,6 +86,11 @@ Stable IDs follow `DOMAIN-TOPIC-NNN`, for example `TS-GEN-002`. Published IDs ar
 
 TypeScript challenges run in an isolated strict compiler invocation with `tsc --noEmit`. Tests use compile-time assertions and `@ts-expect-error`; runtime tests belong only in challenges where runtime behavior matters. The root build excludes editable challenge tasks, while `npm run lint` validates every challenge's metadata, naming, and required files.
 
+Where a challenge's README forbids syntax such as `any` or type assertions, its
+metadata declares that as a machine-checked constraint. The check reads the
+solution's syntax tree and runs only after the code compiles, so reaching a
+passing compile by widening to `any` still fails.
+
 The normal pass/fail path does not call an LLM, access a network, or inspect unrelated challenges.
 
 ## Progress, retention, and stats
