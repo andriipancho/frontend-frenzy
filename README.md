@@ -49,6 +49,7 @@ Run `npm link` once if you prefer the shorter global development command, such a
 | `frenzy retention` | Select a due retention challenge |
 | `frenzy devices` | List the anonymous device shards that recorded progress |
 | `frenzy doctor` | Re-validate every challenge marked completed |
+| `frenzy verify [ID \| --all]` | Prove challenges are solvable and their starters are not |
 
 ## TypeScript curriculum
 
@@ -90,6 +91,12 @@ Where a challenge's README forbids syntax such as `any` or type assertions, its
 metadata declares that as a machine-checked constraint. The check reads the
 solution's syntax tree and runs only after the code compiles, so reaching a
 passing compile by widening to `any` still fails.
+
+A challenge is only sound if a correct solution passes it and the published
+starter does not. `frenzy verify` proves both against a reference solution kept
+in `reference/<domain>/<ID>.ts` — outside the challenge directory, so nothing
+that spoils a challenge sits next to the file you edit. Verification runs on a
+scratch copy and never writes to a challenge's own files.
 
 The normal pass/fail path does not call an LLM, access a network, or inspect unrelated challenges.
 

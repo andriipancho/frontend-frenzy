@@ -19,3 +19,16 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check
+
+  verify-bank:
+    # Slower than `check` and grows with the reference solutions, so it runs on its own.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node dist/packages/cli/src/index.js verify --all

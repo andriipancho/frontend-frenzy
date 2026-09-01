@@ -52,7 +52,19 @@ Prefer `Expect<Equal<A, B>>` from `internal/validation/type-assertions.ts`. Use 
 
 Use runtime tests only when behavior—not just assignability—is part of the requirement. Do not make the root build depend on unsolved starter files.
 
-Before publishing, temporarily complete the task locally and confirm `frenzy check` passes, then restore the intended starter. Also confirm that the starter fails for the intended reason rather than an infrastructure error.
+Before publishing, write the reference solution to `reference/<domain>/<ID>.ts`
+and run `frenzy verify <ID>`. It proves both halves of a sound challenge: the
+reference passes, and the published starter does not. It also checks the
+reference against the challenge's own declared constraints, so a reference that
+cheats is rejected too.
+
+The reference lives outside the challenge directory on purpose — nothing that
+spoils a challenge should sit next to the file you edit while solving it. The
+verification runs against a scratch copy, so a challenge's own files are never
+written to.
+
+`frenzy verify --all` runs the whole bank and reports how many challenges still
+have no reference. CI runs it as a separate job.
 
 ## Difficulty and hints
 
