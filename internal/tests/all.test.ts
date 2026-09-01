@@ -13,6 +13,7 @@ import { validateChallengeBank } from "../validation/src/bank.js";
 import {
   createProgress,
   deviceId,
+  progressErrors,
   type ChallengeProgress,
   readProgress,
   startChallenge,
@@ -53,8 +54,8 @@ test("challenge metadata validation accepts the documented shape", () => {
 
 test("challenge metadata validation rejects unstable IDs and missing hints", () => {
   const errors = validateChallengeMetadata({ ...metadata, id: "challenge-1", hints: [] });
-  assert.ok(errors.some((error) => error.includes("DOMAIN-TOPIC-NNN")));
-  assert.ok(errors.some((error) => error.includes("hints")));
+  assert.ok(errors.some((error: string) => error.includes("DOMAIN-TOPIC-NNN")));
+  assert.ok(errors.some((error: string) => error.includes("hints")));
 });
 
 test("progress is written atomically and can be resumed", () => {
@@ -134,7 +135,7 @@ test("the bank validator rejects a test that asserts nothing", () => {
 
     writeFileSync(join(challengeDirectory, "test.ts"), 'identity("a");\n', "utf8");
     assert.ok(
-      validateChallengeBank([entry]).some((error) => error.includes("must assert")),
+      validateChallengeBank([entry]).some((error: string) => error.includes("must assert")),
       "a call-only test must be rejected",
     );
 
@@ -224,4 +225,30 @@ test("adopting another machine's entry restarts its own counters at zero", () =>
   assert.equal(adopted.retention?.reviewCount, 2);
   assert.equal(adopted.attempts, 0, "attempts stay with the machine that made them");
   assert.equal(adopted.elapsedSeconds, 0, "time stays with the machine that spent it");
+});
+
+test("a malformed progress shard is rejected with the field that is wrong", () => {
+  assert.deepEqual(progressErrors(createProgress()), []);
+
+  assert.ok(progressErrors({ version: 2 }).some((error: string) => error.includes("unsupported progress version")));
+
+  const errors = progressErrors({
+    version: 1,
+    activeSession: { domain: "typescript" },
+    currentMode: "reviewing",
+    challenges: {
+      "TS-GEN-001": {
+        status: "done",
+        startedAt: "not-a-date",
+        attempts: -1,
+        hintsUsed: 0,
+        elapsedSeconds: 0,
+      },
+    },
+  });
+
+  assert.ok(errors.some((error: string) => error.includes("currentMode")));
+  assert.ok(errors.some((error: string) => error.includes("TS-GEN-001.status")));
+  assert.ok(errors.some((error: string) => error.includes("TS-GEN-001.startedAt")));
+  assert.ok(errors.some((error: string) => error.includes("TS-GEN-001.attempts")));
 });

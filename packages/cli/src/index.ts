@@ -304,7 +304,10 @@ function commandStats(exportSnapshot: boolean): void {
 function commandTopics(): void {
   const progress = mergedView(readProgress(root, device));
   const topics = new Map<string, Challenge[]>();
-  for (const challenge of challenges) {
+  // Only the active domain: a second domain would otherwise flood the report.
+  for (const challenge of challenges.filter(
+    (candidate) => candidate.metadata.domain === progress.activeSession.domain,
+  )) {
     const key = `${challenge.metadata.domain}/${challenge.metadata.topic}`;
     topics.set(key, [...(topics.get(key) ?? []), challenge]);
   }
