@@ -507,3 +507,37 @@ test("verify proves a challenge is solvable and its starter is not", async (t) =
     assert.match(result.stdout, /starter already passes/);
   });
 });
+
+function runGit(root: string, ...args: string[]): void {
+  const result = spawnSync("git", args, { cwd: root, encoding: "utf8" });
+  assert.equal(result.status, 0, result.stderr);
+}
+
+/**
+ * A fixture whose main branch publishes the starters while the checked-out branch
+ * carries the solutions, which is how a practice branch is actually used.
+ */
+function createSolutionsBranchRepository(): string {
+  const root = createFixtureRepository();
+  runGit(root, "init", "--quiet", "--initial-branch=main");
+  runGit(root, "config", "user.email", "fixture@example.com");
+  runGit(root, "config", "user.name", "Fixture");
+  runGit(root, "add", "challenges");
+  runGit(root, "commit", "--quiet", "-m", "publish challenges");
+  runGit(root, "checkout", "--quiet", "-b", "solutions/fixture");
+  return root;
+}
+
+test("verify reads the starter from the branch that publishes it", async (t) => {
+  const root = createSolutionsBranchRepository();
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  // The practice branch commits its answer, so HEAD's task.ts passes on its own.
+  writeFileSync(taskPath(root, "TS-CORE-001"), SOLUTION, "utf8");
+  runGit(root, "commit", "--quiet", "-am", "solve TS-CORE-001");
+  writeReference(root, "TS-CORE-001", SOLUTION);
+
+  const result = runCli(root, "verify", "TS-CORE-001");
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /solvable and its starter still fails/);
+});

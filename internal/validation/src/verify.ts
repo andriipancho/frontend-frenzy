@@ -1,8 +1,8 @@
-import { spawnSync } from "node:child_process";
 import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 import type { Challenge } from "../../challenge-schema/src/discovery.js";
+import { publishedStarter } from "../../challenge-schema/src/starter.js";
 import { validateTypeScriptChallenge } from "./typescript.js";
 import { findViolations, formatViolations, type Restriction } from "./constraints.js";
 
@@ -38,15 +38,6 @@ function validateCandidate(root: string, challenge: Challenge, code: string): st
   } finally {
     rmSync(scratch, { recursive: true, force: true });
   }
-}
-
-/** The published starter, so a locally solved task.ts does not mask a broken challenge. */
-function publishedStarter(root: string, challenge: Challenge): string | undefined {
-  const relative = join(challenge.relativeDirectory, "task.ts");
-  const result = spawnSync("git", ["show", `HEAD:${relative}`], { cwd: root, encoding: "utf8" });
-  if (result.status === 0) return result.stdout;
-  const local = join(challenge.directory, "task.ts");
-  return existsSync(local) ? readFileSync(local, "utf8") : undefined;
 }
 
 export function verifyChallenge(root: string, challenge: Challenge): VerificationResult {
