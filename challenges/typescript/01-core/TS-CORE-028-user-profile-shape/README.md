@@ -1,6 +1,9 @@
 # TS-CORE-028 — Correct a user profile shape
 
-Correct `UserProfile` so each property reflects the values used by the application.
+A user profile stores an identifier and a display name as text, and records
+whether the account is currently active. That last one is a flag: it has exactly
+two states and nothing in between. Correct `UserProfile` so every property
+describes the value it actually holds.
 
 ## Constraints
 
