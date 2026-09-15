@@ -1,15 +1,17 @@
 #!/usr/bin/env node
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { dirname, join, relative } from "node:path";
 
 import {
   discoverChallenges,
   findRepositoryRoot,
   type Challenge,
 } from "../../../internal/challenge-schema/src/discovery.js";
+import { publishedStarter } from "../../../internal/challenge-schema/src/starter.js";
 import {
   deviceId,
   elapsedSince,
+  frenzyDirectory,
   listDevices,
   readOtherProgress,
   readProgress,
@@ -261,12 +263,19 @@ function commandCheck(details: boolean): void {
     } else {
       console.log(`✗ FAIL\n\n${result.output}`);
     }
-    if (review) console.log(`\nReview ${review.reviewCount} failed. Due again ${review.dueAt.slice(0, 10)}.`);
+    if (review) {
+      console.log(`\nReview ${review.reviewCount} failed. Due again ${review.dueAt.slice(0, 10)}.`);
+      if (existsSync(stashedSolutionPath(challenge.metadata.id))) {
+        console.log("Your previous solution is still saved; frenzy restore puts it back.");
+      }
+    }
     process.exitCode = 1;
     return;
   }
 
   if (review) {
+    // The challenge was recalled, so the answer just written is the one that stands.
+    rmSync(stashedSolutionPath(challenge.metadata.id), { force: true });
     console.log(`✓ PASS\nReview ${review.reviewCount} recorded. Next due ${review.dueAt.slice(0, 10)}.`);
     return;
   }
@@ -389,7 +398,46 @@ function commandTopics(): void {
   }
 }
 
-function commandRetention(): void {
+/**
+ * Where a review parks the solution it replaces. It stays out of git: the branch
+ * must keep exactly one answer per challenge, the one that currently stands.
+ */
+function stashedSolutionPath(challengeId: string): string {
+  return join(frenzyDirectory(root), "reviews", `${challengeId}.ts`);
+}
+
+function taskPath(challenge: Challenge): string {
+  return join(challenge.directory, "task.ts");
+}
+
+/**
+ * Hands a review a blank slate. The solution being replaced is stashed first,
+ * unless a stash is already there — a repeated reset would otherwise overwrite
+ * the answer with the starter it was replaced by.
+ */
+function resetToStarter(challenge: Challenge): void {
+  const task = taskPath(challenge);
+  const starter = publishedStarter(root, challenge);
+  if (starter === undefined) {
+    throw new Error(`No published starter for ${challenge.metadata.id}; leaving task.ts alone.`);
+  }
+  const current = existsSync(task) ? readFileSync(task, "utf8") : undefined;
+  const stash = stashedSolutionPath(challenge.metadata.id);
+  if (current === starter) {
+    console.log("\ntask.ts already holds the published starter.");
+    return;
+  }
+  if (current !== undefined && !existsSync(stash)) {
+    mkdirSync(dirname(stash), { recursive: true });
+    writeFileSync(stash, current, "utf8");
+  }
+  writeFileSync(task, starter, "utf8");
+  console.log(
+    "\ntask.ts reset to the published starter. Your previous solution is saved; frenzy restore puts it back.",
+  );
+}
+
+function commandRetention(fresh: boolean): void {
   const local = readProgress(root, device);
   const merged = mergedView(local);
   const challenge = selectDueChallenge(challenges, merged, new Date());
@@ -401,6 +449,30 @@ function commandRetention(): void {
   activate(local, merged, challenge.metadata.id, "retention");
   writeProgress(root, local, device);
   showChallenge(challenge, mergedView(local));
+  if (fresh) {
+    resetToStarter(challenge);
+    return;
+  }
+  // Reviewing the answer still sitting in task.ts would record recall that never
+  // happened, so say so rather than let a passing check mean nothing.
+  const task = taskPath(challenge);
+  const starter = publishedStarter(root, challenge);
+  const solved = existsSync(task) && starter !== undefined && readFileSync(task, "utf8") !== starter;
+  if (solved) {
+    console.log("\ntask.ts still holds your solution. Run frenzy retention --fresh to review from the starter.");
+  }
+}
+
+/** Puts back the solution a review replaced, for a review that did not go well. */
+function commandRestore(): void {
+  const progress = readProgress(root, device);
+  const challenge = challengeById(progress.currentChallengeId);
+  if (!challenge) throw new Error("No active challenge. Run frenzy retention first.");
+  const stash = stashedSolutionPath(challenge.metadata.id);
+  if (!existsSync(stash)) throw new Error(`No saved solution for ${challenge.metadata.id}.`);
+  writeFileSync(taskPath(challenge), readFileSync(stash, "utf8"), "utf8");
+  rmSync(stash);
+  console.log(`Restored your previous solution to ${relative(root, taskPath(challenge))}.`);
 }
 
 function commandDevices(): void {
@@ -480,7 +552,7 @@ function commandVerify(target: string | undefined): void {
 }
 
 function printHelp(): void {
-  console.log(`Frontend Frenzy\n\nCommands:\n  frenzy start <domain[/topic]>\n  frenzy next\n  frenzy current\n  frenzy check [--details]\n  frenzy hint\n  frenzy stats [--export | --by-tag]\n  frenzy topics\n  frenzy retention\n  frenzy devices\n  frenzy doctor\n  frenzy verify [ID | --all]`);
+  console.log(`Frontend Frenzy\n\nCommands:\n  frenzy start <domain[/topic]>\n  frenzy next\n  frenzy current\n  frenzy check [--details]\n  frenzy hint\n  frenzy stats [--export | --by-tag]\n  frenzy topics\n  frenzy retention [--fresh]\n  frenzy restore\n  frenzy devices\n  frenzy doctor\n  frenzy verify [ID | --all]`);
 }
 
 function main(args: readonly string[]): void {
@@ -496,7 +568,8 @@ function main(args: readonly string[]): void {
       else commandStats(args.includes("--export"));
       break;
     case "topics": commandTopics(); break;
-    case "retention": commandRetention(); break;
+    case "retention": commandRetention(args.includes("--fresh")); break;
+    case "restore": commandRestore(); break;
     case "devices": commandDevices(); break;
     case "doctor": commandDoctor(); break;
     case "verify": commandVerify(value); break;
