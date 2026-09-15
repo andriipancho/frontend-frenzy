@@ -528,6 +528,73 @@ function createSolutionsBranchRepository(): string {
   return root;
 }
 
+/** Brings a completed challenge's next review forward, so it is due now. */
+function makeDue(root: string, id: string): void {
+  const progress = readProgress(root);
+  const state = stateOf(progress, id);
+  assert.ok(state.retention);
+  state.retention.dueAt = new Date(Date.now() - 60_000).toISOString();
+  writeProgress(root, progress);
+}
+
+function stashPath(root: string, id: string): string {
+  return join(root, ".frenzy", "reviews", `${id}.ts`);
+}
+
+test("a review starts from the published starter, not the answer left in task.ts", async (t) => {
+  const root = createSolutionsBranchRepository();
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  writeFileSync(taskPath(root, "TS-CORE-001"), SOLUTION, "utf8");
+  runCli(root, "start", "typescript");
+  assert.equal(runCli(root, "check").status, 0);
+  makeDue(root, "TS-CORE-001");
+
+  await t.test("retention says the answer is still in place", () => {
+    const result = runCli(root, "retention");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /--fresh/);
+    assert.equal(readFileSync(taskPath(root, "TS-CORE-001"), "utf8"), SOLUTION, "nothing is reset without the flag");
+  });
+
+  await t.test("--fresh restores the published starter and saves the solution", () => {
+    const result = runCli(root, "retention", "--fresh");
+    assert.equal(result.status, 0, result.stderr);
+    assert.equal(readFileSync(taskPath(root, "TS-CORE-001"), "utf8"), STARTER);
+    assert.equal(readFileSync(stashPath(root, "TS-CORE-001"), "utf8"), SOLUTION);
+  });
+
+  await t.test("a repeated reset does not bury the saved solution", () => {
+    assert.equal(runCli(root, "retention", "--fresh").status, 0);
+    assert.equal(readFileSync(stashPath(root, "TS-CORE-001"), "utf8"), SOLUTION);
+  });
+
+  await t.test("the starter fails the review, as an unsolved challenge must", () => {
+    const result = runCli(root, "check");
+    assert.equal(result.status, 1);
+    assert.match(result.stdout, /Review 1 failed/);
+    assert.match(result.stdout, /frenzy restore/);
+    assert.equal(stateOf(readProgress(root), "TS-CORE-001").retention?.lastResult, "failed");
+  });
+
+  await t.test("restore puts the previous solution back", () => {
+    const result = runCli(root, "restore");
+    assert.equal(result.status, 0, result.stderr);
+    assert.equal(readFileSync(taskPath(root, "TS-CORE-001"), "utf8"), SOLUTION);
+    assert.equal(existsSync(stashPath(root, "TS-CORE-001")), false);
+  });
+
+  await t.test("a passed review keeps the answer it was given", () => {
+    makeDue(root, "TS-CORE-001");
+    assert.equal(runCli(root, "retention", "--fresh").status, 0);
+    writeFileSync(taskPath(root, "TS-CORE-001"), SOLUTION, "utf8");
+    const result = runCli(root, "check");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /Review 2 recorded/);
+    assert.equal(existsSync(stashPath(root, "TS-CORE-001")), false, "the recalled answer stands on its own");
+  });
+});
+
 test("verify reads the starter from the branch that publishes it", async (t) => {
   const root = createSolutionsBranchRepository();
   t.after(() => rmSync(root, { recursive: true, force: true }));

@@ -46,7 +46,8 @@ Run `npm link` once if you prefer the shorter global development command, such a
 | `frenzy hint` | Reveal the next predefined hint |
 | `frenzy stats [--export \| --by-tag]` | Show progress, export a public-safe snapshot, or report concept coverage |
 | `frenzy topics` | List topic-level progress |
-| `frenzy retention` | Select a due retention challenge |
+| `frenzy retention [--fresh]` | Select a due retention challenge, optionally resetting its task to the starter |
+| `frenzy restore` | Put back the solution a review replaced |
 | `frenzy devices` | List the anonymous device shards that recorded progress |
 | `frenzy doctor` | Re-validate every challenge marked completed |
 | `frenzy verify [ID \| --all]` | Prove challenges are solvable and their starters are not |
@@ -107,6 +108,19 @@ Personal progress is stored in `.frenzy/progress.<device-id>.json`. The device I
 Each machine writes only its own shard, so shards never conflict, and every read merges them: attempts and time are summed because each shard counts only its own work, the furthest hint reveal wins, and the shard with more reviews holds the current schedule. The active challenge stays local — being midway through one machine's session must not hijack another's.
 
 To practise on more than one machine, commit the shards on the branch that holds your solutions and pull it on the other machine. Progress and solutions have to travel together: a challenge recorded as completed whose solution never arrived would fail its next review and corrupt its schedule. `frenzy doctor` re-runs the validation for everything marked completed and reports exactly that.
+
+A review is only worth recording if it asks you to recall something. Since your
+solution is still sitting in `task.ts`, `frenzy retention --fresh` writes the
+published starter back into it and keeps your previous answer in the ignored
+`.frenzy/reviews/`. Passing the review keeps the answer you just wrote; failing
+it leaves the saved one in place, and `frenzy restore` puts it back so the branch
+never carries a broken solution. Without the flag nothing is overwritten — the
+command says the answer is still there instead.
+
+The starter comes from the branch that publishes challenges rather than from
+`HEAD`, because on a branch that carries solutions `HEAD` holds the solved file.
+`frenzy verify` reads it the same way, so a solved challenge on a practice branch
+is not mistaken for a challenge that asks nothing.
 
 Completed challenges enter deterministic review intervals at D+1, D+3, D+7, D+14, and D+30. Failed attempts, hint usage, difficulty, time, and the previous review result influence which due challenge is selected first. The algorithm is intentionally small and documented in [retention](retention/README.md).
 

@@ -42,7 +42,8 @@ export function createProgress(): ProgressFile {
 
 const SHARD_PATTERN = /^progress\.(.+)\.json$/;
 
-function frenzyDirectory(root: string): string {
+/** Local state this machine keeps outside git, apart from the shared shards. */
+export function frenzyDirectory(root: string): string {
   return join(root, ".frenzy");
 }
 
