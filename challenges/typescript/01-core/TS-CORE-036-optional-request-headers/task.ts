@@ -1,6 +1,6 @@
 export type RequestOptions = {
   method: string;
-  headers: {
+  headers?: {
     [name: string]: string;
   };
 };

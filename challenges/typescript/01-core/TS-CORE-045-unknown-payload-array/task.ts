@@ -1,1 +1,1 @@
-export type PayloadQueue = any[];
+export type PayloadQueue = unknown[];

@@ -1,3 +1,3 @@
 export type UnknownBox = {
-  value: any;
+  value: unknown;
 };

@@ -1,4 +1,4 @@
 export type EnabledFeature = {
   name: string;
-  enabled: boolean;
+  enabled: true;
 };

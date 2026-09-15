@@ -1,3 +1,3 @@
 export type RequestConfig = {
-  timeoutMs: number | undefined;
+  timeoutMs?: number;
 };

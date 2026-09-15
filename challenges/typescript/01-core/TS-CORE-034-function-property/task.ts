@@ -1,3 +1,3 @@
 export type NumberFormatter = {
-  format: string;
+  format: (arg: number) => string;
 };

@@ -1,6 +1,6 @@
 export type CatalogEntry = {
-  sku: string;
-  position: number[];
-  description: string;
-  tags: string[];
+  readonly sku: string;
+  readonly position: readonly [number, number];
+  description?: string;
+  readonly tags: readonly string[];
 };

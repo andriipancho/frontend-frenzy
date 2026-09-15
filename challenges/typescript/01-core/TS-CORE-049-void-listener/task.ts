@@ -1,1 +1,1 @@
-export type Listener = (event: string) => undefined;
+export type Listener = (event: string) => void;

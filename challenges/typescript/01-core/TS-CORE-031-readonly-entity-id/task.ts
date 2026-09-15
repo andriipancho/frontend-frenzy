@@ -1,4 +1,4 @@
 export type Entity = {
-  id: string;
+  readonly id: string;
   name: string;
 };

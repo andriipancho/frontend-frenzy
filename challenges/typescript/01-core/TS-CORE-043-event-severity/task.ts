@@ -1,4 +1,4 @@
 export type Event = {
-  severity: string;
+  severity: 'info' | 'warning' | 'error';
   message: string;
 };

@@ -1,3 +1,3 @@
 export type Snapshot = {
-  tags: string[];
+  readonly tags: readonly string[];
 };

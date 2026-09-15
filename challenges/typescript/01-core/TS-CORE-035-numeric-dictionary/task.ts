@@ -1,1 +1,1 @@
-export type Counters = {};
+export type Counters = Record<string, number>;

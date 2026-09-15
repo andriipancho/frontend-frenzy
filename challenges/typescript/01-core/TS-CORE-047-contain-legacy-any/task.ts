@@ -1,3 +1,3 @@
-export function containLegacy(value: any): any {
+export function containLegacy(value: any): unknown {
   return value;
 }

@@ -1,3 +1,3 @@
-export function decode(input: any): unknown {
+export function decode(input: unknown): unknown {
   return input;
 }

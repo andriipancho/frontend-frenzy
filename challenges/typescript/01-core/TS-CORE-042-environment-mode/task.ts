@@ -1,1 +1,1 @@
-export type Environment = string;
+export type Environment = 'development' | 'production' | 'staging';

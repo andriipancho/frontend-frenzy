@@ -1,5 +1,5 @@
 export type Settings = {
-  preferences: {
+  readonly preferences: {
     theme: string;
   };
 };
