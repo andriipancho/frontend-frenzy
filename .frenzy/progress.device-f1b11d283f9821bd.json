@@ -2,7 +2,7 @@
   "version": 1,
   "activeSession": {
     "domain": "typescript",
-    "topic": "core"
+    "topic": "unions-and-narrowing"
   },
   "challenges": {
     "TS-CORE-024": {
@@ -356,8 +356,476 @@
         "dueAt": "2026-09-16T16:23:54.621Z",
         "reviewCount": 0
       }
+    },
+    "TS-NAR-004": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:35:12.978Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 43,
+      "completedAt": "2026-09-17T14:35:55.532Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:35:55.532Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-005": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:35:58.185Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 21,
+      "completedAt": "2026-09-17T14:36:19.072Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:36:19.072Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-007": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:36:20.713Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 17,
+      "completedAt": "2026-09-17T14:36:37.239Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:36:37.239Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-008": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:36:38.812Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 21,
+      "completedAt": "2026-09-17T14:36:59.785Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:36:59.785Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-011": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:37:40.833Z",
+      "attempts": 2,
+      "hintsUsed": 0,
+      "elapsedSeconds": 182,
+      "completedAt": "2026-09-17T14:40:03.452Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:40:03.452Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-013": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:40:05.201Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 65,
+      "completedAt": "2026-09-17T14:41:10.224Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:41:10.224Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-017": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:41:11.962Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 30,
+      "completedAt": "2026-09-17T14:41:41.967Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:41:41.967Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-018": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:42:31.560Z",
+      "attempts": 2,
+      "hintsUsed": 0,
+      "elapsedSeconds": 79,
+      "completedAt": "2026-09-17T14:43:02.399Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:43:02.399Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-020": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:43:04.163Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 42,
+      "completedAt": "2026-09-17T14:43:46.392Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:43:46.392Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-022": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:43:48.035Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 18,
+      "completedAt": "2026-09-17T14:44:05.996Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:44:05.996Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-037": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:44:07.517Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 76,
+      "completedAt": "2026-09-17T14:45:23.224Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:45:23.224Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-043": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:45:24.867Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 42,
+      "completedAt": "2026-09-17T14:46:06.928Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:46:06.928Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-044": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:46:09.345Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 40,
+      "completedAt": "2026-09-17T14:46:48.918Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:46:48.918Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-001": {
+      "status": "completed",
+      "startedAt": "2026-09-17T14:46:50.601Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 66,
+      "completedAt": "2026-09-17T14:47:56.954Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T14:47:56.954Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-006": {
+      "status": "completed",
+      "startedAt": "2026-09-17T15:06:11.012Z",
+      "attempts": 11,
+      "hintsUsed": 0,
+      "elapsedSeconds": 1192,
+      "completedAt": "2026-09-17T15:07:52.122Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T15:07:52.122Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-009": {
+      "status": "completed",
+      "startedAt": "2026-09-17T15:07:55.501Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 23,
+      "completedAt": "2026-09-17T15:08:18.669Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T15:08:18.669Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-010": {
+      "status": "completed",
+      "startedAt": "2026-09-17T15:08:20.385Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 56,
+      "completedAt": "2026-09-17T15:09:16.765Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T15:09:16.765Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-012": {
+      "status": "completed",
+      "startedAt": "2026-09-17T15:09:18.817Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 372,
+      "completedAt": "2026-09-17T15:15:30.511Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T15:15:30.511Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-014": {
+      "status": "completed",
+      "startedAt": "2026-09-17T15:15:32.112Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 36,
+      "completedAt": "2026-09-17T15:16:08.598Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T15:16:08.598Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-016": {
+      "status": "completed",
+      "startedAt": "2026-09-17T15:17:41.482Z",
+      "attempts": 3,
+      "hintsUsed": 0,
+      "elapsedSeconds": 127,
+      "completedAt": "2026-09-17T15:18:18.742Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T15:18:18.742Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-019": {
+      "status": "completed",
+      "startedAt": "2026-09-17T15:18:20.926Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 1719,
+      "completedAt": "2026-09-17T15:46:59.603Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T15:46:59.603Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-021": {
+      "status": "completed",
+      "startedAt": "2026-09-17T15:47:02.115Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 53,
+      "completedAt": "2026-09-17T15:47:55.528Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T15:47:55.528Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-031": {
+      "status": "completed",
+      "startedAt": "2026-09-17T15:47:58.321Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 148,
+      "completedAt": "2026-09-17T15:50:26.389Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T15:50:26.389Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-032": {
+      "status": "completed",
+      "startedAt": "2026-09-17T15:50:28.570Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 95,
+      "completedAt": "2026-09-17T15:52:03.764Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T15:52:03.764Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-033": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:03:07.544Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 91,
+      "completedAt": "2026-09-17T16:04:38.699Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:04:38.699Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-034": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:04:41.403Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 39,
+      "completedAt": "2026-09-17T16:05:20.242Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:05:20.242Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-038": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:05:21.954Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 56,
+      "completedAt": "2026-09-17T16:06:17.477Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:06:17.477Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-039": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:06:19.222Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 70,
+      "completedAt": "2026-09-17T16:07:28.804Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:07:28.804Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-040": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:07:30.444Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 34,
+      "completedAt": "2026-09-17T16:08:04.090Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:08:04.090Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-042": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:08:05.565Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 38,
+      "completedAt": "2026-09-17T16:08:43.829Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:08:43.829Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-045": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:08:45.471Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 55,
+      "completedAt": "2026-09-17T16:09:39.989Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:09:39.989Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-046": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:09:41.549Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 35,
+      "completedAt": "2026-09-17T16:10:16.100Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:10:16.100Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-048": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:10:17.674Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 54,
+      "completedAt": "2026-09-17T16:11:11.959Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:11:11.959Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-049": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:11:13.466Z",
+      "attempts": 1,
+      "hintsUsed": 0,
+      "elapsedSeconds": 165,
+      "completedAt": "2026-09-17T16:13:58.147Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:13:58.147Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-050": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:15:05.046Z",
+      "attempts": 2,
+      "hintsUsed": 0,
+      "elapsedSeconds": 71,
+      "completedAt": "2026-09-17T16:15:11.117Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:15:11.117Z",
+        "reviewCount": 0
+      }
+    },
+    "TS-NAR-054": {
+      "status": "completed",
+      "startedAt": "2026-09-17T16:16:44.864Z",
+      "attempts": 2,
+      "hintsUsed": 0,
+      "elapsedSeconds": 169,
+      "completedAt": "2026-09-17T16:18:01.864Z",
+      "retention": {
+        "stage": 0,
+        "dueAt": "2026-09-18T16:18:01.864Z",
+        "reviewCount": 0
+      }
     }
   },
-  "currentChallengeId": "TS-CORE-049",
+  "currentChallengeId": "TS-NAR-054",
   "currentMode": "practice"
 }

@@ -3,5 +3,10 @@ export type CacheEntry =
   | { reason: string };
 
 export function describeCache(entry: CacheEntry): string {
-  return entry.value.toUpperCase();
+  if ("value" in entry) {
+    entry.value.toUpperCase()
+  } else if("reason" in entry) {
+    entry.reason.toUpperCase()
+  }
+  return "";
 }

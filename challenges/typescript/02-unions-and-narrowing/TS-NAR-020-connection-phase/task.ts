@@ -1,1 +1,1 @@
-export type ConnectionPhase = string;
+export type ConnectionPhase = "idle" | "connecting" | "connected" | "closed";

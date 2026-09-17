@@ -1,1 +1,1 @@
-export type Selection = string[];
+export type Selection = string[] | string;

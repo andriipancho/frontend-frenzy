@@ -1,1 +1,1 @@
-export type AuditFields = { createdAt: Date };
+export type AuditFields = { createdAt: Date } & { updatedAt: Date };

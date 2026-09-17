@@ -1,1 +1,1 @@
-export type OperationValue = string;
+export type OperationValue = string | Error;

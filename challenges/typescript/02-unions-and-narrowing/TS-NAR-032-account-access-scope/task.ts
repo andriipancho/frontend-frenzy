@@ -3,5 +3,10 @@ export type Account =
   | { id: string; teamId: string };
 
 export function accessScope(account: Account): string {
-  return account.permissions.join(",");
+  if ("permissions" in account) {
+    return account.permissions.join(",");
+  } else if ("teamId" in account) {
+    return account.teamId;
+  }
+  return "";
 }

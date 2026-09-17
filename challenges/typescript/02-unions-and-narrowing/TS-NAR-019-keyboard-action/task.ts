@@ -1,1 +1,1 @@
-export type KeyboardAction = string;
+export type KeyboardAction = "next" | "previous" | "select" | "dismiss";

@@ -1,3 +1,3 @@
 export function collectionSize(value: Set<string> | string[]): number {
-  return value.size;
+  return value instanceof Set ? value.size : value.length;
 }

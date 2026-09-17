@@ -14,6 +14,8 @@ export function area(shape: Shape): number {
     case "rectangle":
       return shape.width * shape.height;
     // TODO: handle every Shape variant.
+      case "triangle":
+        return shape.base * shape.height;
     default:
       return assertNever(shape);
   }

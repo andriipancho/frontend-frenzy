@@ -1,1 +1,1 @@
-export type Timestamp = Date;
+export type Timestamp = Date | number;

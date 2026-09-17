@@ -1,5 +1,8 @@
 export type CountSource = Map<string, unknown> | { count: number };
 
 export function entryCount(value: CountSource): number {
-  return value.size;
+  if(value instanceof Map) {
+    return value.size;
+  }
+  return value.count;
 }

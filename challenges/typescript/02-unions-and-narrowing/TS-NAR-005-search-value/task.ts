@@ -1,1 +1,1 @@
-export type SearchValue = string;
+export type SearchValue = string | number | boolean;

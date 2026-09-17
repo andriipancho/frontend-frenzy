@@ -1,5 +1,10 @@
 export type Contact = { email: string } | { phone: string };
 
 export function contactAddress(contact: Contact): string {
-  return contact.email;
+  if ("email" in contact) {
+    return contact.email;
+  } else if ("phone" in contact) {
+    return contact.phone;
+  }
+  return "";
 }

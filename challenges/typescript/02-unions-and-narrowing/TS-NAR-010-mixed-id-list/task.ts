@@ -1,1 +1,1 @@
-export type IdList = string[] | number[];
+export type IdList = (string | number)[];

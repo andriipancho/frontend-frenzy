@@ -1,1 +1,1 @@
-export type Avatar = string;
+export type Avatar = string | null;

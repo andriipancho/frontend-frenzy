@@ -3,5 +3,5 @@ export type Settings = {
 };
 
 export function themeName(settings: Settings): string {
-  return settings.theme.name;
+  return settings.theme?.name ?? "";
 }

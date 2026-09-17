@@ -1,3 +1,3 @@
 export type User = { id: string; name: string };
 export type Permissions = { permissions: string[] };
-export type UserWithPermissions = User;
+export type UserWithPermissions = User & Permissions;

@@ -1,1 +1,1 @@
-export type ContactId = string;
+export type ContactId = string | number;

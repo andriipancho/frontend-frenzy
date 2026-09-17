@@ -1,3 +1,3 @@
 export function itemCount(items: string[] | undefined): number {
-  return items.length;
+  return items instanceof Array ? items.length : 0;
 }
