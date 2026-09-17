@@ -1,9 +1,10 @@
 # TS-NAR-008 — Represent a missing avatar
 
-Model an avatar URL that is either available as text or explicitly absent.
+A profile either has an avatar URL or the server reports that it has none. The
+absence is always sent as an explicit empty value, never as a missing field.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Accept `string` and `null`; `undefined` is not an accepted value.

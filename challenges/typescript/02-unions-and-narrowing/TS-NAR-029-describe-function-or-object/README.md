@@ -1,6 +1,8 @@
 # TS-NAR-029 — Describe function or object
 
-Complete `describeCallable` by narrowing each union member before applying type-specific behavior.
+`describeCallable` describes its input: a function is reported as callable, a
+record contributes its `kind`. Complete it by narrowing the union before reading
+the property.
 
 ## Constraints
 

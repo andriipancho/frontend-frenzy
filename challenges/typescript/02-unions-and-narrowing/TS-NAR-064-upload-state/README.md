@@ -1,9 +1,11 @@
 # TS-NAR-064 — Model upload progress states
 
-Encode idle, uploading, completed, and failed upload states without contradictory optional data.
+Encode the four upload states without contradictory optional data: `idle` has
+none, `uploading` has `progress: number`, `completed` has `url: string`, and
+`failed` has `error: string`.
 
 ## Constraints
 
 - Use `status` as the discriminant.
-- Require progress only while uploading.
-- Require URL or error only in terminal states.
+- Give each member only the fields listed for it; no `?: never` placeholders.
+- Require progress only while uploading, and URL or error only in a terminal state.

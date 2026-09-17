@@ -1,6 +1,7 @@
 # TS-NAR-035 — Narrow geometric properties
 
-Compute a numeric measure for circles and boxes without adding an explicit discriminator.
+Compute the area of both shapes — `π · radius²` for a circle, `width × height`
+for a box — without adding an explicit discriminator to the union.
 
 ## Constraints
 

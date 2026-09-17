@@ -1,6 +1,7 @@
 # TS-NAR-030 — Handle null or text
 
-Complete `cleanText` by narrowing each union member before applying type-specific behavior.
+`cleanText` always returns a string: the trimmed text when one was supplied, and
+empty text for `null`. Complete it by narrowing the union before trimming.
 
 ## Constraints
 

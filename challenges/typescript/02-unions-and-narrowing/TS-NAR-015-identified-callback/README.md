@@ -1,9 +1,11 @@
 # TS-NAR-015 — Combine identity with behavior
 
-Model a callable handler that also exposes a readonly identifier.
+The registry calls a handler with the event name and expects no return value,
+and it also reads a `readonly id` of type `string` from that same handler.
+`IdentifiedHandler` must describe both capabilities of one value.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Keep the call signature `(event: string) => void` and require the readonly `id`.

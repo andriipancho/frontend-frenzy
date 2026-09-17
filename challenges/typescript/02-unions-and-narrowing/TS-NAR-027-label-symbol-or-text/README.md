@@ -1,6 +1,8 @@
 # TS-NAR-027 — Label symbol or text
 
-Complete `labelValue` by narrowing each union member before applying type-specific behavior.
+`labelValue` returns a label for either input: text is uppercased, a symbol
+contributes its description, or empty text when it has none. Complete it by
+narrowing the union before applying the member-specific call.
 
 ## Constraints
 

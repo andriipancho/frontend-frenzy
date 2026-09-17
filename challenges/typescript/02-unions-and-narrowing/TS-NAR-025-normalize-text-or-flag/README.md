@@ -1,6 +1,8 @@
 # TS-NAR-025 — Normalize text or flag
 
-Complete `normalizeValue` by narrowing each union member before applying type-specific behavior.
+`normalizeValue` always returns text: a string is trimmed, a boolean becomes its
+textual form. Complete it by narrowing the union before applying the
+member-specific call.
 
 ## Constraints
 

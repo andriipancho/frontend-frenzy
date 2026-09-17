@@ -1,9 +1,11 @@
 # TS-NAR-012 — Combine user and permissions
 
-Build UserWithPermissions from the existing identity and permission contracts.
+`UserWithPermissions` describes a user that also carries its permission list.
+Build it from the existing `User` and `Permissions` contracts rather than
+restating their properties.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Require every property of both contracts at the same time.
