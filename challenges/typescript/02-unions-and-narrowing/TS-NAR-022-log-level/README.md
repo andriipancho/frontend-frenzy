@@ -1,9 +1,10 @@
 # TS-NAR-022 — Constrain log levels
 
-Restrict LogLevel to the levels emitted by the local logger.
+The local logger emits four levels: `"debug"`, `"info"`, `"warn"`, and
+`"error"`. Restrict `LogLevel` to them.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Accept only those four levels, exactly as written.

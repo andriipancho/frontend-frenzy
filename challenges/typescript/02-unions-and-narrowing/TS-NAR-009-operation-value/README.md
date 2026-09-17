@@ -1,9 +1,10 @@
 # TS-NAR-009 — Represent an operation value or error
 
-Allow an operation slot to contain its string value or an Error object.
+An operation slot holds either the text the operation produced or the `Error`
+that replaced it.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Accept `string` and `Error`, and nothing else.

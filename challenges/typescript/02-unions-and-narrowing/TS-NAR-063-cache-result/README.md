@@ -1,9 +1,11 @@
 # TS-NAR-063 — Model cache lookup results
 
-Represent cache hits, misses, and stale entries with precise payloads.
+Represent the three lookup outcomes: `hit` carries `value: string`, `miss`
+carries nothing, and `stale` carries `value: string` together with
+`ageSeconds: number`.
 
 ## Constraints
 
 - Use `state` as the discriminant.
-- Require a value for hit and stale states.
+- Give each member only the fields listed for it; no `?: never` placeholders.
 - Require stale age only for stale entries.

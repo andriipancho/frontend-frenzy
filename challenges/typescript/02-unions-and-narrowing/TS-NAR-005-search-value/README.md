@@ -1,9 +1,10 @@
 # TS-NAR-005 — Model searchable primitives
 
-Allow a search filter value to be text, numeric, or boolean.
+A search filter compares a field against a value the caller supplies as text, as
+a number, or as a boolean flag. `SearchValue` must cover all three.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Accept `string`, `number`, and `boolean`, and nothing else.

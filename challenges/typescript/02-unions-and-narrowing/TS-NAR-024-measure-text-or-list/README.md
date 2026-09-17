@@ -1,6 +1,8 @@
 # TS-NAR-024 — Measure text or list
 
-Complete `measure` by narrowing each union member before applying type-specific behavior.
+`measure` reports a length: for text, the character count after trimming; for a
+list, the number of items. Complete it by narrowing the union before applying
+the member-specific call.
 
 ## Constraints
 

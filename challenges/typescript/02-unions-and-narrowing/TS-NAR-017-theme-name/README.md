@@ -1,9 +1,10 @@
 # TS-NAR-017 — Constrain theme names
 
-Restrict ThemeName to the supported light, dark, and system values.
+The application ships three themes: `"light"`, `"dark"`, and `"system"`.
+Restrict `ThemeName` so any other name is rejected at compile time.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Accept only those three values, exactly as written.

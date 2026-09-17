@@ -1,6 +1,8 @@
 # TS-NAR-023 — Format text or count
 
-Complete `formatValue` by narrowing each union member before applying type-specific behavior.
+`formatValue` renders either input form as text: text is uppercased, a number is
+formatted with two decimals. Complete it by narrowing the union before applying
+the member-specific call.
 
 ## Constraints
 

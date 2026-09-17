@@ -1,9 +1,10 @@
 # TS-NAR-021 — Constrain grid columns
 
-Limit GridColumn to the twelve supported layout positions.
+The layout grid has twelve columns numbered `1` through `12`. Restrict
+`GridColumn` to those positions so `0` and `13` are rejected.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Accept only the twelve numeric literals.

@@ -1,6 +1,8 @@
 # TS-NAR-028 — Encode bigint or number
 
-Complete `encodeInteger` by narrowing each union member before applying type-specific behavior.
+`encodeInteger` renders either integer form as digits without a fractional part.
+Complete it by narrowing the union before applying the member-specific call —
+the two members do not share a formatting method.
 
 ## Constraints
 

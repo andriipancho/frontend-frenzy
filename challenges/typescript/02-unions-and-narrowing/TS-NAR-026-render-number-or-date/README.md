@@ -1,6 +1,8 @@
 # TS-NAR-026 — Render number or date
 
-Complete `renderValue` by narrowing each union member before applying type-specific behavior.
+`renderValue` returns text for either input: a number formatted with two
+decimals, a date in ISO form. Complete it by narrowing the union before applying
+the member-specific call.
 
 ## Constraints
 

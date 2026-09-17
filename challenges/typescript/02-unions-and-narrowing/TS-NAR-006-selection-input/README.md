@@ -1,9 +1,11 @@
 # TS-NAR-006 — Accept one or many selections
 
-Model an input that accepts either one selected string or a string array.
+A picker reports a single selected item as a plain string and a multi-selection
+as an array of strings. `Selection` must describe both without forcing the
+single case into an array.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Accept `string` and `string[]`, and nothing else.

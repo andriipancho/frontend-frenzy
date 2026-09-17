@@ -1,9 +1,11 @@
 # TS-NAR-062 — Model authentication states
 
-Separate anonymous, authenticating, authenticated, and rejected authentication states.
+Separate the four states: `anonymous` and `authenticating` carry no data,
+`authenticated` carries `user: { id: string }`, and `rejected` carries
+`error: string`.
 
 ## Constraints
 
 - Use `status` as the discriminant.
-- Require user data only after authentication.
-- Require an error only for rejection.
+- Give each member only the fields listed for it; no `?: never` placeholders.
+- Require user data only after authentication and an error only for rejection.

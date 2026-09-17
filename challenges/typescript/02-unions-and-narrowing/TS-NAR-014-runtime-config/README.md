@@ -1,9 +1,10 @@
 # TS-NAR-014 — Add runtime state to configuration
 
-Combine immutable configuration with mutable runtime readiness.
+`ActiveConfig` is the immutable `Config` loaded at startup together with the
+`RuntimeState` the process keeps updating while it runs.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Build the result from both contracts and keep `endpoint` readonly.

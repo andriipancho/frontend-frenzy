@@ -1,9 +1,10 @@
 # TS-NAR-010 — Type a mixed identifier list
 
-Model an array where each identifier may independently be a string or number.
+A batch request carries its identifiers in one array, and each entry is
+independently a string or a number, so `["u1", 2, "u3"]` is valid input.
 
 ## Constraints
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Preserve the accepted cases demonstrated by the tests.
+- Model one array of mixed elements, not a choice between two uniform arrays.
