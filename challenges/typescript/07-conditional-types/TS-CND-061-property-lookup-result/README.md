@@ -7,3 +7,8 @@ Implement `PropertyLookup` to model a property lookup result, while preserving t
 - Model whether the requested key exists with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- When the key exists, the result is `{ found: true; value: <the property type> }`.
+- When it does not, the result is `{ found: false; key: <the requested key> }`.

@@ -7,3 +7,11 @@ Implement `ResultChannel` to select a result channel, while preserving the gener
 - Model failure and successful cache states in precedence order with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+In this order:
+
+- `ok: false` produces `"error"`;
+- a successful result that is also `cached: true` produces `"cache"`;
+- any other successful result produces `"network"`.

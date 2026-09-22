@@ -7,3 +7,9 @@ Implement `RepositoryLookup` to design repository lookup results, while preservi
 - Model the strict lookup mode with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- Strict lookups produce `{ found: true; entity: <the entity> }` or
+  `{ found: false; reason: "missing" }`.
+- Lenient lookups produce the entity or `null`.

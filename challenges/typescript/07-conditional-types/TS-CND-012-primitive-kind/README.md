@@ -7,3 +7,8 @@ Implement `PrimitiveKind` to classify primitive kinds, while preserving the gene
 - Model each supported primitive category with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- `string` produces `"string"`, `number` produces `"number"`, `boolean` produces `"boolean"`.
+- Every other type produces `"other"`.
