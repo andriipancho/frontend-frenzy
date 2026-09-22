@@ -9,3 +9,5 @@ narrowing the union before applying the member-specific call.
 - Handle every union member.
 - Use runtime checks that TypeScript understands.
 - Do not use `any` or assertions.
+- Keep the declared signature: neither the parameter types nor the return
+  type may change.

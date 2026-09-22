@@ -6,4 +6,6 @@ Turn `isUser` into a type guard that allows callers to safely use an unknown val
 
 - Keep the input as `unknown`.
 - Verify both required properties at runtime.
+- Expose the result as a type predicate that narrows the argument to `User`; a
+  plain `boolean` return is rejected.
 - Do not use `any`.

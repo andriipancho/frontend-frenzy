@@ -7,3 +7,5 @@ Complete `contactAddress` for email and phone contacts by checking which propert
 - Keep both object variants.
 - Use a property-presence check.
 - Do not use assertions.
+- Keep the declared signature: neither the parameter types nor the return
+  type may change.
