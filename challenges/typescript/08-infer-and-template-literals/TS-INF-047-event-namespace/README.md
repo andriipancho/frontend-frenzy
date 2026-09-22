@@ -7,3 +7,9 @@ Implement `EventNamespace` to infer event namespaces, while preserving the infer
 - Derive the output from the portion before an event namespace separator.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- The namespace separator is `:`.
+- An event containing a separator produces the part before the first one.
+- An event without a separator produces `never`.

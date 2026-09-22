@@ -7,3 +7,9 @@ Implement `SwapFirstTwo` to swap the first two tuple elements, while preserving 
 - Derive the output from the first two positions and remaining tuple segment.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- A tuple of two or more elements exchanges its first two elements and keeps the rest in
+  place.
+- A shorter tuple is returned unchanged.

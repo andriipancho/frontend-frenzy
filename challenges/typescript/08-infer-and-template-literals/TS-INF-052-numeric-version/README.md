@@ -7,3 +7,8 @@ Implement `VersionNumber` to infer numeric version literals, while preserving th
 - Derive the output from a numeric literal following the version prefix.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- The version prefix is `v`, and the result is a numeric literal rather than a string.
+- Text that is not `v` followed by digits produces `never`.

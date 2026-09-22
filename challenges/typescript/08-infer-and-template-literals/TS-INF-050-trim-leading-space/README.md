@@ -7,3 +7,9 @@ Implement `TrimLeadingSpace` to trim one leading space, while preserving the inf
 - Derive the output from the remainder after exactly one leading space.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- Text starting with a space produces the remainder after that one space, so a second leading
+  space survives.
+- Text not starting with a space is returned unchanged.

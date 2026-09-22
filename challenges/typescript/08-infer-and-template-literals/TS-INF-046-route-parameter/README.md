@@ -7,3 +7,8 @@ Implement `RouteParameter` to infer route parameter names, while preserving the 
 - Derive the output from the route segment following a colon marker.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- A path containing `:` produces the parameter name that follows it.
+- A path without `:` produces `never`.

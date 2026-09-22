@@ -7,3 +7,9 @@ Implement `UnwrapBrackets` to unwrap bracketed strings, while preserving the inf
 - Derive the output from the text enclosed by one matching bracket pair.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- Text wrapped in `[` and `]` produces the text between the outermost pair, inner brackets
+  included.
+- Text that is not bracketed is returned unchanged.

@@ -7,3 +7,8 @@ Implement `TupleMiddle` to infer tuple middle segments, while preserving the inf
 - Derive the output from the positions between both tuple ends.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- A tuple of two or more elements produces everything between its first and last element.
+- A shorter tuple produces `[]`.

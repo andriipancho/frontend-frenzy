@@ -7,3 +7,10 @@ Implement `PathTail` to infer path tail segments, while preserving the inferred 
 - Derive the output from the path remainder after the first separator.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- Path segments are separated by `/`.
+- A path containing a separator produces everything after the first one, later separators
+  included.
+- A path without a separator produces `""`.
