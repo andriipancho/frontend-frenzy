@@ -6,4 +6,5 @@ Return the exact configuration associated with a concrete feature name.
 
 - Derive feature names from the runtime registry.
 - Reject unknown features.
-- Preserve literal configuration details.
+- Make the registry deeply readonly, so the returned configuration preserves each
+  exact literal value together with its readonly modifier.
