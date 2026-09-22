@@ -6,4 +6,5 @@ Generate set-prefixed action creators for every state property.
 
 - Prefix and capitalize property keys.
 - Accept related payload values.
-- Return exact action discriminants.
+- Return an action object carrying `type` and `payload`, where `type` is the
+  exact generated creator name rather than the original property key.
