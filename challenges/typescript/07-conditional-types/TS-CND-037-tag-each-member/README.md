@@ -7,3 +7,8 @@ Implement `TaggedMember` to tag every union member, while preserving the generic
 - Model each union member independently with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- Each member becomes an object carrying that member twice: once as `value`
+  and once as `source`.

@@ -7,3 +7,12 @@ Implement `LoadStateLabel` to classify load states, while preserving the generic
 - Model the discriminant values in priority order with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+The `status` discriminant selects the label, in this order:
+
+- `"success"` produces `"data"`;
+- `"error"` produces `"failure"`;
+- `"loading"` produces `"pending"`;
+- any other shape produces `"unknown"`.

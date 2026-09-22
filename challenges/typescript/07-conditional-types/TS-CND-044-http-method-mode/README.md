@@ -7,3 +7,9 @@ Implement `MethodMode` to classify HTTP method behavior, while preserving the ge
 - Model the method groups in the contract with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- `"GET"` produces `"read"`.
+- `"POST"`, `"PUT"`, `"PATCH"` and `"DELETE"` produce `"write"`.
+- Every other method produces `"unsupported"`.

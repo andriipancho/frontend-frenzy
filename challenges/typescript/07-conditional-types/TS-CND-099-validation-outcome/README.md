@@ -7,3 +7,8 @@ Implement `ValidationOutcome` to design validation outcomes, while preserving th
 - Model the validation result flag with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- A valid outcome is `{ valid: true; value: <the value> }`.
+- An invalid one is `{ valid: false; input: unknown; issues: readonly string[] }`.

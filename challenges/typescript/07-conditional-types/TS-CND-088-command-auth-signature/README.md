@@ -7,3 +7,10 @@ Implement `CommandHandler` to design authenticated command signatures, while pre
 - Model the command authentication requirement with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- An authenticated command takes the token first and then the payload:
+  `(token: string, payload: <the payload>) => Promise<<the result>>`.
+- An unauthenticated one takes only the payload.
+- Either way the result is delivered through a Promise.

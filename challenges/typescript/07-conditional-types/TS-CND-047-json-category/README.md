@@ -7,3 +7,12 @@ Implement `JsonCategory` to classify JSON-like values, while preserving the gene
 - Model the ordered JSON-like categories with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+In this order:
+
+- `null` produces `"null"`;
+- `string`, `number` and `boolean` produce `"scalar"`;
+- readonly and mutable arrays produce `"array"`;
+- every remaining object produces `"object"`.

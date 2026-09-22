@@ -7,3 +7,8 @@ Implement `NormalizedId` to normalize identifier types, while preserving the gen
 - Model string and number identifier inputs with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- A string identifier normalizes to `string`, a number identifier to `number`.
+- Anything that is not an identifier produces `never`.

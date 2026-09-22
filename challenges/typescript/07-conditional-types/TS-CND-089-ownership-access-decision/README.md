@@ -7,3 +7,9 @@ Implement `AccessDecision` to model ownership access decisions, while preserving
 - Model role privilege before resource ownership with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- `"admin"` is allowed regardless of ownership.
+- `"member"` is allowed only for a resource it owns.
+- `"guest"` is never allowed.

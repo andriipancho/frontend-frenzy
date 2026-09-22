@@ -7,3 +7,8 @@ Implement `BooleanLabel` to label boolean literals, while preserving the generic
 - Model the true boolean literal with conditional branch selection.
 - Preserve exact literal, property, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- `true` produces `"enabled"`.
+- `false` produces `"disabled"`.
