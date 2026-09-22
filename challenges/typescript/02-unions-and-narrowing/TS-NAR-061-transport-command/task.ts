@@ -4,5 +4,10 @@ export type TransportCommand =
   | { kind: "disconnect"; reason: string };
 
 export function commandSummary(command: TransportCommand): string {
-  return command.endpoint;
+  switch (command.kind) {
+    case "connect": return command.endpoint;
+    case "send": return command.data;
+    case "disconnect": return command.reason;
+    default: return "";
+  }
 }

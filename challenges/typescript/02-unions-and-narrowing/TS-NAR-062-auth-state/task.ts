@@ -1,5 +1,11 @@
-export type AuthState = {
-  status: "anonymous" | "authenticating" | "authenticated" | "rejected";
-  user?: { id: string };
-  error?: string;
+export type AuthState = | {
+  status: "authenticated";
+  user: { id: string };
+} | {
+  status: "anonymous";
+} | {
+  status: "authenticating";
+} | {
+  status: "rejected";
+  error: string;
 };

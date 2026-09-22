@@ -1,5 +1,10 @@
-export type CacheResult = {
-  state: "hit" | "miss" | "stale";
-  value?: string;
-  ageSeconds?: number;
+export type CacheResult = | {
+  state: "hit";
+  value: string;
+} | {
+  state: "miss";
+} | {
+  state: "stale",
+  ageSeconds: number;
+  value: string;
 };
