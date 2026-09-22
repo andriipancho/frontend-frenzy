@@ -7,4 +7,6 @@ time.
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Build `TaggedEntity` from both contracts instead of restating their properties.
+- Build `TaggedEntity` as an intersection type of `Named` and `Tagged`. One
+  merged object type restating their properties is a different type here and is
+  rejected, even though it accepts the same values.

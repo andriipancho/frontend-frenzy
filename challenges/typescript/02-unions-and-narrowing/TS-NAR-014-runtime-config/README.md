@@ -7,4 +7,7 @@
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Build the result from both contracts and keep `endpoint` readonly.
+- Build `ActiveConfig` as an intersection type of `Config` and `RuntimeState`.
+  One merged object type restating their properties is a different type here and
+  is rejected, even though it accepts the same values.
+- Keep `endpoint` readonly.

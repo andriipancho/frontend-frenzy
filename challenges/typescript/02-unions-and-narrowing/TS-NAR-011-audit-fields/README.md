@@ -8,4 +8,6 @@ must require both at the same time.
 
 - Keep the exported names.
 - Do not use `any` or assertions.
-- Combine the two contracts instead of declaring one merged object type.
+- Build `AuditFields` as an intersection type of the two contracts. One merged
+  object type listing both properties is a different type here and is rejected,
+  even though it accepts the same values.

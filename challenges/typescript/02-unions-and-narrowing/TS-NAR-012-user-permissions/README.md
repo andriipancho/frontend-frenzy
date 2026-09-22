@@ -9,3 +9,6 @@ restating their properties.
 - Keep the exported names.
 - Do not use `any` or assertions.
 - Require every property of both contracts at the same time.
+- Build `UserWithPermissions` as an intersection type of `User` and
+  `Permissions`. One merged object type restating their properties is a
+  different type here and is rejected, even though it accepts the same values.

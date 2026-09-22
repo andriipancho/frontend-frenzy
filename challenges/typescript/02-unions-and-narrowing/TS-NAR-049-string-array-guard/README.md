@@ -6,4 +6,5 @@ Turn `isStringArray` into a reusable guard that proves every unknown array eleme
 
 - Keep the input unknown.
 - Validate the container and every element.
-- Expose the narrowed type to callers.
+- Expose the result as a type predicate that narrows the argument to `string[]`;
+  a plain `boolean` return is rejected.

@@ -7,3 +7,5 @@ Read network and cache results whose inner payloads use different discriminants.
 - Handle both outer sources.
 - Handle success, error, hit, and miss inner states.
 - Do not use assertions.
+- Keep the declared signature: neither the parameter types nor the return
+  type may change.
