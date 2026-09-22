@@ -228,6 +228,16 @@ export function startChallenge(
   return progress.challenges[challengeId] as ChallengeProgress;
 }
 
+/**
+ * A sitting ends when the laptop closes, not when `check` finally runs, so the
+ * wall clock from startedAt can span a night or a weekend of doing nothing.
+ * Everything past this counts as time away rather than practice: the bank
+ * estimates 3 to 20 minutes a challenge, so an hour never truncates real work.
+ */
+export const MAX_SITTING_SECONDS = 60 * 60;
+
+/** Time worked in one sitting, with an absence charged as the cap, not as hours. */
 export function elapsedSince(startedAt: string, now: Date): number {
-  return Math.max(0, Math.round((now.getTime() - new Date(startedAt).getTime()) / 1000));
+  const seconds = Math.max(0, Math.round((now.getTime() - new Date(startedAt).getTime()) / 1000));
+  return Math.min(seconds, MAX_SITTING_SECONDS);
 }

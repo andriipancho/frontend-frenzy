@@ -14,6 +14,8 @@ import { findViolations } from "../validation/src/constraints.js";
 import {
   createProgress,
   deviceId,
+  elapsedSince,
+  MAX_SITTING_SECONDS,
   progressErrors,
   type ChallengeProgress,
   readProgress,
@@ -93,6 +95,14 @@ test("retention intervals advance and failures retry after one day", () => {
   recordReview(state, false, new Date("2026-01-05T00:00:00.000Z"));
   assert.equal(state.stage, 1);
   assert.equal(state.dueAt, "2026-01-06T00:00:00.000Z");
+});
+
+test("a sitting left open overnight is charged the cap, not the wall clock", () => {
+  const startedAt = "2026-01-01T00:00:00.000Z";
+  assert.equal(elapsedSince(startedAt, new Date("2026-01-01T00:05:00.000Z")), 300);
+  assert.equal(elapsedSince(startedAt, new Date("2026-01-03T14:12:30.332Z")), MAX_SITTING_SECONDS);
+  // A clock that ran backwards between machines must not subtract practice time.
+  assert.equal(elapsedSince(startedAt, new Date("2025-12-31T23:00:00.000Z")), 0);
 });
 
 test("retention selects a harder due challenge when other signals are equal", () => {

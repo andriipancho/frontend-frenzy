@@ -7,6 +7,7 @@ import test from "node:test";
 
 import { findRepositoryRoot } from "../challenge-schema/src/discovery.js";
 import {
+  MAX_SITTING_SECONDS,
   readProgress,
   writeProgress,
   type ChallengeProgress,
@@ -228,6 +229,25 @@ test("retention reviews are counted separately from practice attempts", async (t
     assert.equal(snapshot.failedAttempts, 0);
     assert.equal(snapshot.accuracy, 100);
     assert.equal(snapshot.retentionReviews, 1);
+  });
+});
+
+test("a challenge abandoned for days records one sitting, not the days", async (t) => {
+  const root = createFixtureRepository();
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+
+  runCli(root, "start", "typescript");
+  // The session stayed open across a long weekend before the answer was written.
+  const parked = readProgress(root);
+  stateOf(parked, "TS-CORE-001").startedAt = new Date(Date.now() - 62 * 60 * 60_000).toISOString();
+  writeProgress(root, parked);
+  writeFileSync(taskPath(root, "TS-CORE-001"), SOLUTION, "utf8");
+
+  await t.test("check charges the cap instead of the wall clock", () => {
+    const result = runCli(root, "check");
+    assert.equal(result.status, 0, result.stderr);
+    assert.match(result.stdout, /Time: 01:00:00/);
+    assert.equal(stateOf(readProgress(root), "TS-CORE-001").elapsedSeconds, MAX_SITTING_SECONDS);
   });
 });
 
