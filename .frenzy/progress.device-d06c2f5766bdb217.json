@@ -309,7 +309,7 @@
       "startedAt": "2026-08-29T00:01:33.253Z",
       "attempts": 5,
       "hintsUsed": 0,
-      "elapsedSeconds": 224186,
+      "elapsedSeconds": 3600,
       "completedAt": "2026-08-31T14:12:30.332Z",
       "retention": {
         "stage": 0,
