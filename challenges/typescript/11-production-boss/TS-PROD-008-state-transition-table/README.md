@@ -7,3 +7,8 @@ Derive the exported production contract from the supplied domain model while pre
 - Keep the supplied model and exported type name.
 - Preserve exact inputs, outputs, and modifiers for each member.
 - Do not use any, assertions, or a manually enumerated result.
+
+## Contract
+
+- Each member's `from` state becomes a key of the table.
+- Its value is that member's `to` states, a union of destinations included.

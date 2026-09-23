@@ -7,3 +7,9 @@ Derive the exported production contract from the supplied domain model while pre
 - Keep the supplied model and exported type name.
 - Preserve exact inputs, outputs, and modifiers for each member.
 - Do not use any, assertions, or a manually enumerated result.
+
+## Contract
+
+- Each endpoint key keeps its name.
+- Its value becomes `(request: <request>) => Promise<<response>>`, taken from that endpoint's
+  own contract.

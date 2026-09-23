@@ -7,3 +7,8 @@ Derive a strongly typed production contract from the supplied string convention.
 - Keep the exported type name and its generic inputs.
 - Return the documented fallback for malformed input.
 - Do not use any or hard-code the supplied example literals.
+
+## Contract
+
+- A placeholder is a name wrapped in `{{` and `}}`; the text around it is ignored.
+- Each placeholder becomes a required property typed `string | number`.

@@ -7,3 +7,8 @@ Model a nested production structure recursively while respecting arrays, functio
 - Keep the exported type name and generic inputs.
 - Preserve modifiers and boundary behavior shown by the tests.
 - Do not use any, fixed depth limits, or hard-coded property names.
+
+## Contract
+
+- `readonly` is removed at every depth, from properties and from arrays alike.
+- Function properties pass through unchanged.

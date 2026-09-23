@@ -7,3 +7,8 @@ Create a maintainable registry type derived from the supplied source model, with
 - Keep the supplied domain declarations and exported type name.
 - Derive all registry members from the source type.
 - Do not use any or copy the expected registry by hand.
+
+## Contract
+
+- Each state key becomes `select` followed by that key capitalized.
+- Its value becomes a function taking the whole state and returning that key's own slice.

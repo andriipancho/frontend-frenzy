@@ -7,3 +7,8 @@ Transform the supplied production union while preserving its discriminants and b
 - Keep the domain union and exported type name.
 - Preserve branch correlations and exhaustiveness.
 - Do not use any, assertions, or collapse the union into unrelated unions.
+
+## Contract
+
+- The result is the `value` carried by the `"success"` state.
+- Every other state contributes nothing.

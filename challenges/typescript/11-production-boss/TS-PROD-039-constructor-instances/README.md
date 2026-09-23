@@ -7,3 +7,7 @@ Derive a production contract from function, constructor, or tuple structure whil
 - Keep the exported type name and generic constraints.
 - Preserve parameter tuples, return values, and readonly structure where applicable.
 - Do not use any, erase arguments, or enumerate the supplied example.
+
+## Contract
+
+- Each key keeps its name, and its value becomes the instance type that constructor produces.
