@@ -7,3 +7,8 @@ Implement `ObjectPaths` to generate nested object paths without losing the relat
 - Recurse through each key plus recursively prefixed child paths.
 - Define a terminating base case before or alongside the recursive branch.
 - Do not use any.
+
+## Contract
+
+- Paths join keys with `.`.
+- Every nested object contributes both its own path and the paths beneath it.

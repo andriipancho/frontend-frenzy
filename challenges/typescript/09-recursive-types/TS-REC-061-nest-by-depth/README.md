@@ -7,3 +7,8 @@ Implement `NestValue` to nest values to a fixed depth without losing the relatio
 - Recurse through a depth accumulator and one wrapper per step.
 - Define a terminating base case before or alongside the recursive branch.
 - Do not use any.
+
+## Contract
+
+- Each wrapping layer is `{ value: … }`.
+- A depth of zero returns the input unchanged.

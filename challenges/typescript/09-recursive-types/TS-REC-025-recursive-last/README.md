@@ -7,3 +7,7 @@ Implement `RecursiveLast` to find tuple last members recursively without losing 
 - Recurse through the tuple tail until only one head remains.
 - Define a terminating base case before or alongside the recursive branch.
 - Do not use any.
+
+## Contract
+
+- An empty tuple produces `never`.
