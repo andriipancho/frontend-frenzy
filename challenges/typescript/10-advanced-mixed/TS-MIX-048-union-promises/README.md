@@ -7,3 +7,8 @@ Implement `UnionPromises` by combining the type relationships demonstrated by th
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- The result is the union of the resolved types of every promise member.
+- Members that are not promises contribute nothing.

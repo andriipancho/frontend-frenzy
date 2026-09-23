@@ -7,3 +7,8 @@ Implement `MixedSerializer` by combining the type relationships demonstrated by 
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- The result is `(value: T) => string` — one function taking the whole model and producing its
+  serialized form.

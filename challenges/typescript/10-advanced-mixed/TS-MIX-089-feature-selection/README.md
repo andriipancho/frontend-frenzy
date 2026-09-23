@@ -7,3 +7,8 @@ Implement `MixedFeatures` by combining the type relationships demonstrated by th
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- The result is the union of the keys whose flag is the literal `true`.
+- A flag typed `boolean` is not known to be enabled and does not count.

@@ -7,3 +7,8 @@ Implement `SetterMap` by combining the type relationships demonstrated by the co
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- Each key becomes `set` followed by that key capitalized.
+- Its value becomes `(value: <property type>) => void`.

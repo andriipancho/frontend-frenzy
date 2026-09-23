@@ -7,3 +7,11 @@ Implement `PropertyLabels` by combining the type relationships demonstrated by t
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+In this order:
+
+- a `string` value is labelled `"string"`;
+- a `number` value is labelled `"number"`;
+- everything else, `boolean` included, is labelled `"other"`.
