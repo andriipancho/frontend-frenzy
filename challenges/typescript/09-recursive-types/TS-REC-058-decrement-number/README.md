@@ -7,3 +7,7 @@ Implement `Decrement` to decrement numeric literals recursively without losing t
 - Recurse through a counter and its preceding length.
 - Define a terminating base case before or alongside the recursive branch.
 - Do not use any.
+
+## Contract
+
+- Decrementing `0` produces `0`; the result never goes negative.

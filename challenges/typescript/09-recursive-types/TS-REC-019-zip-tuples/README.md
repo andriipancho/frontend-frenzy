@@ -7,3 +7,8 @@ Implement `ZipTuples` to zip tuple pairs recursively without losing the relation
 - Recurse through both tuple heads and both remaining tails.
 - Define a terminating base case before or alongside the recursive branch.
 - Do not use any.
+
+## Contract
+
+- Elements at the same position pair up as `[left, right]`.
+- Zipping stops at the shorter of the two tuples, and the extra elements are dropped.

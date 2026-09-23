@@ -7,3 +7,9 @@ Implement `PathHead` to infer path head segments, while preserving the inferred 
 - Derive the output from the segment before the first path separator.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- Path segments are separated by `/`.
+- A path containing a separator produces the segment before the first one.
+- A path without a separator is returned unchanged.

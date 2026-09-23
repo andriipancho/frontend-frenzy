@@ -7,3 +7,8 @@ Implement `FormErrors` to model nested form errors without losing the relationsh
 - Recurse through optional error leaves below tuple and object form structure.
 - Define a terminating base case before or alongside the recursive branch.
 - Do not use any.
+
+## Contract
+
+- Each leaf becomes `readonly string[]` — the messages recorded against that field.
+- Every property is optional, tuple positions included, since a field may carry no errors.

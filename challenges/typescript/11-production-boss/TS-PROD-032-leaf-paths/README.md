@@ -7,3 +7,9 @@ Model a nested production structure recursively while respecting arrays, functio
 - Keep the exported type name and generic inputs.
 - Preserve modifiers and boundary behavior shown by the tests.
 - Do not use any, fixed depth limits, or hard-coded property names.
+
+## Contract
+
+- Paths join keys with `.`.
+- Only paths ending at a non-object value appear; the paths of the objects along the way are
+  left out.

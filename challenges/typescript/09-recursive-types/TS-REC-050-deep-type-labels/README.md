@@ -7,3 +7,9 @@ Implement `DeepTypeLabels` to label every nested leaf type without losing the re
 - Recurse through primitive label base cases before tuple and object recursion.
 - Define a terminating base case before or alongside the recursive branch.
 - Do not use any.
+
+## Contract
+
+- A leaf is labelled `"string"`, `"number"` or `"boolean"`; every other leaf, `null` and
+  `symbol` included, is labelled `"other"`.
+- Tuples and objects keep their shape and carry the labels of their own leaves.

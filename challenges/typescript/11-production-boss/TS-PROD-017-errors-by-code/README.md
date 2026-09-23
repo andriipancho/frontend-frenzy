@@ -7,3 +7,8 @@ Transform the supplied production union while preserving its discriminants and b
 - Keep the domain union and exported type name.
 - Preserve branch correlations and exhaustiveness.
 - Do not use any, assertions, or collapse the union into unrelated unions.
+
+## Contract
+
+- Each member's `code` becomes a key of the map.
+- Its value is that member with the `code` discriminant removed.

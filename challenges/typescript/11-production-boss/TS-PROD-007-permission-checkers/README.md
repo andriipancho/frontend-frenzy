@@ -7,3 +7,9 @@ Derive the exported production contract from the supplied domain model while pre
 - Keep the supplied model and exported type name.
 - Preserve exact inputs, outputs, and modifiers for each member.
 - Do not use any, assertions, or a manually enumerated result.
+
+## Contract
+
+- Each permission key becomes `can` followed by that key capitalized.
+- Its value becomes a function taking that permission's own context object and returning
+  `boolean`.

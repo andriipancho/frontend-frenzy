@@ -7,3 +7,8 @@ Implement `UnionElements` by combining the type relationships demonstrated by th
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- The result is the union of the element types of every array and tuple member.
+- Members that are not arrays contribute nothing.

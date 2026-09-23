@@ -7,3 +7,9 @@ Implement `PathSegments` to parse every path segment without losing the relation
 - Recurse through one slash-delimited path segment and remaining path.
 - Define a terminating base case before or alongside the recursive branch.
 - Do not use any.
+
+## Contract
+
+- Segments are separated by `/`, and empty segments are dropped, so a leading slash adds no
+  empty first segment.
+- The empty string produces `[]`.

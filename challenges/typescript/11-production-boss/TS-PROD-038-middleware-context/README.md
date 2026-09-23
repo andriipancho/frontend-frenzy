@@ -7,3 +7,8 @@ Derive a production contract from function, constructor, or tuple structure whil
 - Keep the exported type name and generic constraints.
 - Preserve parameter tuples, return values, and readonly structure where applicable.
 - Do not use any, erase arguments, or enumerate the supplied example.
+
+## Contract
+
+- The result is the intersection of what every middleware returns, in order.
+- An empty list produces `unknown`.

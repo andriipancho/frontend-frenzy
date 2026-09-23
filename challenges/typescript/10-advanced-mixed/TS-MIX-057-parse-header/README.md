@@ -7,3 +7,9 @@ Implement `ParseHeader` by combining the type relationships demonstrated by the 
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- A header line is a name, `:`, a space, then the value.
+- The result carries `name` lowercased and `value` unchanged; text that is not a header line
+  produces `never`.

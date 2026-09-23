@@ -7,3 +7,8 @@ Implement `DropFirstTwo` to drop the first two tuple elements, while preserving 
 - Derive the output from the tuple segment following two leading positions.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- A tuple of two or more elements produces everything after the first two.
+- A shorter tuple produces `[]`.

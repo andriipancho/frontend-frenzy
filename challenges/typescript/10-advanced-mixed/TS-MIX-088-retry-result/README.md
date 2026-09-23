@@ -7,3 +7,8 @@ Implement `MixedRetry` by combining the type relationships demonstrated by the c
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- The result is the union of a success — `{ ok: true; value: T; attempts: Count }`, carrying
+  the attempt count as a numeric literal — and a failure `{ ok: false; error: E }`.

@@ -7,3 +7,9 @@ Transform the supplied production union while preserving its discriminants and b
 - Keep the domain union and exported type name.
 - Preserve branch correlations and exhaustiveness.
 - Do not use any, assertions, or collapse the union into unrelated unions.
+
+## Contract
+
+- Each action's `type` becomes a key of the map.
+- Its reducer takes the state first and the whole action second, discriminant included, and
+  returns the state.

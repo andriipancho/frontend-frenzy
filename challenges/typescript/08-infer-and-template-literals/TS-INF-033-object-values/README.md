@@ -7,3 +7,8 @@ Implement `ObjectValues` to infer object value unions, while preserving the infe
 - Derive the output from the common inferred position across all object properties.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- The result is the union of the object's property types.
+- An object with no properties produces `unknown`.

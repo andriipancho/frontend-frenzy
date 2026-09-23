@@ -7,3 +7,10 @@ Implement `RouteContract` to parse route contracts, while preserving the inferre
 - Derive the output from a constrained method and path in a route contract.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- A contract is an uppercase method, one space, then the path.
+- The supported methods are `GET`, `POST`, `PUT`, and `DELETE`; each produces an object
+  carrying `method` lowercased and `path` unchanged.
+- Any other method produces `never`.

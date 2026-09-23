@@ -7,3 +7,8 @@ Implement `UniqueTuple` to remove duplicate tuple members without losing the rel
 - Recurse through a seen-members accumulator and recursive membership.
 - Define a terminating base case before or alongside the recursive branch.
 - Do not use any.
+
+## Contract
+
+- The first occurrence of each member is kept and every later duplicate is dropped, so the
+  surviving members stay in their original order.

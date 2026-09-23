@@ -7,3 +7,9 @@ Implement `WrappedTail` to wrap inferred tuple tails, while preserving the infer
 - Derive the output from the tuple tail and its literal length.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- The result is an object carrying `rest` — the tuple after its first element — and `count`,
+  the literal length of `rest`.
+- An empty tuple produces `{ rest: []; count: 0 }`.

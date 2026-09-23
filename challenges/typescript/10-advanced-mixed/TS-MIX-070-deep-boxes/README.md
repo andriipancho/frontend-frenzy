@@ -7,3 +7,7 @@ Implement `DeepMixedBoxes` by combining the type relationships demonstrated by t
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- Each leaf becomes `{ value: <leaf> }`, and the objects around it keep their shape.

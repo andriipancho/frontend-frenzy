@@ -7,3 +7,8 @@ Implement `TupleEnds` to infer both tuple ends, while preserving the inferred re
 - Derive the output from the first and final positions of a tuple.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- A tuple of two or more elements produces the pair `[first, last]`.
+- A shorter tuple produces `never`.

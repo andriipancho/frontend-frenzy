@@ -7,3 +7,8 @@ Implement `RouteNames` by combining the type relationships demonstrated by the c
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- Each key becomes `route` followed by that key capitalized.
+- The value type is unchanged.

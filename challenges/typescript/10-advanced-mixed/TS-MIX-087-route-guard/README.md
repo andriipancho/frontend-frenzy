@@ -7,3 +7,10 @@ Implement `MixedGuard` by combining the type relationships demonstrated by the c
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- A contract carrying `roles` produces `{ kind: "roles"; role: … }`, where `role` is the union
+  of the listed role names.
+- With no roles, `auth: true` produces `{ kind: "auth" }` and `auth: false` produces
+  `{ kind: "public" }`.

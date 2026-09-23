@@ -7,3 +7,8 @@ Implement `ParseCssVariable` by combining the type relationships demonstrated by
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- A custom property starts with `--`, and the result is the name after it.
+- Text without that prefix produces `never`.

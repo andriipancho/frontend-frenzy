@@ -7,3 +7,8 @@ Implement `ParseHandler` by combining the type relationships demonstrated by the
 - Preserve every relationship covered by the supplied contract.
 - Compose the relevant TypeScript mechanisms without weakening the public type.
 - Do not use any.
+
+## Contract
+
+- A handler name starts with `on`, and the result is the rest of the name, uncapitalized.
+- Text without that prefix produces `never`.

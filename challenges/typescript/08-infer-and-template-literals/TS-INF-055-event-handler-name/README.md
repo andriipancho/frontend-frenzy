@@ -7,3 +7,8 @@ Implement `HandlerName` to generate event handler names, while preserving the in
 - Derive the output from the event name after capitalization.
 - Preserve exact literal, tuple, and generic relationships in the resulting type.
 - Do not use any.
+
+## Contract
+
+- An event name produces `on` followed by that name capitalized.
+- A union of event names produces the union of the generated handler names.

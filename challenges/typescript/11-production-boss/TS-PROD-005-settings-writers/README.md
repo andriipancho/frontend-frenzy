@@ -7,3 +7,8 @@ Derive the exported production contract from the supplied domain model while pre
 - Keep the supplied model and exported type name.
 - Preserve exact inputs, outputs, and modifiers for each member.
 - Do not use any, assertions, or a manually enumerated result.
+
+## Contract
+
+- Each setting key becomes `set` followed by that key capitalized.
+- Its value becomes `(value: <setting type>) => void`.
